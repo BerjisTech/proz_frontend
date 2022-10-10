@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+//  RAFCE
+import React, { useEffect } from 'react'
+//  Routes
+import { BrowserRouter } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+
+// Import components
+import { Footer, Header, Main, Navbar } from './components'
+// Import pages
+import { Dashboard } from './pages'
+
+const App = () => {
+    return (
+        <BrowserRouter>
+            <div className="flex w-full h-screen flex-wrap content-center">
+                <Navbar />
+                <div className="flex-1 p-5">
+                    <Header />
+                    <Main>
+                        <Dashboard />
+                    </Main>
+                    <Footer />
+                </div>
+            </div>
+        </BrowserRouter >
+    )
 }
 
-export default App;
+export default App
