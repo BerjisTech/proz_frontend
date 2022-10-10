@@ -1,15 +1,29 @@
 import React from 'react'
 import { Routes, Route } from "react-router";
-import { Dashboard } from "../pages";
+import {
+    Applications,
+    Courses,
+    Dashboard,
+    FindWork,
+    Kudoz,
+    Messages,
+    Search,
+    Settings,
+} from "../pages";
 
 const Main = () => {
     return (
-        <main className="app__main flex">
-            <Routes>
-                <Route path="/" element={<h1>Home Page</h1>} />
-                <Route path="/dashboard/*" element={<Dashboard />} />
-            </Routes>
-        </main>
+        <Routes>
+            <Route path="/" element={<h1>Home Page</h1>} />
+            <Route path="/applications/*" element={<Applications />} />
+            <Route path="/courses/*" element={<Courses />} />
+            <Route path="/dashboard/*" element={<Dashboard />} />
+            <Route path="/findwork/*" element={<FindWork />} />
+            <Route path="/kudoz/*" element={<Kudoz />} />
+            <Route path="/messages/*" element={<Messages />} />
+            <Route path="/search/*" element={<Search />} />
+            <Route path="/settings/*" element={<Settings />} />
+        </Routes>
     )
 }
 

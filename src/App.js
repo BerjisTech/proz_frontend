@@ -8,7 +8,7 @@ import './App.css'
 // Import components
 import { Footer, Header, Main, Navbar } from './components'
 // Import pages
-import { Dashboard } from './pages'
+import { Dashboard, Search } from './pages'
 
 const App = () => {
     return (

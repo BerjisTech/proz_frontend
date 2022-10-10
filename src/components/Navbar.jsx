@@ -16,9 +16,39 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li className="relative">
-                    <Link to="/create" className="flex items-center text-lg py-4 px-6 h-12 overflow-hidden text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+                    <Link to="/findwork" className="flex items-center text-lg py-4 px-6 h-12 overflow-hidden text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="dark">
                         <FiPlusSquare className="app__sidebar-icon" />
-                        <span className="p-3">Create</span>
+                        <span className="p-3">Find Work</span>
+                    </Link>
+                </li>
+                <li className="relative">
+                    <Link to="/applications" className="flex items-center text-lg py-4 px-6 h-12 overflow-hidden text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+                        <FiPlusSquare className="app__sidebar-icon" />
+                        <span className="p-3">Applications</span>
+                    </Link>
+                </li>
+                <li className="relative">
+                    <Link to="/courses" className="flex items-center text-lg py-4 px-6 h-12 overflow-hidden text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+                        <FiPlusSquare className="app__sidebar-icon" />
+                        <span className="p-3">Courses</span>
+                    </Link>
+                </li>
+                <li className="relative">
+                    <Link to="/kudoz" className="flex items-center text-lg py-4 px-6 h-12 overflow-hidden text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+                        <FiPlusSquare className="app__sidebar-icon" />
+                        <span className="p-3">Kudoz</span>
+                    </Link>
+                </li>
+                <li className="relative">
+                    <Link to="/messages" className="flex items-center text-lg py-4 px-6 h-12 overflow-hidden text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+                        <FiPlusSquare className="app__sidebar-icon" />
+                        <span className="p-3">Messages</span>
+                    </Link>
+                </li>
+                <li className="relative">
+                    <Link to="/settings" className="flex items-center text-lg py-4 px-6 h-12 overflow-hidden text-white text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+                        <FiPlusSquare className="app__sidebar-icon" />
+                        <span className="p-3">Settings</span>
                     </Link>
                 </li>
             </ul>

@@ -1,1 +1,8 @@
-export { default as Dashboard } from './dashboard/Dashboard';
+export { default as Applications } from './applications/Applications'
+export { default as Courses } from './courses/Courses'
+export { default as Dashboard } from './dashboard/Dashboard'
+export { default as FindWork } from './findwork/FindWork'
+export { default as Kudoz } from './kudoz/Kudoz'
+export { default as Messages } from './messages/Messages'
+export { default as Search } from './search/Search'
+export { default as Settings } from './settings/Settings'
