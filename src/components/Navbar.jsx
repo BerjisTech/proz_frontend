@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <aside className="app__sidebar sidebar w-60 h-screen shadow-md bg-teal-800 px-1 flex-initial">
-            <div className="h-screen flex flex-col sticky top-0">
+        <aside className="app__sidebar sidebar mobile:w-full laptop:w-60 h-screen shadow-md bg-teal-800 px-1 flex-initial mobile:absolute tablet:absolute laptop:relative desktop:relative">
+            <div className="h-screen flex flex-col sticky top-0 overflow-auto">
                 <header className="app__sidebar-header p-3 border-b">
-                    <div class="flex">
+                    <div className="flex">
                         <div className="card bg-white p-3 rounded shadow-md">
                             <img src="https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg" width="30" alt="logo" />
                         </div>
@@ -61,7 +61,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                 </ul>
-                <div className="bg-orange-300 mx-3 pt-5 px-3 pb-2 rounded shadow flex flex-col items-center justify-center">
+                <div className="bg-orange-300 mx-3 pt-5 px-3 mb-10 pb-2 rounded shadow flex flex-col items-center justify-center">
                     <div className="card bg-white p-3 rounded shadow-md">
                         <img src="https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg" width="30" alt="logo" />
                     </div>

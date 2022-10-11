@@ -1,8 +1,14 @@
 import React from 'react'
+import '../../components'
+import JobSearchResults from '../../components/JobSearchResults'
+import SearchJobs from '../../components/SearchJobs'
 
 const FindWork = () => {
   return (
-    <div>FindWork</div>
+    <div>
+      <SearchJobs />
+      <JobSearchResults />
+    </div>
   )
 }
 
