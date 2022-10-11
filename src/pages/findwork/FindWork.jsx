@@ -1,12 +1,12 @@
 import React from 'react'
 import '../../components'
 import JobSearchResults from '../../components/JobSearchResults'
-import SearchJobs from '../../components/SearchJobs'
+import JobSearch from '../../components/JobSearch'
 
 const FindWork = () => {
   return (
     <div>
-      <SearchJobs />
+      <JobSearch />
       <JobSearchResults />
     </div>
   )

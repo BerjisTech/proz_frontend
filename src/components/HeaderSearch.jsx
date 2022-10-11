@@ -4,10 +4,10 @@ import { FiSearch } from 'react-icons/fi'
 
 const HeaderSearch = () => {
     return (
-        <div className="d-flex-grow">
-            <form className="d-flex items-center justify-center ms-10" action='/search' method='GET'>
-                <FiSearch className="text-xl me-3" />
-                <input type="text" placeholder="Search..." name="searchItem" className='rounded-full bg-gray-200 dark:bg-main-dark-gray dark:text-white w-full outline-none py-2 px-5' />
+        <div className="flex-fill">
+            <form className="d-flex flex-row align-items-center justify-content-center ms-5" action='/search' method='GET'>
+                <FiSearch className="fs-3 me-3 text-gray-400" />
+                <input type="text" placeholder="Search..." name="searchItem" className='flex-fill border-0 bg-gray-100 rounded-5 bg-gray py-2 px-5' />
             </form>
         </div>
     )

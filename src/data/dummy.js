@@ -62,7 +62,7 @@ export const kanbanGrid = [
     allowToggle: true },
 ];
 const gridEmployeeProfile = (props) => (
-  <div className="d-flex items-center gap-2">
+  <div className="d-flex align-items-center gap-2">
     <img
       className="rounded-full w-10 h-10"
       src={props.EmployeeImage}
@@ -73,7 +73,7 @@ const gridEmployeeProfile = (props) => (
 );
 
 const gridEmployeeCountry = (props) => (
-  <div className="d-flex items-center justify-center gap-2">
+  <div className="d-flex align-items-center justify-content-center gap-2">
     <GrLocation />
     <span>{props.Country}</span>
   </div>
@@ -121,7 +121,7 @@ export const EditorData = () => (
   </div>
 );
 const customerGridImage = (props) => (
-  <div className="image flex gap-4">
+  <div className="image d-flex gap-4">
     <img
       className="rounded-full w-10 h-10"
       src={props.CustomerImage}
@@ -135,7 +135,7 @@ const customerGridImage = (props) => (
 );
 
 const customerGridStatus = (props) => (
-  <div className="d-flex gap-2 justify-center items-center text-gray-700 capitalize">
+  <div className="d-flex gap-2 justify-content-center align-items-center text-gray-700 capitalize">
     <p style={{ background: props.StatusBg }} className="rounded-full h-3 w-3" />
     <p>{props.Status}</p>
   </div>
