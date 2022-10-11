@@ -26,7 +26,7 @@ import product8 from './product8.jpg';
 export const gridOrderImage = (props) => (
   <div>
     <img
-      className="rounded-xl h-20 md:ml-3"
+      className="rounded-xl h-20 md:ms-3"
       src={props.ProductImage}
       alt="order-item"
     />
@@ -62,7 +62,7 @@ export const kanbanGrid = [
     allowToggle: true },
 ];
 const gridEmployeeProfile = (props) => (
-  <div className="flex items-center gap-2">
+  <div className="d-flex items-center gap-2">
     <img
       className="rounded-full w-10 h-10"
       src={props.EmployeeImage}
@@ -73,7 +73,7 @@ const gridEmployeeProfile = (props) => (
 );
 
 const gridEmployeeCountry = (props) => (
-  <div className="flex items-center justify-center gap-2">
+  <div className="d-flex items-center justify-center gap-2">
     <GrLocation />
     <span>{props.Country}</span>
   </div>
@@ -135,7 +135,7 @@ const customerGridImage = (props) => (
 );
 
 const customerGridStatus = (props) => (
-  <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
+  <div className="d-flex gap-2 justify-center items-center text-gray-700 capitalize">
     <p style={{ background: props.StatusBg }} className="rounded-full h-3 w-3" />
     <p>{props.Status}</p>
   </div>
