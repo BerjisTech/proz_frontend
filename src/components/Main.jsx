@@ -18,14 +18,14 @@ const Main = () => {
         <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/dashboard/*" element={<Dashboard />} />
-            <Route path="/applications/*" element={<Applications />} />
-            <Route path="/courses/*" element={<Courses />} />
-            <Route path="/findwork/*" element={<FindWork />} />
-            <Route path="/kudoz/*" element={<Kudoz />} />
-            <Route path="/messages/*" element={<Messages />} />
-            <Route path="/search/*" element={<Search />} />
-            <Route path="/settings/*" element={<Settings />} />
-            <Route path="/billing/*" element={<Billing />} />
+            <Route path="/dashboard/applications/*" element={<Applications />} />
+            <Route path="/dashboard/courses/*" element={<Courses />} />
+            <Route path="/dashboard/findwork/*" element={<FindWork />} />
+            <Route path="/dashboard/kudoz/*" element={<Kudoz />} />
+            <Route path="/dashboard/messages/*" element={<Messages />} />
+            <Route path="/dashboard/search/*" element={<Search />} />
+            <Route path="/dashboard/settings/*" element={<Settings />} />
+            <Route path="/dashboard/billing/*" element={<Billing />} />
         </Routes>
     )
 }

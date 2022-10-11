@@ -16,7 +16,7 @@ const TopUserIcons = () => {
             </span>
             <div className="flex items-center justify-center mr-10">
                 <img src='https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg' alt='User Icon' className='shadow-md rounded-full h-10 w-10 object-cover object-center' />
-                <div class="flex flex-col mx-3">
+                <div className="flex flex-col mx-3">
                     <span className="font-bold">Benedict</span>
                     <span className="text-sm text-gray-400">translator</span>
                 </div>
