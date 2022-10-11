@@ -4,4 +4,5 @@ export { default as Navbar } from "./Navbar"
 export { default as Footer } from "./Footer"
 export { default as HeaderSearch } from "./HeaderSearch"
 export { default as TopUserIcons } from "./TopUserIcons"
+export { default as LandingPageNav } from "./LandingPageNav"
 

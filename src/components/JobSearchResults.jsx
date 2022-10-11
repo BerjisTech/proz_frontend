@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import 'react-icons/fi'
 import { GoPrimitiveDot } from 'react-icons/go'
 import { BiDotsVertical } from 'react-icons/bi'
 const JobSearchResults = () => {
+    const [jobs, setJobs] = React.useState([])
+    const fetchJobs = async () => {
+        return fetch('https://www.proz.com/language-jobs', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+            },
+        }).then(
+            (response) => response.json()
+        ).then((data) => {
+            setJobs(data)
+        })
+    }
+
+    useEffect(() => {
+        fetchJobs()
+    }, [])
+
+    console.log(jobs)
+
     return (
         <div>
             <div className="d-flex align-items-center justify-content-between">
@@ -28,20 +49,27 @@ const JobSearchResults = () => {
             </div>
             <div className="shadow-lg shadow-indigo-500/40 p-3 rounded-3 pb-5">
                 <span className="fw-bold text-2xl"> Applications</span>
-                <div className="d-flex align-items-center justify-content-start hover:shadow-xl p-3 rounded-5">
-                    <img src="https://m.media-amazon.com/images/M/MV5BMWFmYmRiYzMtMTQ4YS00NjA5LTliYTgtMmM3OTc4OGY3MTFkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg" className="rounded-circle" width="50" height="50" alt="avatar" />
-                    <div className='d-flex flex-column flex-fill ms-3'>
-                        <span className="fw-bold">Eng-Chinese (Mandarin/Cantonese/Taiwanese)</span>
-                        <span className="text-sm text-gray-600">Translation</span>
-                        <span>Germany Translator</span>
-                    </div>
-                    <div className='d-flex flex-column ms-3'>
-                        <span className="text-blue-600 text-sm font-medium">Learn more »</span>
-                    </div>
-                </div>
+                {jobs.length == 0 ? (
+                    <div className="text-sm pt-3">No jobs found</div>
+                ) : (jobs && jobs.length > 0 && jobs.map((job, index) => {
+                    return (
+                        <div id={index} className="d-flex align-items-center justify-content-start hover:shadow-xl p-3 rounded-5">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMWFmYmRiYzMtMTQ4YS00NjA5LTliYTgtMmM3OTc4OGY3MTFkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg" className="rounded-circle" width="50" height="50" alt="avatar" />
+                            <div className='d-flex flex-column flex-fill ms-3'>
+                                <span className="fw-bold">Eng-Chinese (Mandarin/Cantonese/Taiwanese)</span>
+                                <span className="text-sm text-gray-600">Translation</span>
+                                <span>Germany Translator</span>
+                            </div>
+                            <div className='d-flex flex-column ms-3'>
+                                <span className="text-blue-600 text-sm font-medium">Learn more »</span>
+                            </div>
+                        </div>
+                    )
+                }))}
             </div>
         </div>
     )
 }
+
 
 export default JobSearchResults
