@@ -3,7 +3,7 @@ import "react-icons/fi";
 
 const Footer = () => {
     return (
-        <div className="text-end text-xs text-gray p-2 bg-transparent">
+        <div className="text-end text-xs text-gray p-2">
             Copyright &copy; {new Date().getFullYear()} Proz.com
         </div>
     )
