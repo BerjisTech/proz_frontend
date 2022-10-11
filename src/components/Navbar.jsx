@@ -1,26 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart, FiBookmark } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+    const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+    const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
     return (
         <nav className="navbar navbar-expand-lg min-vh-100 bg-primary m-0 p-0">
-            <div className="container-fluid m-0 p-0 h-screen d-flex flex-column sticky overflow-auto">
-                <header className="w-full p-3 border-bottom sticky bg-primary shadow">
-                    <div className="d-flex">
-                        <div className="card bg-white p-3 rounded shadow-sm">
-                            <img src="https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg" width="30" alt="logo" />
+            <div className="container-fluid m-0 p-0 h-screen d-flex flex-column flex-nowrap sticky overflow-auto">
+                <header className="w-full px-3 pt-3 border-bottom sticky bg-primary shadow">
+                    <a class="navbar-brand m-0 p-0" href="/">
+                        <div className="d-flex align-items-center justify-content-center">
+                            <div className="card bg-white p-3 rounded shadow-sm">
+                                <img src="https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg" width="30" alt="logo" />
+                            </div>
+                            <div className="flex-fill d-flex flex-column ps-3">
+                                <span className="text-white text-xl fw-bold">Dashboard</span>
+                                <span className="text-orange-300 text-lg">Professional</span>
+                            </div>
                         </div>
-                        <div className="flex-fill d-flex flex-column ps-3">
-                            <span className="text-white text-xl fw-bold">Dashboard</span>
-                            <span className="text-orange-300 text-lg">Professional</span>
-                        </div>
-                    </div>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    </a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sideBarNav" aria-controls="sideBarNav" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
                         <span className="navbar-toggler-icon"></span>
                     </button>
                 </header>
-                <div className="collapse navbar-collapse d-flex flex-column align-items-start justify-content-start" id="navbarNav">
+                <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse d-flex flex-column align-items-start justify-content-start`} id="sideBarNav">
                     <ul className="navbar-nav d-flex flex-column w-full align-items-start justify-content-start">
                         <li className="nav-item w-full ps-2 py-2">
                             <Link to="/dashboard" className="nav-link d-flex align-items-center overflow-hidden text-white">
