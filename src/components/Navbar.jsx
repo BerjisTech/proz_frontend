@@ -21,44 +21,44 @@ const Navbar = () => {
                     </button>
                 </header>
                 <div className="collapse navbar-collapse d-flex flex-column align-items-start justify-content-start" id="navbarNav">
-                    <ul className="navbar-nav d-flex flex-column align-items-start justify-content-start">
-                        <li className="nav-item ps-2 py-2">
+                    <ul className="navbar-nav d-flex flex-column w-full align-items-start justify-content-start">
+                        <li className="nav-item w-full ps-2 py-2">
                             <Link to="/dashboard" className="nav-link d-flex align-items-center overflow-hidden text-white">
                                 <FiHome className="app__sidebar-icon" />
                                 <span className="px-3">Dashboard</span>
                             </Link>
                         </li>
-                        <li className="nav-item ps-2 py-2">
+                        <li className="nav-item w-full ps-2 py-2">
                             <Link to="/dashboard/findwork" className="nav-link d-flex align-items-center overflow-hidden text-white">
                                 <FiPieChart className="app__sidebar-icon" />
                                 <span className="px-3">Find Work</span>
                             </Link>
                         </li>
-                        <li className="nav-item ps-2 py-2">
+                        <li className="nav-item w-full ps-2 py-2">
                             <Link to="/dashboard/applications" className="nav-link d-flex align-items-center overflow-hidden text-white">
                                 <FiShoppingCart className="app__sidebar-icon" />
                                 <span className="px-3">Applications</span>
                             </Link>
                         </li>
-                        <li className="nav-item ps-2 py-2">
+                        <li className="nav-item w-full ps-2 py-2">
                             <Link to="/dashboard/courses" className="nav-link d-flex align-items-center overflow-hidden text-white">
                                 <FiBookOpen className="app__sidebar-icon" />
                                 <span className="px-3">Courses</span>
                             </Link>
                         </li>
-                        <li className="nav-item ps-2 py-2">
+                        <li className="nav-item w-full ps-2 py-2">
                             <Link to="/dashboard/kudoz" className="nav-link d-flex align-items-center overflow-hidden text-white">
                                 <FiThumbsUp className="app__sidebar-icon" />
                                 <span className="px-3">Kudoz</span>
                             </Link>
                         </li>
-                        <li className="nav-item ps-2 py-2">
+                        <li className="nav-item w-full ps-2 py-2">
                             <Link to="/dashboard/messages" className="nav-link d-flex align-items-center overflow-hidden text-white">
                                 <FiMessageCircle className="app__sidebar-icon" />
                                 <span className="px-3">Messages</span>
                             </Link>
                         </li>
-                        <li className="nav-item ps-2 py-2">
+                        <li className="nav-item w-full ps-2 py-2">
                             <Link to="/dashboard/settings" className="nav-link d-flex align-items-center overflow-hidden text-white">
                                 <FiSettings className="app__sidebar-icon" />
                                 <span className="px-3">Settings</span>
