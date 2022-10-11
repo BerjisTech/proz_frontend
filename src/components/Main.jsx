@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from "react-router";
 import {
+    LandingPage,
     Applications,
     Courses,
     Dashboard,
@@ -9,20 +10,22 @@ import {
     Messages,
     Search,
     Settings,
+    Billing
 } from "../pages";
 
 const Main = () => {
     return (
         <Routes>
-            <Route path="/" element={<h1>Home Page</h1>} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/dashboard/*" element={<Dashboard />} />
             <Route path="/applications/*" element={<Applications />} />
             <Route path="/courses/*" element={<Courses />} />
-            <Route path="/dashboard/*" element={<Dashboard />} />
             <Route path="/findwork/*" element={<FindWork />} />
             <Route path="/kudoz/*" element={<Kudoz />} />
             <Route path="/messages/*" element={<Messages />} />
             <Route path="/search/*" element={<Search />} />
             <Route path="/settings/*" element={<Settings />} />
+            <Route path="/billing/*" element={<Billing />} />
         </Routes>
     )
 }
