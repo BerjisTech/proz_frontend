@@ -1,6 +1,7 @@
 import React from 'react'
-import 'react-icons/fi'
-import { FiKey } from 'react-icons/fi'
+import { BiGlasses, BiRocket } from 'react-icons/bi'
+import { FiKey, FiSave, FiShoppingCart } from 'react-icons/fi'
+import { GiCutDiamond } from 'react-icons/gi'
 const LandingPageNav = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light sticky">
@@ -14,14 +15,39 @@ const LandingPageNav = () => {
                 <div className="collapse navbar-collapse flex-grow flex justify-content-center align-items-center" id="navbarSupportedContent">
                     <ul className="navbar-nav mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/">Home</a>
+                            <a className="nav-link active" aria-current="page" href="/">
+                                <div className="d-flex align-items-center justify-content-center">
+                                    <FiSave />
+                                    <span className="ms-2">Training</span>
+                                </div>
+                            </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/">Link</a>
+                            <a className="nav-link active" aria-current="page" href="/">
+                                <div className="d-flex align-items-center justify-content-center">
+                                    <BiGlasses />
+                                    <span className="ms-2">Community</span>
+                                </div>
+                            </a>
                         </li>
+
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                            <a className="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <BiRocket />
+                                <span className="ms-2">Services</span>
+                            </a>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a className="dropdown-item" href="/">Action</a></li>
+                                <li><a className="dropdown-item" href="/">Another action</a></li>
+                                <li><hr className="dropdown-divider" /></li>
+                                <li><a className="dropdown-item" href="/">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <FiShoppingCart />
+                                <span className="ms-2">Products</span>
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a className="dropdown-item" href="/">Action</a></li>
@@ -31,7 +57,15 @@ const LandingPageNav = () => {
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link disabled" href="/" tabIndex="-1" aria-disabled="true">Disabled</a>
+                            <a className="nav-link active" aria-current="page" href="/">
+                                <div className="d-flex align-items-center justify-content-center">
+                                    <GiCutDiamond />
+                                    <span className="ms-2">About</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/">Link</a>
                         </li>
                     </ul>
                 </div>
