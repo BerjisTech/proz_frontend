@@ -74,7 +74,7 @@ const Navbar = () => {
                         <span className="text-black fw-bold mt-3">Proz.com Membership</span>
                         <span className="text-white fs-6 text-center ">Get access to all features and put proz.com to work for you</span>
                         <span className="d-flex rounded bg-white my-3 btn px-4">
-                            <Link to="/billing" className="d-flex align-items-center nav-link overflow-hidden text-gray">
+                            <Link to="/dashboard/billing" className="d-flex align-items-center nav-link overflow-hidden text-gray">
                                 <FiBookmark className="app__sidebar-icon" />
                                 <span className="px-3">Go Pro</span>
                             </Link>

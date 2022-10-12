@@ -11,5 +11,7 @@ import "bootstrap";
 // Styles
 import './index.css';
 
+import LogRocket from 'logrocket';
+LogRocket.init('2pkhka/prozreactfrontend');
 
 createRoot(document.getElementById('root')).render(<App />);
