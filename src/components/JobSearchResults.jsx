@@ -49,7 +49,7 @@ const JobSearchResults = () => {
             </div>
             <div className="shadow-lg shadow-indigo-500/40 p-3 rounded-3 pb-5">
                 <span className="fw-bold text-2xl"> Applications</span>
-                {jobs.length == 0 ? (
+                {jobs.length === 0 ? (
                     <div className="text-sm pt-3">No jobs found</div>
                 ) : (jobs && jobs.length > 0 && jobs.map((job, index) => {
                     return (

@@ -9,5 +9,8 @@ export { default as ClearStrikeThrough } from "./ClearStrikeThrough"
 export { default as Spacer } from "./Spacer"
 export { default as FindWorkButton } from "./FindWorkButton"
 export { default as FindProButton } from "./FindProButton"
-
-
+export { default as Partner } from "./Partner"
+export { default as Flags } from "./Flags"
+export { default as MembershipModel } from "./MembershipModel"
+export { default as Integrations } from "./Integrations"
+export { default as AddressCards } from "./AddressCards"

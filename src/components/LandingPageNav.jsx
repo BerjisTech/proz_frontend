@@ -4,10 +4,10 @@ import { FiKey, FiSave, FiShoppingCart } from 'react-icons/fi'
 import { GiCutDiamond } from 'react-icons/gi'
 const LandingPageNav = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light sticky">
+        <nav className="navbar navbar-expand-lg bg-blue-100 navbar-light sticky">
             <div className="container-fluid d-flex flex-row align-items-center justify-between">
                 <a className="navbar-brand" href="/">
-                    <img src="https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg" width="30" alt="logo" />
+                    <img src="https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg" width="30" alt="logo" className='bg-white shadow rounded-full mx-2 fs-5' />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

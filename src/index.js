@@ -8,6 +8,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@popperjs/core";
 import "bootstrap";
 
+// core UI
+import '@coreui/coreui/dist/css/coreui.min.css'
+
 // Styles
 import './index.css';
 
