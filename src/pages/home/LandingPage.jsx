@@ -168,7 +168,7 @@ const LandingPage = () => {
             <div className="col-sm-9">
               <div className="d-flex flex-column">
                 <span className="fs-6 text-green-200">FOR YOUR APPS & WEBSITES</span>
-                <span className="fs-1 text-black fw-bolder">Plug-andplay integrations</span>
+                <span className="fs-1 text-black fw-bolder">Plug-and-play integrations</span>
                 <div className="">
                   <Integrations />
                 </div>
