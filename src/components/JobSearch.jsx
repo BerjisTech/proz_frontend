@@ -5,7 +5,7 @@ import { GiCancel } from 'react-icons/gi'
 const JobSearch = () => {
     return (
         <div>
-            <form name="jobSearch" className="d-flex flex-row sm:flex-columnumn align-items-center justify-content-center w-full">
+            <form method="GET" className="d-flex flex-row sm:flex-columnumn align-items-center justify-content-center w-full" action="/dashboard/findwork">
                 <div className="d-flex flex-row flex-fill align-items-center rounded-5 py-2 px-2 border-0 shadow card m-2 cursor-pointer">
                     <FiSearch className="ms-3 text-gray-400" />
                     <input type="search" placeholder="Search" name="search" id="search" className="ms-3 p-3 pe-5 border-0 bg-gray-100 flex-fill rounded-5" />

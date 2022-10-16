@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import 'react-icons/fi'
 import { GoPrimitiveDot } from 'react-icons/go'
 import { BiDotsVertical } from 'react-icons/bi'
+import JobSearch from './JobSearch'
+
 const JobSearchResults = () => {
     const [jobs, setJobs] = React.useState([])
     const fetchJobs = async () => {
@@ -26,6 +28,7 @@ const JobSearchResults = () => {
 
     return (
         <div>
+            <JobSearch />
             <div className="d-flex align-items-center justify-content-between">
                 <span className="fw-bold fs-3 my-4">2 jobs found | sorted by recent</span>
                 <BiDotsVertical className="fs-2" />
