@@ -1,7 +1,6 @@
 import React from 'react'
 
 const MembershipModel = ({ identifier, details }) => {
-  console.log(details)
   let id = JSON.parse(identifier)
   let det = JSON.parse(details)
   return (

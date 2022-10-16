@@ -1,15 +1,12 @@
 import React from 'react'
 
-const Partner = ({ showtext }) => {
+const Partner = ({ showtext, partner_logo, card_style, logo_size, main_style }) => {
     return (
-        <div className="d-flex align-items-center justify-content-between w-[100%]">
-            {showtext === true ? <p className="m-0 me-1 fw-bolder">They trust us...</p> : "Nope"}
-            <img className="d-block mx-3 h-[30px]" src="/images/logos/google.png" alt="slide 1" />
-            <img className="d-block mx-3 h-[30px]" src="/images/logos/nikon.png" alt="slide 1" />
-            <img className="d-block mx-3 h-[30px]" src="/images/logos/netflix.png" alt="slide 1" />
-            <img className="d-block mx-3 h-[30px]" src="/images/logos/target.png" alt="slide 1" />
-            <img className="d-block mx-3 h-[30px]" src="/images/logos/microsoft.png" alt="slide 1" />
-        </div >
+        <div className={main_style}>
+            <div className={card_style}>
+                <img src={partner_logo} alt="logo" className={`h-[${logo_size ? logo_size : '100%'}]`} />
+            </div>
+        </div>
     )
 }
 

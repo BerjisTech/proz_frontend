@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiKey } from 'react-icons/fi'
+import { FiKey, FiMail } from 'react-icons/fi'
 import { LandingPageNav, ClearStrikeThrough, Spacer, Partner, MembershipModel, Integrations, AddressCards } from '../../components'
 import { Button } from 'react-bootstrap'
 import { BiBookAlt, BiBriefcase, BiLaptop, BiTargetLock, BiUserPin } from 'react-icons/bi'
@@ -11,8 +11,8 @@ const LandingPage = () => {
       <LandingPageNav />
       <div className="bg-blue-50 pb-[100px]">
         <div className="row m-0 p-0">
-          <div className="col-sm-4"></div>
-          <div className="col-sm-4">
+          <div className="col-md-4"></div>
+          <div className="col-md-4">
             <Spacer spacing='[4, 0, 0, 0]' />
             <ClearStrikeThrough striked_text={`WE ARE SO MUCH MORE THAN A FREELANCE SITE`} font_size="12px" text_color="#3A727F" />
             <div className="text-4xl font-[800] text-center mt-5">
@@ -34,34 +34,43 @@ const LandingPage = () => {
               </a>
             </div>
           </div>
-          <div className="col-sm-4"></div>
+          <div className="col-md-4"></div>
         </div>
         <Spacer spacing='[4, 0, 0, 0]' />
         <div className="row m-0 p-0">
-          <div className="col-sm-2"></div>
-          <div className="col-sm-8">
+          <div className="col-md-2"></div>
+          <div className="col-md-8">
             <img src='/images/proz_services_banner.png' alt="ProZ Services Box" />
           </div>
-          <div className="col-sm-2"></div>
+          <div className="col-md-2"></div>
         </div>
       </div>
       <div className="mt-[-50px]">
         <div className="row">
-          <div className="col-sm-3"></div>
-          <div className="col-sm-6 p-0 m-0">
+          <div className="col-md-3"></div>
+          <div className="col-md-6 p-0 m-0">
             <div className="d-flex shadow rounded bg-white p-3">
-              <Partner showtext={true} />
+              <div className="d-flex align-items-center justify-content-start w-[100%]">
+                <p className="m-0 me-1 fw-bolder">They trust us...</p>
+                <div className="row d-flex align-items-center justify-content-between flex-fill">
+                  <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/google.png" alt="slide 1" />
+                  <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/nikon.png" alt="slide 1" />
+                  <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/netflix.png" alt="slide 1" />
+                  <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/target.png" alt="slide 1" />
+                  <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/microsoft.png" alt="slide 1" />
+                </div>
+              </div >
             </div>
           </div>
-          <div className="col-sm-3"></div>
+          <div className="col-md-3"></div>
         </div>
       </div>
       <div className="my-[150px]">
         <div className="row">
-          <div className="col-sm-3"></div>
-          <div className="col-sm-7">
+          <div className="col-md-3"></div>
+          <div className="col-md-7">
             <div className="row">
-              <div className="col-sm-6">
+              <div className="col-md-6">
                 <div className="d-flex flex-column">
                   <span className="text-[#A1DDCB] text-[12px]">BECAUSE PROZ.COM HAS A DIFFERENT MISSION</span>
                   <span className="fs-3 fw-bolder">Use ProZ.com to expand your business</span>
@@ -84,7 +93,7 @@ const LandingPage = () => {
                 <Spacer spacing='[5, 0, 0, 0]' />
                 <Spacer spacing='[5, 0, 0, 0]' />
               </div>
-              <div className="col-sm-5 h-100 d-flex flex-column align-items-center justify-content-center">
+              <div className="col-md-5 h-100 d-flex flex-column align-items-center justify-content-center">
                 <img src='/images/screens_dashboard.png' alt="ProZ is 2" />
               </div>
             </div>
@@ -92,10 +101,10 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="row bg-[#A1DDCB]">
-        <div className="col-sm-6">
+        <div className="col-md-6">
           <div className="row py-5">
-            <div className="col-sm-4"></div>
-            <div className="col-sm-8 py-5 my-5">
+            <div className="col-md-4"></div>
+            <div className="col-md-8 py-5 my-5">
               <div className="d-flex flex-column">
                 <Spacer spacing='[5, 0, 0, 0]' />
                 <span className="text-[12px] text-[#186362]">FIND THE BEST TALENT WORLDWIDE</span>
@@ -131,12 +140,12 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="col-sm-6 m-0 p-0">
-          <div className="d-flex m-0 p-0 flex-column w-[100%] h-[100%] align-items-start justify-content-center">
+        <div className="col-md-6 m-0 p-0">
+          <div className="d-flex m-0 p-0 flex-column w-[100%] min-h-[100%] align-items-start justify-content-center">
             <div className="w-[100%] py-[70px] px-4 bg-[#73CCB1] h-[60%] rounded-tl-[50px] rounded-bl-[50px]">
-              <div className="row m-0 p-0 h-[100%]">
-                <div className="col-sm-3 h-100 my-auto">
-                  <div className="h-[100%] px-4 py-4 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
+              <div className="row m-0 p-0 min-h-[100%]">
+                <div className="col-md-3 h-100 my-auto">
+                  <div className="min-h-[100%] px-4 py-4 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
                     <BiBriefcase className="text-[#3A727F] fs-3" />
                     <span className="fw-bolder w-full text-center text-[#3A727F] my-3">Post Jobs<br /> For Free</span>
                     <span className="text-[12px]">
@@ -144,8 +153,8 @@ const LandingPage = () => {
                     </span>
                   </div>
                 </div>
-                <div className="col-sm-3 h-100 my-auto">
-                  <div className="h-[100%] px-4 py-4 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
+                <div className="col-md-3 h-100 my-auto">
+                  <div className="min-h-[100%] px-4 py-4 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
                     <GiPapers className="text-[#3A727F] fs-3" />
                     <span className="fw-bolder w-full text-center text-[#3A727F] my-3">Browse our Directories</span>
                     <span className="text-[12px]">
@@ -153,8 +162,8 @@ const LandingPage = () => {
                     </span>
                   </div>
                 </div>
-                <div className="col-sm-3 h-100 my-auto">
-                  <div className="h-[100%] px-4 py-4 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
+                <div className="col-md-3 h-100 my-auto">
+                  <div className="min-h-[100%] px-4 py-4 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
                     <BiLaptop className="text-[#3A727F] fs-3" />
                     <span className="fw-bolder w-full text-center text-[#3A727F] my-3">Discover APIs & CAT tools</span>
                     <span className="text-[12px]">
@@ -162,8 +171,8 @@ const LandingPage = () => {
                     </span>
                   </div>
                 </div>
-                <div className="col-sm-3 h-100 my-auto">
-                  <div className="h-[100%] px-4 py-4 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
+                <div className="col-md-3 h-100 my-auto">
+                  <div className="min-h-[100%] px-4 py-4 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
                     <BiBookAlt className="text-[#3A727F] fs-3" />
                     <span className="fw-bolder w-full text-center text-[#3A727F] my-3">Easy & Fast management</span>
                     <span className="text-[12px]">
@@ -177,9 +186,9 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col-sm-2"></div>
-        <div className="col-sm-8 mb-5">
-          <div className="d-flex flex-column w-[100%] h-[100%] align-items-start justify-content-center mb-5">
+        <div className="col-md-2"></div>
+        <div className="col-md-8 mb-5">
+          <div className="d-flex flex-column w-[100%] min-h-[100%] align-items-start justify-content-center mb-5">
             <Spacer spacing='[5, 0, 0, 0]' />
             <span className="fs-6 text-green-200">WHAT MAKES PROZ.COM UNIQUE</span>
             <span className="fs-1 text-black fw-bolder">Membership Model</span>
@@ -199,15 +208,15 @@ const LandingPage = () => {
             <Spacer spacing='[5, 0, 0, 0]' />
           </div>
         </div>
-        <div className="col-sm-2"></div>
+        <div className="col-md-2"></div>
       </div>
       <div className="row bg-[#FFEDD9]">
-        <div className="col-sm-6 m-0 p-0">
-          <div className="d-flex m-0 p-0 flex-column w-[100%] h-[100%] align-items-start justify-content-center">
+        <div className="col-md-6 m-0 p-0">
+          <div className="d-flex m-0 p-0 flex-column w-[100%] min-h-[100%] align-items-start justify-content-center">
             <div className="w-[100%] py-[70px] px-4 bg-[#FFE7CC] h-[80%] rounded-tr-[50px] rounded-br-[50px]">
-              <div className="row m-0 p-0 h-[100%]">
-                <div className="col-sm-3 h-100 my-auto">
-                  <div className="h-[100%] px-3 py-5 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
+              <div className="row m-0 p-0 min-h-[100%]">
+                <div className="col-md-3 h-100 my-auto">
+                  <div className="min-h-[100%] px-3 py-5 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
                     <BiBriefcase className="text-[#E7A354] fs-3" />
                     <span className="fw-bolder w-full text-center text-[#E7A354] my-4">Easy & Fast management</span>
                     <span className="text-[12px]">
@@ -215,8 +224,8 @@ const LandingPage = () => {
                     </span>
                   </div>
                 </div>
-                <div className="col-sm-3 h-100 my-auto">
-                  <div className="h-[100%] px-3 py-5 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
+                <div className="col-md-3 h-100 my-auto">
+                  <div className="min-h-[100%] px-3 py-5 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
                     <GiGraduateCap className="text-[#E7A354] fs-3" />
                     <span className="fw-bolder w-full text-center text-[#E7A354] my-4">Professional development</span>
                     <span className="text-[12px]">
@@ -224,8 +233,8 @@ const LandingPage = () => {
                     </span>
                   </div>
                 </div>
-                <div className="col-sm-3 h-100 my-auto">
-                  <div className="h-[100%] px-3 py-5 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
+                <div className="col-md-3 h-100 my-auto">
+                  <div className="min-h-[100%] px-3 py-5 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
                     <GiPresent className="text-[#E7A354] fs-3" />
                     <span className="fw-bolder w-full text-center text-[#E7A354] my-4">Certified PRO<br /> Network</span>
                     <span className="text-[12px]">
@@ -233,8 +242,8 @@ const LandingPage = () => {
                     </span>
                   </div>
                 </div>
-                <div className="col-sm-3 h-100 my-auto">
-                  <div className="h-[100%] px-3 py-5 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
+                <div className="col-md-3 h-100 my-auto">
+                  <div className="min-h-[100%] px-3 py-5 d-flex flex-column align-items-center justify-content-start bg-white rounded-4">
                     <GiChatBubble className="text-[#E7A354] fs-3" />
                     <span className="fw-bolder w-full text-center text-[#E7A354] my-4">Easy & Fast management</span>
                     <span className="text-[12px]">
@@ -246,9 +255,9 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="col-sm-6">
+        <div className="col-md-6">
           <div className="row">
-            <div className="col-sm-6">
+            <div className="col-md-7">
               <div className="d-flex flex-column">
                 <Spacer spacing='[5, 0, 0, 0]' />
                 <span className="fs-6 text-[#E7A354]">FIND THE BEST TALENT WORLDWIDE</span>
@@ -275,48 +284,64 @@ const LandingPage = () => {
                 <Spacer spacing='[5, 0, 0, 0]' />
               </div>
             </div>
-            <div className="col-sm-6"></div>
+            <div className="col-md-5"></div>
           </div>
         </div>
       </div>
       <div className="row">
-        <div className="col-sm-3">
+        <div className="col-md-2">
         </div>
-        <div className="col-sm-6 py-5">
+        <div className="col-md-8 py-5">
           <div className="row">
-            <div className="col-sm-3">
+            <div className="col-md-3">
               <img src="/images/white_mobile.png" alt="Proz App" />
             </div>
-            <div className="col-sm-9">
-              <div className="d-flex flex-column">
-                <span className="fs-6 text-green-200">FOR YOUR APPS & WEBSITES</span>
+            <div className="col-md-9">
+              <div className="d-flex flex-column justify-content-center h-full">
+                <span className="fs-6 text-[#B9E6D8]">FOR YOUR APPS & WEBSITES</span>
                 <span className="fs-1 text-black fw-bolder">Plug-and-play integrations</span>
-                <div className="">
-                  <Integrations />
+                <div className="items-center justify-start d-flex flex-wrap">
+                  <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4" icon_path="/images/logos/tm-town.jpg" app_name="TM Town" />
+                  <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4" icon_path="/images/logos/google.png" app_name="TM Town" />
+                  <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4" icon_path="/images/logos/tm-town.jpg" app_name="TM Town" />
+                  <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4" icon_path="/images/logos/tm-town.jpg" app_name="TM Town" />
+                  <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4 bg-[#A1DDCB] border-[#3A727F] border-1 text-[#3A727F]" icon_path="/images/icons/plus_square.png" app_name="See More" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="col-sm-3"></div>
+        <div className="col-md-2"></div>
       </div>
       <div className="row bg-[#ECF5FA]">
-        <div className="col-sm-2"></div>
-        <div className="col-sm-8">
+        <Spacer spacing='[5, 0, 0, 0]' />
+        <div className="col-md-2"></div>
+        <div className="col-md-8">
           <div className="row">
-            <div className="col-sm-6">
-              <Spacer spacing='[5, 0, 0, 0]' />
-              <div className="row">
-                <AddressCards column="4" background="[#ECF5FA]" shadow="lg" border_radius="2" office_location="ProZ.com Headquaters" office_phone="+1-315-463-7323" office_address="235 Harrison Street Suite 202 Syracuse, NY 13202. USA" />
-                <AddressCards column="4" background="[#ECF5FA]" shadow="lg" border_radius="2" office_location="ProZ.com Argentina" office_phone="+54-221-425-1266" office_address="Calle 14 nro. 622 1/2 entre 44 y 45 La Plata (B1900AND), Buenos Aires Argentina" />
-                <AddressCards column="4" background="[#ECF5FA]" shadow="lg" border_radius="2" office_location="ProZ.com Ukraine" office_phone="+380 57 7281624" office_address="6 Karazina St. Kharkiv, 61002. Ukraine" />
+            <div className="col-md-7">
+              <div className="row h-full">
+                <AddressCards main_style="col-md-4 h-full" card_style="bg-[#ECF5FA] shadow-lg rounded-2 h-full" office_location="ProZ.com Headquaters" office_phone="+1-315-463-7323" office_address="235 Harrison Street Suite 202 Syracuse, NY 13202. USA" />
+                <AddressCards main_style="col-md-4 h-full" card_style="bg-[#ECF5FA] shadow-lg rounded-2 h-full" office_location="ProZ.com Argentina" office_phone="+54-221-425-1266" office_address="Calle 14 nro. 622 1/2 entre 44 y 45 La Plata (B1900AND), Buenos Aires Argentina" />
+                <AddressCards main_style="col-md-4 h-full" card_style="bg-[#ECF5FA] shadow-lg rounded-2 h-full" office_location="ProZ.com Ukraine" office_phone="+380 57 7281624" office_address="6 Karazina St. Kharkiv, 61002. Ukraine" />
               </div>
-              <Spacer spacing='[5, 0, 0, 0]' />
             </div>
-            <div className="col-sm-6"></div>
+            <div className="col-md-5">
+              <div className="d-flex flex-column">
+                <span className="text-md fw-bolder">Newsletter</span>
+                <span className="text-sm my-2">Be ther first to know about discounts, offers and events. Unsubscribe whenever you like.</span>
+                <div className="d-flex align-items-center justify-content-start bg-white rounded-full p-2">
+                  <FiMail className="ms-3" />
+                  <input type="text" className="flex-fill mx-3 focus:outline-none" placeholder="Enter your email" />
+                  <Button className="text-xs bg-[#3A727F] border-[#3A727F] border-[3px] fw-bold rounded-full d-flex align-items-center justify-content-center hover:bg-white hover:text-[#3A727F] hover:border-[#3A727F]">
+                    SUBSCRIBE
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="col-sm-2"></div>
+        <div className="col-md-2"></div>
+        <Spacer spacing='[5, 0, 0, 0]' />
       </div>
     </div >
   )
