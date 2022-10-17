@@ -5,7 +5,7 @@ const AddressCards = ({ main_style, card_style, office_location, office_phone, o
     return (
         <div className={main_style}>
             <div className={card_style}>
-                <div className="d-flex flex-column align-items-start justify-content-center p-2 h-full">
+                <div className="d-flex flex-column align-items-start justify-content-start p-2 h-full">
                     <span className="fw-bold mb-3">{office_location}</span>
                     <table>
                         <tbody>

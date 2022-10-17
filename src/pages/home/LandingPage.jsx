@@ -343,6 +343,15 @@ const LandingPage = () => {
         <div className="col-md-2"></div>
         <Spacer spacing='[5, 0, 0, 0]' />
       </div>
+      <div className="bg-[#254856] w-full py-3 d-flex align-items-center justify-content-center">
+        <span className="text-white px-2">&copy; 1999 - {new Date().getFullYear()}, All Rights Reserved. Designed By OpusCreation</span>
+        <span className="text-[#A1DDCB] px-2">
+          <a href="/privacy-policy">Privacy Policy</a>
+        </span>
+        <span className="text-[#A1DDCB] px-2">
+          <a href="/terms-of-use">Terms Of Use</a>
+        </span>
+      </div>
     </div >
   )
 }
