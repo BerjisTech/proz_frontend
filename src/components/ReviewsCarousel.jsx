@@ -1,3 +1,4 @@
+import { CCarousel, CCarouselItem } from '@coreui/react'
 import React from 'react'
 const demo_reviews = [
     {
@@ -34,7 +35,7 @@ const demo_reviews = [
     }
 ]
 
-const ReviewsCarousel = () => {
+const ReviewsCarousel = ({ reviews = demo_reviews }) => {
     return (
         <CCarousel
             indicators
