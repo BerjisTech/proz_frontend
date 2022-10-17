@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route } from "react-router";
 import {
     LandingPage,
+    Signup,
     Applications,
     Courses,
     Dashboard,
@@ -17,6 +18,7 @@ const Main = () => {
     return (
         <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard/*" element={<Dashboard />} />
             <Route path="/dashboard/applications/*" element={<Applications />} />
             <Route path="/dashboard/courses/*" element={<Courses />} />

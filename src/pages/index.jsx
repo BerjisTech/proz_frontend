@@ -1,5 +1,6 @@
 // Landing & user facing files
 export { default as LandingPage } from './home/LandingPage';
+export { default as Signup } from './auth/Signup';
 
 // Dashboard files
 export { default as Applications } from './applications/Applications'
