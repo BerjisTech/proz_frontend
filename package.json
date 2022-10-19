@@ -1,6 +1,7 @@
 {
   "name": "proz_frontend",
   "version": "0.1.0",
+  "homepage": "https://berjistech.github.io/proz-frontend",
   "private": true,
   "dependencies": {
     "@coreui/coreui": "^4.2.2",
@@ -12,6 +13,7 @@
     "axios": "^1.1.3",
     "bootstrap": "^5.2.2",
     "buffer": "^6.0.3",
+    "gh-pages": "^4.0.0",
     "logrocket": "^3.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
@@ -24,6 +26,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
