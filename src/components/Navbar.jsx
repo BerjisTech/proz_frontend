@@ -1,6 +1,7 @@
 import React from 'react'
 import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart, FiBookmark } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import Spacer from './Spacer'
 
 const Navbar = () => {
     return (
@@ -17,6 +18,7 @@ const Navbar = () => {
                                 <span className="text-orange-300 text-lg">Professional</span>
                             </div>
                         </div>
+                        <Spacer spacing='[2, 0, 0, 0]' />
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sideBarNav" aria-controls="sideBarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
