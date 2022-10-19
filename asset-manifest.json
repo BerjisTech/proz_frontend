@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/proz-frontend/static/css/main.77b82731.css",
+    "main.js": "/proz-frontend/static/js/main.d0900450.js",
+    "index.html": "/proz-frontend/index.html",
+    "main.77b82731.css.map": "/proz-frontend/static/css/main.77b82731.css.map",
+    "main.d0900450.js.map": "/proz-frontend/static/js/main.d0900450.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77b82731.css",
+    "static/js/main.d0900450.js"
+  ]
+}
