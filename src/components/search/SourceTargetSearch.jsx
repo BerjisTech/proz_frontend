@@ -8,14 +8,14 @@ const SourceTargetSearch = () => {
         <form className="rounded-4 shadow bg-white p-3 min-w-[50%]" action="/dashboard/search">
             <div className="d-flex align-items-center justify-content-center">
                 <select className="form-select flex-fill form-select-sm border-none focuse:outline-none focus:border-none" aria-label=".form-select-sm example">
-                    <option selected>Source</option>
+                    <option defaultValue>Source</option>
                     <option value="1">English</option>
                     <option value="2">Mandarin</option>
                     <option value="3">Korean</option>
                 </select>
                 <img src="/images/icons/swap.png" alt="swap" className="mx-2 w-[20px]" />
                 <select className="form-select flex-fill form-select-sm border-none focuse:outline-none focus:border-none" aria-label=".form-select-sm example">
-                    <option selected>Target</option>
+                    <option defaultValue>Target</option>
                     <option value="1">Siswati</option>
                     <option value="2">Kiswahili</option>
                     <option value="3">Luganda</option>
