@@ -1,8 +1,11 @@
 import React from 'react'
+import SingleBusiness from '../../components/businesses/SingleBusiness'
 
 const business = () => {
   return (
-    <div>business</div>
+    <div>
+      <SingleBusiness />
+    </div>
   )
 }
 

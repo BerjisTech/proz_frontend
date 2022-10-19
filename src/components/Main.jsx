@@ -31,7 +31,7 @@ const Main = () => {
             <Route path="/dashboard/settings/*" element={<Settings />} />
             <Route path="/dashboard/billing/*" element={<Billing />} />
             <Route path="/dashboard/businesses/*" element={<Businesses />} />
-            <Route path="/dashboard/business/*" element={<Business />} />
+            <Route path="/dashboard/business/:business_id" element={<Business />} />
         </Routes>
     )
 }
