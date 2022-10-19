@@ -1,6 +1,6 @@
 import React from 'react'
 import { FiKey, FiMail } from 'react-icons/fi'
-import { LandingPageNav, ClearStrikeThrough, Spacer, Partner, MembershipModel, Integrations, AddressCards } from '../../components'
+import { LandingPageNav, ClearStrikeThrough, Spacer, Partner, MembershipModel, Integrations, AddressCards, SourceTargetSearch } from '../../components'
 import { Button } from 'react-bootstrap'
 import { BiBookAlt, BiBriefcase, BiLaptop, BiTargetLock, BiUserPin } from 'react-icons/bi'
 import { GiBullseye, GiChatBubble, GiGraduateCap, GiPapers, GiPresent } from 'react-icons/gi'
@@ -9,63 +9,39 @@ const LandingPage = () => {
   return (
     <div>
       <LandingPageNav />
-      <div className="bg-blue-50 pb-[100px]">
-        <div className="row m-0 p-0">
-          <div className="col-md-4"></div>
-          <div className="col-md-4">
-            <Spacer spacing='[4, 0, 0, 0]' />
-            <ClearStrikeThrough striked_text={`WE ARE SO MUCH MORE THAN A FREELANCE SITE`} font_size="12px" text_color="#3A727F" />
-            <div className="text-4xl font-[800] text-center mt-5">
-              Online Community and Workplace<br />
-              for <span className="text-[#A1DDCB]">Language Professionals</span>
-            </div>
-            <Spacer spacing='[5, 0, 0, 0]' />
-            <div className="d-flex align-items-center justify-content-center">
-              <a href="/jobs" >
-                <span className="fw-bolder d-flex align-items-center justify-content-center w-auto bg-[#386E7A] text-white px-3 py-2 mx-2 rounded">
-                  <BiTargetLock className="me-2" /> Find Work
-                </span>
-              </a>
-              <span className="inline-block mx-3"></span>
-              <a href="/transaltors" >
-                <span className="fw-bolder d-flex align-items-center justify-content-center w-auto bg-inherit text-[#386E7A] border-[#386E7A] border-2 px-3 py-2 mx-2 rounded">
-                  <BiUserPin className="me-2" /> Hire A Pro
-                </span>
-              </a>
-            </div>
+      <div className="bg-[#F4F6FA] pb-[100px]">
+        <div className="d-flex flex-column align-items-center justify-content-between h-[75vh]">
+          <Spacer spacing='[5, 0, 0, 0]' />
+          <div className="d-flex flex-column align-items-start justify-content-between">
+            <span className='text-[80px] text-[#2E6969]'>
+              Find Professional<br />
+              Translators
+              <span className="d-flex algin-items-end justify-content-end mt-[-80px] pr-[70px]">
+                <img src='/images/avatars/avatar.jpg' alt="translator" className="inline ml-[-20px] border-1 border-white rounded-circle w-[60px] h-[60px]" />
+                <img src='/images/avatars/avatar2.jpg' alt="translator" className="inline ml-[-20px] border-1 border-white rounded-circle w-[60px] h-[60px]" />
+                <img src='/images/avatars/avatar3.png' alt="translator" className="inline ml-[-20px] border-1 border-white rounded-circle w-[60px] h-[60px]" />
+              </span>
+            </span>
+            <Spacer spacing='[2, 0, 0, 0]' />
+            <span className="text-[#739CB4]">Over 1,288,599 professional translators and translation companies</span>
           </div>
-          <div className="col-md-4"></div>
-        </div>
-        <Spacer spacing='[4, 0, 0, 0]' />
-        <div className="row m-0 p-0">
-          <div className="col-md-2"></div>
-          <div className="col-md-8">
-            <img src='/images/proz_services_banner.png' alt="ProZ Services Box" />
-          </div>
-          <div className="col-md-2"></div>
+          <SourceTargetSearch />
+          <Spacer spacing='[5, 0, 0, 0]' />
         </div>
       </div>
-      <div className="mt-[-50px]">
-        <div className="row">
-          <div className="col-md-3"></div>
-          <div className="col-md-6 p-0 m-0">
-            <div className="d-flex shadow rounded bg-white p-3">
-              <div className="d-flex align-items-center justify-content-start w-[100%]">
-                <p className="m-0 me-1 fw-bolder">They trust us...</p>
-                <div className="row d-flex align-items-center justify-content-between flex-fill">
-                  <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/google.png" alt="slide 1" />
-                  <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/nikon.png" alt="slide 1" />
-                  <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/netflix.png" alt="slide 1" />
-                  <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/target.png" alt="slide 1" />
-                  <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/microsoft.png" alt="slide 1" />
-                </div>
-              </div >
-            </div>
+      <div className="d-flex bg-white p-3">
+        <div className="d-flex align-items-center justify-content-start w-[100%]">
+          {/* <p className="m-0 me-1 fw-bolder">They trust us...</p> */}
+          <div className="row d-flex align-items-center justify-content-between flex-fill">
+            <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/google.png" alt="slide 1" />
+            <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/nikon.png" alt="slide 1" />
+            <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/netflix.png" alt="slide 1" />
+            <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/target.png" alt="slide 1" />
+            <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/microsoft.png" alt="slide 1" />
           </div>
-          <div className="col-md-3"></div>
-        </div>
+        </div >
       </div>
-      <div className="my-[150px]">
+      <div className="py-[150px] bg-[#F4F6FA]">
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-7">

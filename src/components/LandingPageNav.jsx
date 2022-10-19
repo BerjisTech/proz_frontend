@@ -4,7 +4,7 @@ import { FiKey, FiSave, FiShoppingCart } from 'react-icons/fi'
 import { GiCutDiamond } from 'react-icons/gi'
 const LandingPageNav = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-blue-50 navbar-light sticky">
+        <nav className="navbar navbar-expand-lg bg-[#F4F6FA] navbar-light sticky">
             <div className="container-fluid d-flex flex-row align-items-center justify-between">
                 <a className="navbar-brand" href="/">
                     <img src="https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg" width="30" alt="logo" className='bg-white shadow rounded-full mx-2 fs-5' />

@@ -20,6 +20,9 @@ export { default as Integrations } from "./Integrations"
 export { default as AddressCards } from "./AddressCards"
 export { default as ReviewsCarousel } from "./ReviewsCarousel"
 
+// Search forms
+export { default as SourceTargetSearch } from "./search/SourceTargetSearch"
+
 
 // Businesses
 export { default as BusinessList } from "./businesses/BusinessList"
