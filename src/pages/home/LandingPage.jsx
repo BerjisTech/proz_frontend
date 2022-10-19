@@ -302,8 +302,8 @@ const LandingPage = () => {
                 <span className="fs-1 text-black fw-bolder">Plug-and-play integrations</span>
                 <div className="items-center justify-start d-flex flex-wrap">
                   <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4" icon_path="/images/logos/tm-town.jpg" app_name="TM Town" />
-                  <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4" icon_path="/images/logos/google.png" app_name="TM Town" />
-                  <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4" icon_path="/images/logos/tm-town.jpg" app_name="TM Town" />
+                  <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4" icon_path="/images/logos/cafetran.png" app_name="Cafetran" />
+                  <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4" icon_path="/images/logos/protemos.jpg" app_name="Protemos" />
                   <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4" icon_path="/images/logos/tm-town.jpg" app_name="TM Town" />
                   <Integrations main_style="inline-table w-[150px] h-[150px] p-3" card_style="d-flex h-[150px] shadow p-3 rounded-4 bg-[#A1DDCB] border-[#3A727F] border-1 text-[#3A727F]" icon_path="/images/icons/plus_square.png" app_name="See More" />
                 </div>

@@ -12,4 +12,6 @@ export { default as Messages } from './messages/Messages'
 export { default as Search } from './search/Search'
 export { default as Settings } from './settings/Settings'
 export { default as Billing } from './settings/Billing'
+export { default as Businesses } from './business/businesses'
+export { default as Business } from './business/business'
 

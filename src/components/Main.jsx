@@ -11,7 +11,9 @@ import {
     Messages,
     Search,
     Settings,
-    Billing
+    Billing,
+    Businesses,
+    Business
 } from "../pages";
 
 const Main = () => {
@@ -28,6 +30,8 @@ const Main = () => {
             <Route path="/dashboard/search/*" element={<Search />} />
             <Route path="/dashboard/settings/*" element={<Settings />} />
             <Route path="/dashboard/billing/*" element={<Billing />} />
+            <Route path="/dashboard/businesses/*" element={<Businesses />} />
+            <Route path="/dashboard/business/*" element={<Business />} />
         </Routes>
     )
 }

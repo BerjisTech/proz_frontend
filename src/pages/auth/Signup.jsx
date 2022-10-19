@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReviewsCarousel } from "./ReviewsCarousel";
+import { ReviewsCarousel, SignupForm } from "../../components";
 
 const Signup = () => {
     return (
@@ -9,12 +9,16 @@ const Signup = () => {
                     <img src="/images/logos/logo.png" alt="logo" className='w-30' />
                     <span className="text-white text-[50px]">Start Translating With Us</span>
                     <span className="text-white text-[25px]">Connect with world class traslators from across the globe and get context oriented translations from native speakers</span>
-                    <div className='rounded-5 shadow-lg w-full p-3'>
+                    <div className='w-full p-0 m-0'>
                         <ReviewsCarousel />
                     </div>
                 </div>
             </div>
-            <div className='col-md-8'></div>
+            <div className='col-md-9 py-5'>
+                <div className="py-4 px-[30px]">
+                    <SignupForm />
+                </div>
+            </div>
         </div >
     )
 }
