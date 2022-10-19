@@ -27,7 +27,7 @@ const JobSearchResults = () => {
     console.log(jobs)
 
     return (
-        <div>
+        <div className="p-5">
             <JobSearch />
             <div className="d-flex align-items-center justify-content-between">
                 <span className="fw-bold fs-3 my-4">2 jobs found | sorted by recent</span>
