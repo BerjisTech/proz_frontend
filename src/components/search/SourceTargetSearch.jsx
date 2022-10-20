@@ -1,7 +1,4 @@
 import React from 'react'
-import { BiChevronDown } from 'react-icons/bi'
-import { FiSearch } from 'react-icons/fi'
-import { GoArrowDown } from 'react-icons/go'
 
 const SourceTargetSearch = () => {
     return (

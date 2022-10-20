@@ -1,6 +1,5 @@
-import axios from 'axios';
+import axios from 'axios'
 import React from 'react'
-import { Buffer } from 'buffer'
 
 const BusinessList = () => {
   const [businesses, setBusinesses] = React.useState([]);

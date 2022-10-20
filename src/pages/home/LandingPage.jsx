@@ -1,8 +1,8 @@
 import React from 'react'
 import { FiKey, FiMail } from 'react-icons/fi'
-import { LandingPageNav, ClearStrikeThrough, Spacer, Partner, MembershipModel, Integrations, AddressCards, SourceTargetSearch } from '../../components'
+import { LandingPageNav, Spacer, Partner, MembershipModel, Integrations, AddressCards, SourceTargetSearch } from '../../components'
 import { Button } from 'react-bootstrap'
-import { BiBookAlt, BiBriefcase, BiLaptop, BiTargetLock, BiUserPin } from 'react-icons/bi'
+import { BiBookAlt, BiBriefcase, BiLaptop } from 'react-icons/bi'
 import { GiBullseye, GiChatBubble, GiGraduateCap, GiPapers, GiPresent } from 'react-icons/gi'
 
 const LandingPage = () => {
