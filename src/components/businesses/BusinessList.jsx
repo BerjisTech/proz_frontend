@@ -4,11 +4,10 @@ import React from 'react'
 const BusinessList = () => {
   const [businesses, setBusinesses] = React.useState([]);
 
-
   React.useEffect(() => {
     axios.get('https://api.proz.com/v2/businesses?ids[]=', {
       headers: {
-        'Authorization': `Bearer e5d0cf93ab4ba99261aa9a02adeb30c3abfad5cf`
+        'Authorization': `Bearer f40bee2df5d8eeabd82449578150203dafc7e304`
       }
     })
       .then(res => {
