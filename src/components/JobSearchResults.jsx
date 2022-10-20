@@ -7,16 +7,15 @@ import JobSearch from './JobSearch'
 const JobSearchResults = () => {
     const [jobs, setJobs] = React.useState([])
     const fetchJobs = async () => {
-        return fetch('https://www.proz.com/language-jobs', {
+        return fetch('https://api.proz.com/v2/job-postings', {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
+                'Authorization': `Bearer f40bee2df5d8eeabd82449578150203dafc7e304`
             },
         }).then(
             (response) => response.json()
         ).then((data) => {
-            setJobs(data)
+            setJobs(data['data'])
         })
     }
 
@@ -30,7 +29,7 @@ const JobSearchResults = () => {
         <div className="p-5">
             <JobSearch />
             <div className="d-flex align-items-center justify-content-between">
-                <span className="fw-bold fs-3 my-4">2 jobs found | sorted by recent</span>
+                <span className="fw-bold fs-3 my-4">{jobs.length} jobs found | sorted by recent</span>
                 <BiDotsVertical className="fs-2" />
             </div>
             <div className="d-flex align-items-center justify-content-between">
@@ -54,14 +53,14 @@ const JobSearchResults = () => {
                 <span className="fw-bold text-2xl"> Applications</span>
                 {jobs.length === 0 ? (
                     <div className="text-sm pt-3">No jobs found</div>
-                ) : (jobs && jobs.length > 0 && jobs.map((job, index) => {
+                ) : (jobs.map((job, index) => {
                     return (
                         <div id={index} className="d-flex align-items-center justify-content-start hover:shadow-xl p-3 rounded-5">
-                            <img src="https://m.media-amazon.com/images/M/MV5BMWFmYmRiYzMtMTQ4YS00NjA5LTliYTgtMmM3OTc4OGY3MTFkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg" className="rounded-circle" width="50" height="50" alt="avatar" />
+                            {/* <img src="https://m.media-amazon.com/images/M/MV5BMWFmYmRiYzMtMTQ4YS00NjA5LTliYTgtMmM3OTc4OGY3MTFkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg" className="rounded-circle" width="50" height="50" alt="avatar" /> */}
                             <div className='d-flex flex-column flex-fill ms-3'>
-                                <span className="fw-bold">Eng-Chinese (Mandarin/Cantonese/Taiwanese)</span>
+                                <span className="fw-bold">{job.summary}</span>
                                 <span className="text-sm text-gray-600">Translation</span>
-                                <span>Germany Translator</span>
+                                <span>{job.description}</span>
                             </div>
                             <div className='d-flex flex-column ms-3'>
                                 <span className="text-blue-600 text-sm font-medium">Learn more »</span>
