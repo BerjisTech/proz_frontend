@@ -20,11 +20,11 @@ const LandingPagesLayout = () => {
 
 const DashboardLayout = () => {
     return (<BrowserRouter>
-        <div className="row p-0 m-0">
-            <div className="col-md-2 p-0 m-0">
+        <div className="d-flex align-items-start justify-content-start p-0 m-0">
+            <div className="p-0 m-0">
                 <Navbar />
             </div>
-            <div className="col-md-10 p-0 m-0">
+            <div className="flex-fill p-0 m-0">
                 <div className="flex-fill d-flex flex-column h-screen">
                     <Header />
                     <section className="flex-fill m-0 p-0 overflow-auto">

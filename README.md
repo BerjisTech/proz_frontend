@@ -1,3 +1,50 @@
+# PROZ FRONTEND
+This repo hosts the new frontend app for ProZ.com. All data it spulled from ProZ main repo.
+
+### Local setup
+1. Clone this repo
+2. Run `yarn install`
+3. Run `yarn start`
+4. Open `http://localhost:3000` in your browser
+5. Create a new branch
+``` bash
+git checkout -b feature/your-feature-name
+```
+6. Push your changes
+7. Create a PR
+8. Wait for review
+9. Merge
+
+### Naming conventions
+1. Branches should be named as follows:
+  - For features: `feature/your-feature-name`
+  - For bugs fixes: `bugfix/your-bugfix-name`
+  - For hotfixes: `hotfix/your-hotfix-name`
+  - For releases: `release/your-release-name`
+  - For documentation: `docs/your-doc-name`
+  - For chores: `chore/your-chore-name`
+  - For refactors: `refactor/your-refactor-name`
+  - For tests: `test/your-test-name`
+  - For style changes: `style/your-style-name`
+  - For security fixes: `security/your-security-name`
+  - For performance improvements: `perf/your-perf-name`
+  - For build changes: `build/your-build-name`
+
+2. Commits should be named as follows:
+``` bash
+[feature/your-feature-name] Your commit message
+```
+3. PRs should be named as follows:
+``` bash
+[feature/your-feature-name] Your PR title
+```
+
+### Deployment
+1. Run `yarn build`
+2. Copy the contents of the `build` folder to the `public` folder in the main repo
+3. Commit and push the changes to the main repo
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
