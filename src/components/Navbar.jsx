@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart, FiBookmark } from 'react-icons/fi'
+import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import Spacer from './Spacer'
 

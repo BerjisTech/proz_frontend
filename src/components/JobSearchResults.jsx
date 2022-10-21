@@ -23,8 +23,6 @@ const JobSearchResults = () => {
         fetchJobs()
     }, [])
 
-    console.log(jobs)
-
     return (
         <div className="p-5">
             <JobSearch />
