@@ -20,7 +20,7 @@ const Navbar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                 </header>
-                <div className="collapse navbar-collapse d-flex flex-column align-items-center justify-content-start" id="sideBarNav">
+                <div className="collapse navbar-collapse d-flex flex-column align-items-center justify-content-between" id="sideBarNav">
                     <ul className="navbar-nav d-flex flex-column w-full align-items-start justify-content-start">
                         <li className="nav-item w-full py-2">
                             <Link to="/dashboard" role="tooltip" data-bs-tooltip="Home" className="nav-link d-flex align-items-center overflow-hidden text-white">
@@ -52,6 +52,8 @@ const Navbar = () => {
                                 <FiMessageCircle className="app__sidebar-icon" />
                             </Link>
                         </li>
+                    </ul>
+                    <ul className="navbar-nav d-flex flex-column w-full align-items-start justify-content-start">
                         <li className="nav-item w-full py-2">
                             <Link to="/dashboard/settings" className="nav-link d-flex align-items-center overflow-hidden text-white">
                                 <FiSettings className="app__sidebar-icon" />
