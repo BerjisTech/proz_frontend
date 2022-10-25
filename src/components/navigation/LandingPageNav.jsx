@@ -84,6 +84,14 @@ const LandingPageNav = () => {
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
+                                            <img src="/images/flags/ke.svg" alt="flag" className="me-2 h-[10px]" />
+                                            <span className="text-[12px]">Kiswahili (Sanifu)</span>
+                                        </a></li>
+                                        <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
+                                            <img src="/images/flags/tz.svg" alt="flag" className="me-2 h-[10px]" />
+                                            <span className="text-[12px]">Kiswahili (Mufti)</span>
+                                        </a></li>
+                                        <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
                                             <img src="/images/flags/gb.svg" alt="flag" className="me-2 h-[10px]" />
                                             <span className="text-[12px]">English (Standard)</span>
                                         </a></li>
