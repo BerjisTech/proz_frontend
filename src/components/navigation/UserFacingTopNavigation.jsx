@@ -10,7 +10,7 @@ const UserFacingTopNavigation = () => {
             <div className="d-flex align-items-center justify-content-center w-full py-2 shadow">
                 <img src='/images/logos/logo.png' alt="logo" className="w-20 ms-3" />
                 <HeaderSearch placeholder="What are you looking for?" />
-                <ul className="navbar-nav mb-2 mb-lg-0 flex-fill justify-content-end me-3">
+                <ul className="navbar-nav mb-2 mb-lg-0 flex-fill justify-content-center me-3">
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <BiGlasses />
