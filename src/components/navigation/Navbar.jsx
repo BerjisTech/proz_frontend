@@ -14,7 +14,7 @@ import Spacer from '../extra_ui_tools/Spacer'
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg min-vh-100 bg-primary m-0 p-0 d-flex">
-            <div className="m-0 p-0 h-screen d-flex flex-column flex-nowrap sticky overflow-auto">
+            <div className="m-0 p-0 h-screen d-flex flex-column w-[50px] flex-nowrap sticky overflow-auto">
                 <header className="w-full px-3 pt-3 border-bottom sticky bg-primary shadow">
                     <a className="navbar-brand m-0 p-0" href="/">
                         <div className="d-flex align-items-center justify-content-center">
@@ -31,39 +31,39 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse d-flex flex-column align-items-center justify-content-between" id="sideBarNav">
                     <ul className="navbar-nav d-flex flex-column w-full align-items-center justify-content-center primaryDashboardNavigation">
                         <li className="nav-item w-full text-center py-2">
-                            <Link to="/dashboard" role="tooltip" data-bs-tooltip="Home" className="nav-link d-flex align-items-center overflow-hidden text-white">
+                            <Link to="/dashboard" role="tooltip" data-bs-tooltip="Home" className="nav-link d-flex align-items-center justify-content-center  w-full overflow-hidden text-white">
                                 <FiHome className="app__sidebar-icon" />
                             </Link>
                         </li>
                         <li className="nav-item w-full text-center py-2">
-                            <Link to="/dashboard/findwork" className="nav-link d-flex align-items-center overflow-hidden text-white">
+                            <Link to="/dashboard/findwork" className="nav-link d-flex align-items-center justify-content-center  w-full overflow-hidden text-white">
                                 <FiPieChart className="app__sidebar-icon" />
                             </Link>
                         </li>
                         <li className="nav-item w-full text-center py-2">
-                            <Link to="/dashboard/applications" className="nav-link d-flex align-items-center overflow-hidden text-white">
+                            <Link to="/dashboard/applications" className="nav-link d-flex align-items-center justify-content-center  w-full overflow-hidden text-white">
                                 <FiShoppingCart className="app__sidebar-icon" />
                             </Link>
                         </li>
                         <li className="nav-item w-full text-center py-2">
-                            <Link to="/dashboard/courses" className="nav-link d-flex align-items-center overflow-hidden text-white">
+                            <Link to="/dashboard/courses" className="nav-link d-flex align-items-center justify-content-center  w-full overflow-hidden text-white">
                                 <FiBookOpen className="app__sidebar-icon" />
                             </Link>
                         </li>
                         <li className="nav-item w-full text-center py-2">
-                            <Link to="/dashboard/kudoz" className="nav-link d-flex align-items-center overflow-hidden text-white">
+                            <Link to="/dashboard/kudoz" className="nav-link d-flex align-items-center justify-content-center  w-full overflow-hidden text-white">
                                 <FiThumbsUp className="app__sidebar-icon" />
                             </Link>
                         </li>
                         <li className="nav-item w-full text-center py-2">
-                            <Link to="/dashboard/messages" className="nav-link d-flex align-items-center overflow-hidden text-white">
+                            <Link to="/dashboard/messages" className="nav-link d-flex align-items-center justify-content-center  w-full overflow-hidden text-white">
                                 <FiMessageCircle className="app__sidebar-icon" />
                             </Link>
                         </li>
                     </ul>
                     <ul className="navbar-nav d-flex flex-column w-full align-items-start justify-content-start">
                         <li className="nav-item w-full text-center py-2">
-                            <Link to="/dashboard/settings" className="nav-link d-flex align-items-center overflow-hidden text-white">
+                            <Link to="/dashboard/settings" className="nav-link w-full d-flex align-items-center justify-content-center overflow-hidden text-white">
                                 <FiSettings className="app__sidebar-icon" />
                             </Link>
                         </li>
