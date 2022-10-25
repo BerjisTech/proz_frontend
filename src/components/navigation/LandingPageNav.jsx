@@ -1,6 +1,6 @@
 import React from 'react'
-import { BiGlasses, BiLogIn, BiRocket } from 'react-icons/bi'
-import { FiBookOpen, FiKey } from 'react-icons/fi'
+import { BiGlasses, BiRocket } from 'react-icons/bi'
+import { FiBookOpen } from 'react-icons/fi'
 import { GiCutDiamond, GiHelp } from 'react-icons/gi'
 import { SignupSigninLinks } from '..'
 const LandingPageNav = () => {

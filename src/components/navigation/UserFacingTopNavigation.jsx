@@ -1,7 +1,6 @@
 import React from 'react'
 import { BiGlasses, BiRocket } from 'react-icons/bi'
 import { FiBookOpen } from 'react-icons/fi'
-import { GiCutDiamond, GiHelp } from 'react-icons/gi'
 import { SignupSigninLinks } from '..'
 import HeaderSearch from '../general_ui_components/HeaderSearch'
 
