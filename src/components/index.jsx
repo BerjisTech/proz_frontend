@@ -18,6 +18,9 @@ export { default as ActivePolls } from "./extra_ui_tools/ActivePolls"
 export { default as LandingPageNav } from "./navigation/LandingPageNav"
 export { default as Navbar } from "./navigation/Navbar"
 export { default as RightSideBar } from "./navigation/RightSideBar"
+export { default as SecondaryNavigation } from "./navigation/SecondaryNavigation"
+export { default as UserFacingTopNavigation } from "./navigation/UserFacingTopNavigation"
+
 
 export { default as Partner } from "./Partner"
 export { default as Flags } from "./Flags"

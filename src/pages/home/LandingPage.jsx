@@ -8,7 +8,6 @@ import { GiBullseye, GiChatBubble, GiGraduateCap, GiPapers, GiPresent } from 're
 const LandingPage = () => {
   return (
     <div>
-      <LandingPageNav />
       <div className="bg-[#F4F6FA] pb-[100px]">
         <div className="d-flex flex-column align-items-center justify-content-between h-[75vh]">
           <Spacer spacing='[5, 0, 0, 0]' />

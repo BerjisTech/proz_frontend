@@ -6,12 +6,13 @@ import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 
 // Import components
-import { Footer, Header, Main, Navbar } from './components'
+import { Footer, Header, Main, Navbar, UserFacingTopNavigation, LandingPageNav } from './components'
 // Import pages
 import { Dashboard, LandingPage } from './pages'
 
 const LandingPagesLayout = () => {
     return (<BrowserRouter>
+        {window.location.pathname === '/' ? <LandingPageNav /> : <UserFacingTopNavigation />}
         <Main>
             <LandingPage />
         </Main>
@@ -40,7 +41,7 @@ const DashboardLayout = () => {
 }
 
 const App = () => {
-    let location = window.location.href.split('/')
+    let location = window.location.href
 
     if (location.includes('dashboard')) {
         return (
