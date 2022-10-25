@@ -24,6 +24,8 @@ const Main = () => {
             <Route path="/signup" element={<Signup />} />
             <Route path="/applications/*" element={<Applications />} />
             <Route path="/courses/*" element={<Courses />} />
+            <Route path="/find-work/*" element={<FindWork />} />
+            <Route path="/find_work/*" element={<FindWork />} />
             <Route path="/findwork/*" element={<FindWork />} />
             <Route path="/kudoz/*" element={<Kudoz />} />
             <Route path="/messages/*" element={<Messages />} />
