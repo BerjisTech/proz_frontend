@@ -14,13 +14,25 @@ import {
     Billing,
     Businesses,
     Business
-} from "../pages";
+} from "../../pages";
 
 const Main = () => {
     return (
         <Routes>
+            {/* User facing pages links */}
             <Route path="/" element={<LandingPage />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/applications/*" element={<Applications />} />
+            <Route path="/courses/*" element={<Courses />} />
+            <Route path="/findwork/*" element={<FindWork />} />
+            <Route path="/kudoz/*" element={<Kudoz />} />
+            <Route path="/messages/*" element={<Messages />} />
+            <Route path="/search/*" element={<Search />} />
+            <Route path="/settings/*" element={<Settings />} />
+            <Route path="/billing/*" element={<Billing />} />
+            <Route path="/businesses/*" element={<Businesses />} />
+            <Route path="/business/:business_id" element={<Business />} />
+            {/* Dashboard links */}
             <Route path="/dashboard/*" element={<Dashboard />} />
             <Route path="/dashboard/applications/*" element={<Applications />} />
             <Route path="/dashboard/courses/*" element={<Courses />} />

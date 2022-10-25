@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
-import Spacer from './Spacer'
+import Spacer from '../extra_ui_tools/Spacer'
 
 // let primary_nav_dom = document.querySelector('.primaryDashboardNavigation')
 // let secondary_nav_dom = document.querySelector('.secondaryDashboardNavigation')
