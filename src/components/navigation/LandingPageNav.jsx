@@ -1,6 +1,6 @@
 import React from 'react'
 import { BiGlasses, BiLogIn, BiRocket } from 'react-icons/bi'
-import { FiKey, FiSave } from 'react-icons/fi'
+import { FiBookOpen, FiKey } from 'react-icons/fi'
 import { GiCutDiamond, GiHelp } from 'react-icons/gi'
 const LandingPageNav = () => {
     return (
@@ -27,14 +27,6 @@ const LandingPageNav = () => {
                                 <li><a className="dropdown-item" href="/jobs/interprete">Interpretation Jobs</a></li>
                             </ul>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/training">
-                                <div className="d-flex align-items-center justify-content-center">
-                                    <FiSave />
-                                    <span className="ms-2">Training</span>
-                                </div>
-                            </a>
-                        </li>
 
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,10 +36,25 @@ const LandingPageNav = () => {
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a className="dropdown-item" href="/prozpay">ProZPay&trade;</a></li>
                                 <li><a className="dropdown-item" href="/directory">ProZ Directory</a></li>
+                                <li><a className="dropdown-item" href="/wiwo">#Wiwo</a></li>
                                 <li><hr className="dropdown-divider" /></li>
                                 <li><a className="dropdown-item" href="/collaborate">Collaborative Translation</a></li>
                             </ul>
                         </li>
+
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <FiBookOpen />
+                                <span className="ms-2">ProZ Educate&trade;</span>
+                            </a>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a className="dropdown-item" href="/prozpay">Courses</a></li>
+                                <li><a className="dropdown-item" href="/directory">Training</a></li>
+                                <li><hr className="dropdown-divider" /></li>
+                                <li><a className="dropdown-item" href="/collaborate">Collaborative Translation</a></li>
+                            </ul>
+                        </li>
+
                         <li className="nav-item">
                             <a className="nav-link active" aria-current="page" href="/about-us">
                                 <div className="d-flex align-items-center justify-content-center">
