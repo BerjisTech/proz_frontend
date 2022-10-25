@@ -1,8 +1,5 @@
 import React from 'react'
-import '.Events'
-import '.ActivePolls'
-import '.InternalAds'
-import Events from '../Events'
+import { Events, ActivePolls, InternalAds } from '../../components'
 
 const RightSideBar = () => {
     return (
