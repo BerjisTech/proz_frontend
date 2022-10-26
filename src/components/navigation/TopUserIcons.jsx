@@ -1,16 +1,13 @@
 import React from 'react'
 import 'react-icons/fi';
 import { FiBell, FiChevronDown } from 'react-icons/fi';
+import { LocalizationDropdown } from './LocalizationSelect';
 
 const TopUserIcons = () => {
     return (
         <div className="flex items-center justify-between">
             {/* User icon */}
-            <span className="p-3 flex items-center justify-center cursor-pointer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" alt='language flag' className='rounded-full h-7 w-7 object-cover object-center' />
-                <span className="mx-2">Eng (US)</span>
-                <FiChevronDown className="text-lg" />
-            </span>
+            <LocalizationDropdown />
             <span className="p-3">
                 <FiBell className="text-xl text-orange-400" />
             </span>

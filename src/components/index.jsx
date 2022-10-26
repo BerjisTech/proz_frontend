@@ -9,7 +9,6 @@ export { default as Main } from "./general_ui_components/Main"
 export { default as Footer } from "./general_ui_components/Footer"
 export { default as HeaderSearch } from "./general_ui_components/HeaderSearch"
 
-export { default as TopUserIcons } from "./extra_ui_tools/TopUserIcons"
 export { default as ClearStrikeThrough } from "./extra_ui_tools/ClearStrikeThrough"
 export { default as Spacer } from "./extra_ui_tools/Spacer"
 export { default as InternalAds } from "./extra_ui_tools/InternalAds"
@@ -21,6 +20,7 @@ export { default as RightSideBar } from "./navigation/RightSideBar"
 export { default as SecondaryNavigation } from "./navigation/SecondaryNavigation"
 export { default as UserFacingTopNavigation } from "./navigation/UserFacingTopNavigation"
 export { default as SignupSigninLinks } from "./navigation/SignupSigninLinks"
+export { default as TopUserIcons } from "./navigation/TopUserIcons"
 
 
 export { default as Partner } from "./Partner"
