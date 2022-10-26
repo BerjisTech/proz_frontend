@@ -20,7 +20,7 @@ const LocalizationSelect = () => {
     return (
         <div className="fixed rounded-[0px] w-screen h-screen top-0 border-none modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog d-flex align-items-start justify-content-start absolute top-0 m-0 rounded-[0px] border-none">
-                <div className="modal-content w-[200px] rounded-[0px] bg-white shadow h-screen border-none">
+                <div className="modal-content w-[auto] rounded-[0px] bg-white shadow h-screen border-none">
                     <ul className="rounded-[0px] modal-body border-none">
                         <li>
                             <LocalizationSelectButton locale="sw" locale_name="Kiswahili (Sanifu)" locale_flag="ke" />
