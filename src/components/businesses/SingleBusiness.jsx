@@ -1,8 +1,11 @@
 import React from 'react'
-import axios from 'axios';
+import { useParams } from "react-router-dom";
+import axios from 'axios'
 
-const SingleBusiness = ({business_id = 1}) => {
+const SingleBusiness = () => {
     const [business, setBusiness] = React.useState({});
+
+    let { business_id } = useParams()
 
     React.useEffect(() => {
         axios.get(`https://api.proz.com/v2/businesses/${business_id}`, {
@@ -20,11 +23,14 @@ const SingleBusiness = ({business_id = 1}) => {
 
     return (
         <div>
-            <h1>Single Business</h1>
-            <div>
-                <h3>{business.business_name}</h3>
-                <p>{business.business_link}</p>
-            </div>
+            {business.business_name ? (
+                <div>
+                    <h3>{business.business_name}</h3>
+                    <p>{business.business_link}</p>
+                </div>
+            ) : (
+                <p>No business found</p>
+            )}
         </div>
     )
 
