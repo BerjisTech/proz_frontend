@@ -6,9 +6,11 @@ import HeaderSearch from '../general_ui_components/HeaderSearch'
 
 const UserFacingTopNavigation = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-white navbar-light sticky w-full">
+        <nav className="navbar navbar-expand-lg bg-white navbar-light sticky w-screen">
             <div className="d-flex align-items-center justify-content-center w-full py-2 shadow">
-                <img src='/images/logos/logo.png' alt="logo" className="w-20 ms-3" />
+                <a href="/">
+                    <img src='/images/logos/logo.png' alt="logo" className="w-20 m-3" />
+                </a>
                 <HeaderSearch placeholder="What are you looking for?" />
                 <ul className="navbar-nav mb-2 mb-lg-0 flex-fill justify-content-center me-3">
                     <li className="nav-item dropdown">

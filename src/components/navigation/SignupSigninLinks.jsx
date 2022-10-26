@@ -3,6 +3,14 @@ import { BiLogIn } from 'react-icons/bi'
 import { FiKey } from 'react-icons/fi'
 
 const SignupSigninLinks = () => {
+    let selectOtherLanguage = document.getElementsByClassName('selectOtherLanguage')[0]
+    if (selectOtherLanguage) {
+        selectOtherLanguage.addEventListener('click', (e) => {
+            e.preventDefault()
+            let localizationSelect = document.getElementsByClassName('localizationSelect')[0]
+            localizationSelect.classList.toggle('d-none')
+        })
+    }
     return (
         <div>
             {
@@ -53,7 +61,7 @@ const SignupSigninLinks = () => {
                                         <span className="text-[12px]">Chinese (Simplified)</span>
                                     </a></li>
                                     <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item text-[14px]" href="/collaborate">Pick another alnguage</a></li>
+                                    <li><span className="dropdown-item text-[14px] selectOtherLanguage cursor-pointer">Pick another alnguage</span></li>
                                 </ul>
                             </li>
                         </ul>

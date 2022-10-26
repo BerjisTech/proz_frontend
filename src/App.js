@@ -7,20 +7,23 @@ import './App.css'
 
 // Import components
 import { Footer, Header, Main, Navbar, UserFacingTopNavigation, LandingPageNav } from './components'
+import LocalizationSelect from './components/navigation/LocalizationSelect'
 // Import pages
 import { Dashboard, LandingPage } from './pages'
 
 const LandingPagesLayout = () => {
-    return (<BrowserRouter>
-        {window.location.pathname === '/' ? <LandingPageNav /> : <UserFacingTopNavigation />}
-        <Main>
-            <LandingPage />
-        </Main>
-    </BrowserRouter >)
+    return (
+        <div>
+            {window.location.pathname === '/' ? <LandingPageNav /> : <UserFacingTopNavigation />}
+            <Main>
+                <LandingPage />
+            </Main>
+        </div>
+    )
 }
 
 const DashboardLayout = () => {
-    return (<BrowserRouter>
+    return (
         <div className="d-flex align-items-start justify-content-start p-0 m-0">
             <div className="p-0 m-0">
                 <Navbar />
@@ -37,22 +40,15 @@ const DashboardLayout = () => {
                 </div>
             </div>
         </div>
-    </BrowserRouter >)
+    )
 }
 
 const App = () => {
     let location = window.location.href
-
-    if (location.includes('dashboard')) {
-        return (
-            <DashboardLayout />
-        )
-    }
-
-    return (
-        <LandingPagesLayout />
-    )
-
+    return (<BrowserRouter>
+        <LocalizationSelect />
+        {location.includes('dashboard') ? <DashboardLayout /> : <LandingPagesLayout />}
+    </BrowserRouter>)
 }
 
 export default App
