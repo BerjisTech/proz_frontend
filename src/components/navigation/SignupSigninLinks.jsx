@@ -1,16 +1,10 @@
 import React from 'react'
 import { BiLogIn } from 'react-icons/bi'
 import { FiKey } from 'react-icons/fi'
+import { LocalizationSelectButton } from './LocalizationSelect'
 
 const SignupSigninLinks = () => {
-    let selectOtherLanguage = document.getElementsByClassName('selectOtherLanguage')[0]
-    if (selectOtherLanguage) {
-        selectOtherLanguage.addEventListener('click', (e) => {
-            e.preventDefault()
-            let localizationSelect = document.getElementsByClassName('localizationSelect')[0]
-            localizationSelect.classList.toggle('d-none')
-        })
-    }
+
     return (
         <div>
             {
@@ -32,36 +26,23 @@ const SignupSigninLinks = () => {
                                     <span className="ms-2">En</span>
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                                        <img src="/images/flags/ke.svg" alt="flag" className="me-2 h-[10px]" />
-                                        <span className="text-[12px]">Kiswahili (Sanifu)</span>
-                                    </a></li>
-                                    <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                                        <img src="/images/flags/tz.svg" alt="flag" className="me-2 h-[10px]" />
-                                        <span className="text-[12px]">Kiswahili (Mufti)</span>
-                                    </a></li>
-                                    <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                                        <img src="/images/flags/gb.svg" alt="flag" className="me-2 h-[10px]" />
-                                        <span className="text-[12px]">English (Standard)</span>
-                                    </a></li>
-                                    <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                                        <img src="/images/flags/us.svg" alt="flag" className="me-2 h-[10px]" />
-                                        <span className="text-[12px]">English (Simplified)</span>
-                                    </a></li>
-                                    <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                                        <img src="/images/flags/ru.svg" alt="flag" className="me-2 h-[10px]" />
-                                        <span className="text-[12px]">Русский</span>
-                                    </a></li>
-                                    <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                                        <img src="/images/flags/cn.svg" alt="flag" className="me-2 h-[10px]" />
-                                        <span className="text-[12px]">Chinese (Standard)</span>
-                                    </a></li>
-                                    <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                                        <img src="/images/flags/tw.svg" alt="flag" className="me-2 h-[10px]" />
-                                        <span className="text-[12px]">Chinese (Simplified)</span>
-                                    </a></li>
+                                    <li>
+                                        <LocalizationSelectButton locale="sw" locale_name="Kiswahili (Sanifu)" locale_flag="ke" />
+                                    </li>
+                                    <li>
+                                        <LocalizationSelectButton locale="sw" locale_name="Kiswahili (Mufti)" locale_flag="tz" />
+                                    </li>
+                                    <li>
+                                        <LocalizationSelectButton locale="en-gb" locale_name="English (UK)" locale_flag="gb" />
+                                    </li>
+                                    <li>
+                                        <LocalizationSelectButton locale="en-us" locale_name="Kiswahili (US)" locale_flag="us" />
+                                    </li>
+                                    <li>
+                                        <LocalizationSelectButton locale="sw" locale_name="Kiswahili (Sanifu)" locale_flag="ke" />
+                                    </li>
                                     <li><hr className="dropdown-divider" /></li>
-                                    <li><span className="dropdown-item text-[14px] selectOtherLanguage cursor-pointer">Pick another alnguage</span></li>
+                                    <li><span className="dropdown-item text-[14px] selectOtherLanguage cursor-pointer" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Pick another alnguage</span></li>
                                 </ul>
                             </li>
                         </ul>
