@@ -1,5 +1,6 @@
 import React from 'react'
-import { HeaderSearch, TopUserIcons } from '../../components'
+import { HeaderSearch } from '../../components'
+import TopUserIcons from '../navigation/TopUserIcons'
 
 const Header = () => {
     return (
