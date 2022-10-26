@@ -1,4 +1,3 @@
-import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
 export default function NavBarSerction({listItems, sectionTitle, id, showMore}) {
@@ -20,13 +19,13 @@ export default function NavBarSerction({listItems, sectionTitle, id, showMore}) 
                         {
                             showMore && (
                                 <li className="nav-item w-full py-2">
-                                    <a className="nav-link d-flex align-items-center justify-content-start  w-full overflow-hidden text-white">
+                                    <a href="#showmore" className="nav-link d-flex align-items-center justify-content-start  w-full overflow-hidden text-white">
                                         <p>Show more</p>
                                     </a>
                                 </li>
                             )
                         }
-                        
+
                     </ul>
                 </div>
     )
