@@ -17,6 +17,7 @@ import axios from 'axios'
 //     lwa_num_entries_five_year: 3
 //     self_link: "https://api.proz.com/v2/businesses/100"
 // }
+
 const SingleBusiness = () => {
     const [business, setBusiness] = React.useState({});
 
