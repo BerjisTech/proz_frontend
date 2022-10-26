@@ -1,53 +1,62 @@
 import React from 'react'
+import { setLocale } from '../Helpers'
+
+export function LocalizationSelectButton({ locale, locale_name, locale_flag }) {
+    return (
+        <span className='setNewLocale' data-bs-dismiss="modal">
+            <a className="dropdown-item d-flex align-items-center justify-content-start" href="/" onClick={(e) => {
+                e.preventDefault()
+                setLocale(locale)
+            }}>
+                <img src={`/images/flags/${locale_flag}.svg`} alt="flag" className="me-2 h-[10px]" />
+                <span className="text-[12px]">{locale_name}</span>
+            </a>
+        </span>
+    )
+}
 
 const LocalizationSelect = () => {
-    let hideLocalizationSelect = document.getElementsByClassName('hideLocalizationSelect')[0]
-
-    if (hideLocalizationSelect) {
-        hideLocalizationSelect.addEventListener('click', (e) => {
-            let localizationSelect = document.getElementsByClassName('localizationSelect')[0]
-            localizationSelect.classList.toggle('d-none')
-        })
-    }
 
     return (
-        <div className="fixed w-screen h-screen bg-transparent top-0 z-[500] localizationSelect d-none">
-            <div className="d-flex align-items-start justify-content-start">
-                <div className="w-[200px] bg-white shadow h-screen">
-                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                            <img src="/images/flags/ke.svg" alt="flag" className="me-2 h-[10px]" />
-                            <span className="text-[12px]">Kiswahili (Sanifu)</span>
-                        </a></li>
-                        <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                            <img src="/images/flags/tz.svg" alt="flag" className="me-2 h-[10px]" />
-                            <span className="text-[12px]">Kiswahili (Mufti)</span>
-                        </a></li>
-                        <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                            <img src="/images/flags/gb.svg" alt="flag" className="me-2 h-[10px]" />
-                            <span className="text-[12px]">English (Standard)</span>
-                        </a></li>
-                        <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                            <img src="/images/flags/us.svg" alt="flag" className="me-2 h-[10px]" />
-                            <span className="text-[12px]">English (Simplified)</span>
-                        </a></li>
-                        <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                            <img src="/images/flags/ru.svg" alt="flag" className="me-2 h-[10px]" />
-                            <span className="text-[12px]">Русский</span>
-                        </a></li>
-                        <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                            <img src="/images/flags/cn.svg" alt="flag" className="me-2 h-[10px]" />
-                            <span className="text-[12px]">Chinese (Standard)</span>
-                        </a></li>
-                        <li><a className="dropdown-item d-flex align-items-center justify-content-start" href="/prozpay">
-                            <img src="/images/flags/tw.svg" alt="flag" className="me-2 h-[10px]" />
-                            <span className="text-[12px]">Chinese (Simplified)</span>
-                        </a></li>
-                        <li><hr className="dropdown-divider" /></li>
-                        <li><span className="dropdown-item text-[14px] selectOtherLanguage cursor-pointer">Pick another alnguage</span></li>
+        <div className="fixed rounded-[0px] w-screen h-screen top-0 border-none modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal-dialog d-flex align-items-start justify-content-start absolute top-0 m-0 rounded-[0px] border-none">
+                <div className="modal-content w-[200px] rounded-[0px] bg-white shadow h-screen border-none">
+                    <ul className="rounded-[0px] modal-body border-none">
+                        <li>
+                            <LocalizationSelectButton locale="sw" locale_name="Kiswahili (Sanifu)" locale_flag="ke" />
+                        </li>
+                        <li>
+                            <LocalizationSelectButton locale="sw" locale_name="Kiswahili (Mufti)" locale_flag="tz" />
+                        </li>
+                        <li>
+                            <LocalizationSelectButton locale="pt" locale_name="Portugese" locale_flag="pt" />
+                        </li>
+                        <li>
+                            <LocalizationSelectButton locale="fr" locale_name="French" locale_flag="fr" />
+                        </li>
+                        <li>
+                            <LocalizationSelectButton locale="ru" locale_name="Russian" locale_flag="ru" />
+                        </li>
+                        <li>
+                            <LocalizationSelectButton locale="ua" locale_name="Ukranian" locale_flag="ua" />
+                        </li>
+                        <li>
+                            <LocalizationSelectButton locale="cn" locale_name="Mandarin" locale_flag="cn" />
+                        </li>
+                        <li>
+                            <LocalizationSelectButton locale="cn" locale_name="Cantonese" locale_flag="cn" />
+                        </li>
+                        <li>
+                            <LocalizationSelectButton locale="tw" locale_name="Taiwanese" locale_flag="tw" />
+                        </li>
+                        <li>
+                            <LocalizationSelectButton locale="jp" locale_name="Japanese" locale_flag="jp" />
+                        </li>
+                        <li>
+                            <LocalizationSelectButton locale="kr" locale_name="Korean" locale_flag="kr" />
+                        </li>
                     </ul>
                 </div>
-                <div className="flex-fill h-screen hideLocalizationSelect"></div>
             </div>
         </div>
     )
