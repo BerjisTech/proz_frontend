@@ -11,13 +11,29 @@ import LocalizationSelect from './components/navigation/LocalizationSelect'
 // Import pages
 import { Dashboard, LandingPage } from './pages'
 
+const UserFacingPages = () => {
+    let sideBar = localStorage.getItem('sidebarLeft') ? localStorage.getItem('sidebarLeft') : null
+
+    return (
+        <div className='row'>
+            <div className='col-sm-2'>
+                {sideBar}
+            </div>
+            <div className='col-sm-8'>
+                <Main>
+                    <LandingPage />
+                </Main>
+            </div>
+            <div className='col-sm-2'></div>
+        </div>
+    )
+}
+
 const LandingPagesLayout = () => {
     return (
         <div>
             {window.location.pathname === '/' ? <LandingPageNav /> : <UserFacingTopNavigation />}
-            <Main>
-                <LandingPage />
-            </Main>
+            {window.location.pathname === '/' ? <Main><LandingPage /></Main> : <UserFacingPages />}
         </div>
     )
 }
