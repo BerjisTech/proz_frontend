@@ -43,6 +43,14 @@ module.exports = {
                     "url('https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg')",
             },
         },
+        screens: {
+            xs: '320px',
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+            '2xl': '1536px',
+        }
     },
     plugins: [],
 };

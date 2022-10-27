@@ -5,17 +5,9 @@ import Spacer from '../extra_ui_tools/Spacer'
 import "./Navbar.css"
 import NavBarSerction from './NavBarSection'
 
-// let primary_nav_dom = document.querySelector('.primaryDashboardNavigation')
-// let secondary_nav_dom = document.querySelector('.secondaryDashboardNavigation')
-// // secondary_nav_dom.classList.toggle('hidden')
-// primary_nav_dom.addEventListener('click', (e) => {
-//     e.preventDefault()
-//     secondary_nav_dom.classList.toggle('hidden')
-// })
-
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg min-vh-100 m-0 p-0 d-flex overflow-x-hidden">
+        <nav className="min-vh-100 m-0 p-0 d-flex overflow-x-hidden">
             <div className="m-0 p-0 h-screen d-flex flex-column w-[50px] flex-nowrap sticky  overflow-y-auto overflow-x-hidden" id="navBarWrapper">
                 <header className="w-full px-3 pt-3 border-bottom sticky bg-primary shadow">
                     <a className="navbar-brand m-0 p-0" href="/">
