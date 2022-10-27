@@ -13,7 +13,8 @@ import {
     Settings,
     Billing,
     Businesses,
-    Business
+    Business,
+    BlueboardList
 } from "../../pages";
 
 const Main = () => {
@@ -34,6 +35,7 @@ const Main = () => {
             <Route path="/billing/*" element={<Billing />} />
             <Route path="/businesses/*" element={<Businesses />} />
             <Route path="/business/:business_id" element={<Business />} />
+            <Route path="/blueboards" element={<BlueboardList />} />
             {/* Dashboard links */}
             <Route path="/dashboard/*" element={<Dashboard />} />
             <Route path="/dashboard/applications/*" element={<Applications />} />
