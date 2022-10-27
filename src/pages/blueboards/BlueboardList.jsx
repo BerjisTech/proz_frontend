@@ -1,21 +1,22 @@
 import React from 'react'
 import Blueboards from '../../components/blueboard/Blueboards';
 
-const BlueboardList = () => {
-
+export function BlueboardSidebarLeft() {
     return (
-        <div className='row'>
-            <div className='col-2'>
-                <div className='sticky top-20'>
-                    Biringanya
-                </div>
-            </div>
-            <div className='col-8'>
-                <Blueboards />
-            </div>
-            <div className='col-2'></div>
+        <div className="d-flex flex-column align-items-start justify-content-start">
+            <Blueboards />
         </div>
     )
 }
 
+const BlueboardList = () => {
+
+    return (
+        <div>
+            <Blueboards />
+        </div>
+    )
+}
+
+localStorage.setItem('sidebarLeft', BlueboardSidebarLeft());
 export default BlueboardList
