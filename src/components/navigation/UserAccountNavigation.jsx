@@ -9,7 +9,7 @@ export function UserAccountProfileImage() {
 export function UserAccountNavigationDropdown() {
     return (
         <div className="dropdown">
-            <a className="dropdown-toggle text-green-800 bg-white border-1 rounded-full m-2 px-2 py-1 d-flex align-items-center justify-content-center" id="userAccountDropdown" href="/dashboard/*" data-bs-toggle="dropdown" aria-expanded="false">
+            <a className="dropdown-toggle text-green-800 bg-inherit border-1 rounded-full m-2 px-2 py-1 d-flex align-items-center justify-content-center" id="userAccountDropdown" href="/dashboard/*" data-bs-toggle="dropdown" aria-expanded="false">
                 {window.location.href.includes('/dashboard') ? <UserAccountProfileImage /> : <BiUser />}
             </a>
             <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="userAccountDropdown">
