@@ -17,26 +17,29 @@ const Blueboards = () => {
     }, [])
 
     return (
-        <table className='table table-responsive'>
-            <tbody>
-                {
-                    blueboards['data'] && blueboards['data'].length > 0 ? (
-                        blueboards['data'].map(blueboard => {
-                            return (
-                                <tr className='bg-white hover:shadow hover:h-[50px] align-items-center vertical-middle' key={blueboard.id}>
-                                    <td className='text-[16px] fw-bold'>{blueboard.name}</td>
-                                    <td>{blueboard.web_url}</td>
-                                    <td>{blueboard.country}</td>
-                                    <td><a href={`/business/${blueboard.business_id}`} className='nav-link'>View Business</a></td>
-                                </tr>
-                            )
-                        })
-                    ) : (
-                        <p className='w-full text-center'>No blueboards found</p>
-                    )
-                }
-            </tbody>
-        </table>
+        <div>
+            {
+                blueboards['data'] && blueboards['data'].length > 0 ? (
+
+                    <table className='table table-responsive'>
+                        <tbody>
+                            {blueboards['data'].map(blueboard => {
+                                return (
+                                    <tr className='bg-white hover:shadow hover:h-[50px] align-items-center vertical-middle' key={blueboard.id}>
+                                        <td className='text-[16px] fw-bold'>{blueboard.name}</td>
+                                        <td>{blueboard.web_url}</td>
+                                        <td>{blueboard.country}</td>
+                                        <td><a href={`/business/${blueboard.business_id}`} className='nav-link'>View Business</a></td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                ) : (
+                    <p className='w-full text-center'>No blueboards found</p>
+                )
+            }
+        </div>
     )
 }
 

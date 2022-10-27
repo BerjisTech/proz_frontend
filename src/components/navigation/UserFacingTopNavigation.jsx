@@ -20,7 +20,7 @@ const UserFacingTopNavigation = () => {
                         </a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li className='p-2 fw-bold'>Kudoz Help Netwrok</li>
-                            <li><a className="dropdown-item" href="/search">Term Searc</a></li>
+                            <li><a className="dropdown-item" href="/search">Term Search</a></li>
                             <li><a className="dropdown-item" href="/kudoz/ask">Ask Question</a></li>
                             <li><a className="dropdown-item" href="/kudoz">Answer Question</a></li>
                             <li><hr className="dropdown-divider" /></li>

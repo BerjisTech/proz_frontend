@@ -19,7 +19,7 @@ export function LocalizationDropdown() {
     return (
         <ul>
             <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle bg-white shadow rounded-full mx-2 p-2 fs-5 text-green-400 d-flex align-items-center justify-content-center" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a className="nav-link dropdown-toggle bg-white mx-2 text-green-400 d-flex align-items-center justify-content-center" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <span className="ms-2">En</span>
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
