@@ -1,5 +1,5 @@
 import React from 'react'
-import SingleBusiness from '../../components/businesses/SingleBusiness'
+import { SingleBusiness } from '../../components'
 
 const business = () => {
   return (
