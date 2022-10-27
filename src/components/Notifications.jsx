@@ -4,7 +4,7 @@ import { FiBell } from 'react-icons/fi'
 const Notifications = () => {
     return (
         <div>
-            <a className="dropdown-toggle text-green-800 bg-white mx-2 d-flex align-items-center justify-content-center" id="notificationsDropdown" href="/dashboard/*" data-bs-toggle="dropdown" aria-expanded="false">
+            <a className="dropdown-toggle text-green-800 bg-inherit mx-2 d-flex align-items-center justify-content-center" id="notificationsDropdown" href="/dashboard/*" data-bs-toggle="dropdown" aria-expanded="false">
                 <FiBell className="text-xl text-orange-400" />
             </a>
             <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="notificationsDropdown">

@@ -9,14 +9,13 @@ const Navbar = () => {
     return (
         <nav className="min-vh-100 m-0 p-0 d-flex overflow-x-hidden border-end-1">
             <div className="m-0 p-0 h-screen d-flex flex-column flex-nowrap sticky " id="navBarWrapper">
-                <header className="w-full px-3 pt-3 border-bottom sticky bg-primary shadow">
-                    <a className="navbar-brand m-0 p-0" href="/">
-                        <div className="d-flex align-items-center justify-content-center">
+                <header className="w-full border-bottom sticky bg-primary shadow">
+                    <a className="m-0 p-0 w-full h-full d-flex align-items-center justif-content-center" href="/">
+                        <div className="m-0 p-0 d-flex w-full h-full align-items-center justify-content-center">
                             <div className="card bg-white p-1 rounded shadow-sm">
                                 <img src="https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg" width="30" alt="logo" />
                             </div>
                         </div>
-                        <Spacer spacing='[2, 0, 0, 0]' />
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sideBarNav" aria-controls="sideBarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
