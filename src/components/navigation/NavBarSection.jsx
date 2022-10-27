@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function NavBarSerction({ listItems, sectionTitle, id, showMore }) {
     return (
         <div className="collapse navbar-collapse d-flex flex-column align-items-center justify-content-start navbar-section-proz" id={id}>
-            {sectionTitle && (<h3>{sectionTitle}</h3>)}
+            {sectionTitle && (<h3 className="navbar_sectionTitle">{sectionTitle}</h3>)}
             <ul className="navbar-nav d-flex flex-column w-full align-items-start justify-content-start primaryDashboardNavigation">
                 {
                     listItems.map(item => {

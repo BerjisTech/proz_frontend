@@ -8,7 +8,7 @@ import NavBarSerction from './NavBarSection'
 const Navbar = () => {
     return (
         <nav className="min-vh-100 m-0 p-0 d-flex overflow-x-hidden border-end-1">
-            <div className="m-0 p-0 h-screen d-flex flex-column w-[50px] flex-nowrap sticky " id="navBarWrapper">
+            <div className="m-0 p-0 h-screen d-flex flex-column flex-nowrap sticky " id="navBarWrapper">
                 <header className="w-full px-3 pt-3 border-bottom sticky bg-primary shadow">
                     <a className="navbar-brand m-0 p-0" href="/">
                         <div className="d-flex align-items-center justify-content-center">
@@ -33,27 +33,27 @@ const Navbar = () => {
                     ]}
                         id={"sideBarNav"} />
                     <NavBarSerction listItems={[
-                        { name: "Interpret", route: "/marketplace/interpreting" },
-                        { name: "Donate words", route: "/marketplace/donate" },
-                        { name: "Translate", route: "/marketplace/translate" },
-                        { name: "Subtitle", route: "/marketplace/subtitle" }
+                        { name: "Interpret", route: "/marketplace/interpreting", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Donate words", route: "/marketplace/donate", icon: <FiPieChart className="app__sidebar-icon" /> },
+                        { name: "Translate", route: "/marketplace/translate", icon: <FiShoppingCart className="app__sidebar-icon" /> },
+                        { name: "Subtitle", route: "/marketplace/subtitle", icon: <FiBookOpen className="app__sidebar-icon" /> },
                     ]}
                         sectionTitle="Marketplace"
                         showMore={true}
                     />
                     <NavBarSerction listItems={[
-                        { name: "Forums", route: "/networking/forum" },
-                        { name: "Meetups", route: "/networking/meetups" },
-                        { name: "Mentoring", route: "/networking/mentoring" },
-                        { name: "Gatherings", route: "/networking/gatherings" }
+                        { name: "Forums", route: "/networking/forum", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Meetups", route: "/networking/meetups", icon: <FiPieChart className="app__sidebar-icon" /> },
+                        { name: "Mentoring", route: "/networking/mentoring", icon: <FiShoppingCart className="app__sidebar-icon" /> },
+                        { name: "Gatherings", route: "/networking/gatherings", icon: <FiBookOpen className="app__sidebar-icon" /> },
                     ]}
                         sectionTitle="Networking"
                     />
                     <NavBarSerction listItems={[
-                        { name: "Invoicing", route: "/tools/invoicing" },
-                        { name: "Widgets", route: "/tools/widgets" },
-                        { name: "CafeTran", route: "/tools/cafetran" },
-                        { name: "Community Rates", route: "/tools/community-rates" }
+                        { name: "Invoicing", route: "/tools/invoicing", icon: <FiHome className="app__sidebar-icon" /> },
+                        { name: "Widgets", route: "/tools/widgets", icon: <FiPieChart className="app__sidebar-icon" /> },
+                        { name: "CafeTran", route: "/tools/cafetran", icon: <FiShoppingCart className="app__sidebar-icon" /> },
+                        { name: "Community Rates", route: "/tools/community-rates", icon: <FiBookOpen className="app__sidebar-icon" /> },
                     ]}
                         sectionTitle="Tools"
                         showMore={true}
@@ -64,7 +64,7 @@ const Navbar = () => {
                         <li className="nav-item w-full text-center">
                             <Link to="/dashboard/settings" className="nav-link w-full d-flex align-items-center justify-content-start overflow-hidden">
                                 <FiSettings className="app__sidebar-icon me-2" />
-                                Settings
+                                <p>Settings</p>
                             </Link>
                         </li>
                     </ul>
