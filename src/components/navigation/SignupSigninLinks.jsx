@@ -1,7 +1,9 @@
 import React from 'react'
-import { BiLogIn, BiUser } from 'react-icons/bi'
+import { BiLogIn } from 'react-icons/bi'
 import { FiKey } from 'react-icons/fi'
+import Notifications from '../Notifications'
 import { LocalizationDropdown } from './LocalizationSelect'
+import { UserAccountNavigationDropdown } from './UserAccountNavigation'
 
 const SignupSigninLinks = () => {
 
@@ -21,10 +23,8 @@ const SignupSigninLinks = () => {
                     </span>
                     : <span className="d-flex align-items-center justify-content-between">
                         <LocalizationDropdown />
-
-                        <a className="text-green-800 bg-white border-1 rounded-full mx-2 p-2 d-flex align-items-center justify-content-center" href="/dashboard/*">
-                            <BiUser />
-                        </a>
+                        <Notifications />
+                        <UserAccountNavigationDropdown />
                     </span>
             }
         </div>

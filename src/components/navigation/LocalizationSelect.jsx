@@ -22,7 +22,7 @@ export function LocalizationDropdown() {
                 <a className="nav-link dropdown-toggle bg-white mx-2 text-green-400 d-flex align-items-center justify-content-center" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <span className="ms-2">En</span>
                 </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li>
                         <LocalizationSelectButton locale="sw" locale_name="Kiswahili (Sanifu)" locale_flag="ke" />
                     </li>
