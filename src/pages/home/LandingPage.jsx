@@ -168,16 +168,19 @@ const LandingPage = () => {
             <span className="fs-6 text-green-200">WHAT MAKES PROZ.COM UNIQUE</span>
             <span className="fs-1 text-black fw-bolder">Membership Model</span>
             <Spacer spacing='[5, 0, 0, 0]' />
-            <div className="d-flex align-items-start justify-content-between h-full w-100">
+            <div className="row d-flex align-items-start justify-content-between h-full w-100">
               <MembershipModel
+                main_styles="col-md-4 m-0 p-0"
                 identifier='[true, 1, "bg-[#254856] p-4 rounded-3 h-[100px] w-[100px] mt-[-60px] ml-[-70px] relative text-white fs-1 fw-bolder d-flex align-items-center justify-content-center"]'
-                details='[true, ["Enhanced Tools and Services", "Membership buys enhanced tools and services, specifically created to improve business and kickstart careers", "All of the services on ProZ.com offer access to more benefits for paying members. For example, priority placement in the directories or unrestricted access to the risk management information available in full Blue Board records."], "h-full shadow rounded-3 bg-white p-4 mx-[60px]"]' />
+                details='[true, ["Enhanced Tools and Services", "Membership buys enhanced tools and services, specifically created to improve business and kickstart careers", "All of the services on ProZ.com offer access to more benefits for paying members. For example, priority placement in the directories or unrestricted access to the risk management information available in full Blue Board records."], "h-full shadow rounded-3 bg-white p-4 m-[40px] sm:mt-[150px]"]' />
               <MembershipModel
+                main_styles="col-md-4 m-0 p-0"
                 identifier='[true, 2, "bg-[#254856] p-4 rounded-3 h-[100px] w-[100px] mt-[-60px] ml-[-70px] relative text-white fs-1 fw-bolder d-flex align-items-center justify-content-center"]'
-                details='[true, ["Commission-free Access", "Membership allows for direct, commission-free access to translators and translation companies", "ProZ.coms unique membership model means that when outsourcers and service providers connect via ProZ.com, neither side is charged any commissions or fees. Meet a client or provider, and the relationship is yours, unencumbered, forever."], "h-full shadow rounded-3 bg-white p-4 mx-[60px]"]' />
+                details='[true, ["Commission-free Access", "Membership allows for direct, commission-free access to translators and translation companies", "ProZ.coms unique membership model means that when outsourcers and service providers connect via ProZ.com, neither side is charged any commissions or fees. Meet a client or provider, and the relationship is yours, unencumbered, forever."], "h-full shadow rounded-3 bg-white p-4 m-[40px] sm:mt-[150px]"]' />
               <MembershipModel
+                main_styles="col-md-4 m-0 p-0"
                 identifier='[true, 3, "bg-[#254856] p-4 rounded-3 h-[100px] w-[100px] mt-[-60px] ml-[-70px] relative text-white fs-1 fw-bolder d-flex align-items-center justify-content-center"]'
-                details='[true, ["Trust and Growth", "Everyone benefits, resulting in continued trust and growth for the community within the language industry", "The benefits passed to both members and translation buyers continue to play a direct role in the ongoing success of ProZ.com as the largest, most trusted online community where language professionals can freely form transparent and open working relationships."], "h-full shadow rounded-3 bg-white p-4 mx-[60px]"]' />
+                details='[true, ["Trust and Growth", "Everyone benefits, resulting in continued trust and growth for the community within the language industry", "The benefits passed to both members and translation buyers continue to play a direct role in the ongoing success of ProZ.com as the largest, most trusted online community where language professionals can freely form transparent and open working relationships."], "h-full shadow rounded-3 bg-white p-4 m-[40px] sm:mt-[150px]"]' />
             </div>
             <Spacer spacing='[5, 0, 0, 0]' />
             <Spacer spacing='[5, 0, 0, 0]' />

@@ -15,3 +15,7 @@ export { default as Billing } from './settings/Billing'
 export { default as Businesses } from './business/businesses'
 export { default as Business } from './business/business'
 
+// Blueboards
+export { default as BlueboardList } from './blueboards/BlueboardList'
+
+

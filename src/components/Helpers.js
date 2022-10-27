@@ -1,3 +1,5 @@
+import axios from "axios"
+
 export function setLocale(locale) {
     alert(locale)
     return {
@@ -5,3 +7,16 @@ export function setLocale(locale) {
         locale
     }
 }
+
+export function getApiData(path) {
+    return axios.get(path, {
+        headers: {
+            'Authorization': `Bearer f40bee2df5d8eeabd82449578150203dafc7e304`
+        }
+    }).then(response => {
+        return response.data
+    }).catch(err => {
+        throw err;
+    });
+}
+

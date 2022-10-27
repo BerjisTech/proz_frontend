@@ -1,7 +1,9 @@
 import React from 'react'
 import { BiLogIn } from 'react-icons/bi'
 import { FiKey } from 'react-icons/fi'
+import Notifications from '../Notifications'
 import { LocalizationDropdown } from './LocalizationSelect'
+import { UserAccountNavigationDropdown } from './UserAccountNavigation'
 
 const SignupSigninLinks = () => {
 
@@ -19,12 +21,10 @@ const SignupSigninLinks = () => {
                             Get Started
                         </a>
                     </span>
-                    : <span className="d-flex">
+                    : <span className="d-flex align-items-center justify-content-between">
                         <LocalizationDropdown />
-
-                        <a className="text-green-800 bg-white shadow rounded-full mx-2 p-2 fs-5 d-flex align-items-center justify-content-center" href="/dashboard/*">
-                            <FiKey className='me-2' /> Account
-                        </a>
+                        <Notifications />
+                        <UserAccountNavigationDropdown />
                     </span>
             }
         </div>
