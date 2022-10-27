@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart } from 'react-icons/fi'
+import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart, FiUsers, FiHelpCircle } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import Spacer from '../extra_ui_tools/Spacer'
 import "./Navbar.css"
@@ -44,8 +44,8 @@ const Navbar = () => {
                     <NavBarSerction listItems={[
                         { name: "Forums", route: "/networking/forum", icon: <FiHome className="app__sidebar-icon" /> },
                         { name: "Meetups", route: "/networking/meetups", icon: <FiPieChart className="app__sidebar-icon" /> },
-                        { name: "Mentoring", route: "/networking/mentoring", icon: <FiShoppingCart className="app__sidebar-icon" /> },
-                        { name: "Gatherings", route: "/networking/gatherings", icon: <FiBookOpen className="app__sidebar-icon" /> },
+                        { name: "Mentoring", route: "/networking/mentoring", icon: <FiHelpCircle className="app__sidebar-icon" /> },
+                        { name: "Gatherings", route: "/networking/gatherings", icon: <FiUsers className="app__sidebar-icon" /> },
                     ]}
                         sectionTitle="Networking"
                     />
