@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React from 'react'
+import Feed from '../Feed';
 
 // Business data block
 // {
@@ -42,10 +43,7 @@ const BusinessList = () => {
         businesses['businesses'] && businesses['businesses'].length > 0 ? (
           businesses['businesses'].map(business => {
             return (
-              <div key={business.business_id}>
-                <h2>{business.business_name}</h2>
-                <p>{business.business_link}</p>
-              </div>
+              <Feed key={business.business_id} feed_icon='/images/logos/proz.png' feed_title={business.business_name} feed_description={business.business_link} feed_extra_text={business.business_membership_package} feed_link={business.business_link} />
             )
           })
         ) : (

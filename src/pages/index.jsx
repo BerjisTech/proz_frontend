@@ -18,4 +18,7 @@ export { default as Business } from './business/business'
 // Blueboards
 export { default as BlueboardList } from './blueboards/BlueboardList'
 
+// Feed
+export { default as Feeds } from './feeds/Feeds'
+
 
