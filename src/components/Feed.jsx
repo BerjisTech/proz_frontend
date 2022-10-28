@@ -8,7 +8,7 @@ const Feed = ({ feed_icon, feed_title, feed_description, feed_extra_text, feed_l
                 <p className='fw-bold'>{feed_title}</p>
                 <div className='d-flex flex-column align-items-start justify-content-start'>
                     <span className="fs-6">{feed_description}</span>
-                    <span>{feed_extra_text}</span>
+                    <span className='text-[12px]'>{feed_extra_text}</span>
                 </div>
             </div>
         </a>

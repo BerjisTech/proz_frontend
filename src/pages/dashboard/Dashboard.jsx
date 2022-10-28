@@ -5,7 +5,7 @@ const Dashboard = () => {
   return (
     <div className='m-5'>
       <div className='row'>
-        <div className='col-sm-7'>
+        <div className='col-sm-8'>
           {/* Jobs */}
           <div className='rounded-3 shadow bg-white border-1'>
             <div className='row h-full border-bottom-1'>
@@ -52,8 +52,12 @@ const Dashboard = () => {
               <a href='/dashboard/prozpay' className='bg-[#186362] py-2 px-3 rounded-3 text-white hover:bg-[#2E6969]'>Visit ProZPay&trade;</a>
             </div>
           </div>
+          {/* Extra cards */}
+          <div className='row mt-3'>
+            <div className='col-sm-6'></div>
+          </div>
         </div>
-        <div className='col-sm-5'>
+        <div className='col-sm-4'>
           {/* Recent Activity */}
           <div className='rounded-3 shadow bg-white border-1'>
             <div className='d-flex align-items-center justify-content-between p-2 border-bottom-1'>
@@ -61,9 +65,9 @@ const Dashboard = () => {
               <a href='/dashboard/activity' className='text-decoration-none text-[#186362]'>View All</a>
             </div>
             <div className='p-2'>
-              <Feed feed_icon='/images/money-bag.jpg' feed_title='You have received a payment' feed_description='Translate Legal Document...' feed_extra_text='2 days ago'feed_link="/dashboard/prozpay/1" />
-              <Feed feed_icon='/images/translate.png' feed_title='You have completed a job' feed_description='Translate Legal Document...' feed_extra_text='2 days ago' feed_link="/dashboard/job/1"/>
-              <Feed feed_icon='/images/translate.png' feed_title='You have a new job' feed_description='Translate Legal Document...' feed_extra_text='2 days ago' feed_link="/dashboard/job/1"/>
+              <Feed feed_icon='/images/money-bag.jpg' feed_title='You have received a payment' feed_description='Translate Legal Document...' feed_extra_text='1 day ago' feed_link="/dashboard/prozpay/1" />
+              <Feed feed_icon='/images/translate.png' feed_title='You have completed a job' feed_description='Translate Legal Document...' feed_extra_text='2 days ago' feed_link="/dashboard/job/1" />
+              <Feed feed_icon='/images/translate.png' feed_title='You have a new job' feed_description='Translate Legal Document...' feed_extra_text='2 days ago' feed_link="/dashboard/job/1" />
             </div>
           </div>
         </div>

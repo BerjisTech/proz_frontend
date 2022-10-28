@@ -7,26 +7,26 @@ import Spacer from '../extra_ui_tools/Spacer'
 export const UserFacingFooter = () => {
     return (
         <div>
-            <div className="row bg-[#ECF5FA]">
+            <div className="row bg-[#DFEDEB]">
                 <Spacer spacing='[5, 0, 0, 0]' />
                 <div className="col-md-4">
                     <div className='row'>
                         <div className="col-md-6">
                             <span className='nav-items'>
-                                <a href="/jobs-and-directory" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Jobs & Directory</a>
-                                <a href="/member-activities" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Member Activities</a>
-                                <a href="/education" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Education</a>
-                                <a href="/tools" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Tools</a>
-                                <a href="/basics" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">ProZ basics</a>
+                                <a href="/jobs-and-directory" className="nav-item nav-link text-primary text-[14px] font-bold">Jobs & Directory</a>
+                                <a href="/member-activities" className="nav-item nav-link text-primary text-[14px] font-bold">Member Activities</a>
+                                <a href="/education" className="nav-item nav-link text-primary text-[14px] font-bold">Education</a>
+                                <a href="/tools" className="nav-item nav-link text-primary text-[14px] font-bold">Tools</a>
+                                <a href="/basics" className="nav-item nav-link text-primary text-[14px] font-bold">ProZ basics</a>
                             </span>
                         </div>
                         <div className="col-md-6">
                             <span className='nav-items'>
-                                <a href="about-us" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">About Us</a>
-                                <a href="/advertising" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Advertising</a>
-                                <a href="/support" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Support</a>
-                                <a href="/faq" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">FAQ</a>
-                                <a href="/terms-of-use" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Terms Of Use</a>
+                                <a href="about-us" className="nav-item nav-link text-primary text-[14px] font-bold">About Us</a>
+                                <a href="/advertising" className="nav-item nav-link text-primary text-[14px] font-bold">Advertising</a>
+                                <a href="/support" className="nav-item nav-link text-primary text-[14px] font-bold">Support</a>
+                                <a href="/faq" className="nav-item nav-link text-primary text-[14px] font-bold">FAQ</a>
+                                <a href="/terms-of-use" className="nav-item nav-link text-primary text-[14px] font-bold">Terms Of Use</a>
                             </span>
                         </div>
                     </div>
@@ -35,9 +35,9 @@ export const UserFacingFooter = () => {
                     <div className="row">
                         <div className="col-md-8">
                             <div className="row h-full">
-                                <AddressCards main_style="col-md-4 h-full" card_style="bg-[#ECF5FA] h-full" office_location="ProZ.com Headquaters" office_phone="+1-315-463-7323" office_address="235 Harrison Street Suite 202 Syracuse, NY 13202. USA" />
-                                <AddressCards main_style="col-md-4 h-full" card_style="bg-[#ECF5FA] h-full" office_location="ProZ.com Argentina" office_phone="+54-221-425-1266" office_address="Calle 14 nro. 622 1/2 entre 44 y 45 La Plata (B1900AND), Buenos Aires Argentina" />
-                                <AddressCards main_style="col-md-4 h-full" card_style="bg-[#ECF5FA] h-full" office_location="ProZ.com Ukraine" office_phone="+380 57 7281624" office_address="6 Karazina St. Kharkiv, 61002. Ukraine" />
+                                <AddressCards main_style="col-md-4 h-full" card_style="h-full" office_location="ProZ.com Headquaters" office_phone="+1-315-463-7323" office_address="235 Harrison Street Suite 202 Syracuse, NY 13202. USA" />
+                                <AddressCards main_style="col-md-4 h-full" card_style="h-full" office_location="ProZ.com Argentina" office_phone="+54-221-425-1266" office_address="Calle 14 nro. 622 1/2 entre 44 y 45 La Plata (B1900AND), Buenos Aires Argentina" />
+                                <AddressCards main_style="col-md-4 h-full" card_style="h-full" office_location="ProZ.com Ukraine" office_phone="+380 57 7281624" office_address="6 Karazina St. Kharkiv, 61002. Ukraine" />
                             </div>
                         </div>
                         <div className="col-md-4">

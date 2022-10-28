@@ -25,11 +25,20 @@ const Blueboards = () => {
                         <tbody>
                             {blueboards['data'].map(blueboard => {
                                 return (
-                                    <tr className='bg-white hover:shadow hover:h-[50px] align-items-center vertical-middle' key={blueboard.id}>
-                                        <td className='text-[16px] fw-bold'>{blueboard.name}</td>
-                                        <td>{blueboard.web_url}</td>
-                                        <td>{blueboard.country}</td>
-                                        <td><a href={`/business/${blueboard.business_id}`} className='nav-link'>View Business</a></td>
+                                    // TR with feed
+                                    <tr key={blueboard.id}>
+                                        <td>
+                                            <a href={`/business/${blueboard.business_id}`} className='text-decoration-none d-flex align-items-center justify-content-start mb-3'>
+                                                <img src='/images/logos/proz.png' alt={blueboard.name} className='border-1 w-[50px] h-[50px] rounded-full img-fluid' />
+                                                <div className='ms-3'>
+                                                    <p className='fw-bold'>{blueboard.name}</p>
+                                                    <div className='d-flex flex-column align-items-start justify-content-start'>
+                                                        <span className="fs-6">{blueboard.web_url}</span>
+                                                        <span className='text-[12px]'>{blueboard.country}</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
                                     </tr>
                                 )
                             })}
