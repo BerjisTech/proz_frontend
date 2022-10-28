@@ -23,10 +23,10 @@ export const UserFacingFooter = () => {
                         <div className="col-md-6">
                             <span className='nav-items'>
                                 <a href="about-us" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">About Us</a>
-                                <a href="/jobs-and-directory" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Advertising</a>
-                                <a href="/member-activities" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Support</a>
-                                <a href="/education" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">FAQ</a>
-                                <a href="/tools" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Terms Of Use</a>
+                                <a href="/advertising" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Advertising</a>
+                                <a href="/support" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Support</a>
+                                <a href="/faq" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">FAQ</a>
+                                <a href="/terms-of-use" className="nav-item nav-link text-[#0B5D92] text-[14px] font-bold">Terms Of Use</a>
                             </span>
                         </div>
                     </div>
