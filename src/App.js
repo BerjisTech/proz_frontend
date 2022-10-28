@@ -49,7 +49,7 @@ const DashboardLayout = () => {
             <div className="flex-fill p-0 m-0">
                 <div className="flex-fill d-flex flex-column h-screen">
                     <Header />
-                    <section className="flex-fill m-0 p-0 overflow-auto">
+                    <section className="flex-fill m-0 p-0 overflow-auto bg-[#FAFAFA]">
                         <Main>
                             <Dashboard />
                         </Main>

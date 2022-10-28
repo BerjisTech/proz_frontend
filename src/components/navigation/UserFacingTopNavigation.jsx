@@ -2,7 +2,7 @@ import React from 'react'
 import { BiGlasses, BiRocket } from 'react-icons/bi'
 import { FiBookOpen } from 'react-icons/fi'
 import { SignupSigninLinks } from '..'
-import HeaderSearch from '../general_ui_components/HeaderSearch'
+import HeaderSearch from '../search/HeaderSearch'
 
 const UserFacingTopNavigation = () => {
     return (

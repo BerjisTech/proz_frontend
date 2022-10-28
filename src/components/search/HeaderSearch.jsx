@@ -6,8 +6,8 @@ const HeaderSearch = ({ placeholder }) => {
     return (
         <div className="flex-fill">
             <form className="d-flex flex-row align-items-center justify-content-center" action='/dashboard/search' method='GET'>
-                <FiSearch className="fs-3 me-3 text-gray-400" />
-                <input type="text" placeholder={placeholder ? placeholder : "Search..."} name="searchItem" className='flex-fill border-0 bg-gray-100 rounded-5 bg-gray py-2 px-5' />
+                <FiSearch className="fs-3 ms-3" />
+                <input type="text" placeholder={placeholder ? placeholder : "Search..."} name="searchItem" className='flex-fill border-0 py-2 px-5 outline-none focus:outline-none' />
             </form>
         </div>
     )
