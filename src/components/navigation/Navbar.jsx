@@ -1,7 +1,6 @@
 import React from 'react'
 import { FiSettings, FiHome, FiMessageCircle, FiThumbsUp, FiBookOpen, FiShoppingCart, FiPieChart, FiUsers, FiHelpCircle } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
-import Spacer from '../extra_ui_tools/Spacer'
 import "./Navbar.css"
 import NavBarSerction from './NavBarSection'
 
