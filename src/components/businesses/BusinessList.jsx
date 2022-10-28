@@ -39,7 +39,7 @@ const BusinessList = () => {
     <div>
       <h1>Business List</h1>
       {
-        businesses['businesses'].length > 0 ? (
+        businesses['businesses'] && businesses['businesses'].length > 0 ? (
           businesses['businesses'].map(business => {
             return (
               <div key={business.business_id}>

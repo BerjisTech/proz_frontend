@@ -7,6 +7,7 @@ import './App.css'
 
 // Import components
 import { Footer, Header, Main, Navbar, UserFacingTopNavigation, LandingPageNav } from './components'
+import { UserFacingFooter } from './components/general_ui_components/Footer'
 import LocalizationSelect from './components/navigation/LocalizationSelect'
 // Import pages
 import { Dashboard, LandingPage } from './pages'
@@ -34,6 +35,7 @@ const LandingPagesLayout = () => {
         <div>
             {window.location.pathname === '/' ? <LandingPageNav /> : <UserFacingTopNavigation />}
             {window.location.pathname === '/' ? <Main><LandingPage /></Main> : <UserFacingPages />}
+            <UserFacingFooter />
         </div>
     )
 }
