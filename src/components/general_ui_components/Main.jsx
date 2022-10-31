@@ -15,7 +15,9 @@ import {
     Businesses,
     Business,
     BlueboardList,
-    Feeds
+    Feeds,
+    Jobs,
+    Hire
 } from "../../pages";
 
 const Main = () => {
@@ -38,6 +40,8 @@ const Main = () => {
             <Route path="/business/:business_id" element={<Business />} />
             <Route path="/blueboards" element={<BlueboardList />} />
             <Route path="/feed" element={<Feeds />} />
+            <Route path="/jobs/:job_type" element={<Jobs />} />
+            <Route path="/hire/:translator_type" element={<Hire />} />
 
             {/* Dashboard links */}
             <Route path="/dashboard/*" element={<Dashboard />} />

@@ -21,4 +21,9 @@ export { default as BlueboardList } from './blueboards/BlueboardList'
 // Feed
 export { default as Feeds } from './feeds/Feeds'
 
+// Jobs
+export { default as Jobs } from './jobs/Jobs'
+export { default as Hire } from './jobs/Hire'
+
+
 
