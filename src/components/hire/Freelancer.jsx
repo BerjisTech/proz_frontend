@@ -2,22 +2,6 @@ import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
 
-// User list
-// [
-//     {
-//         "id": 2,
-//         "parent_id": 1,
-//         "name": "My Vendors",
-//         "description": "This is a description of My Vendors list.",
-//         "users": [
-//             {
-//                 "id": 46745,
-//                 "link": "https://api.proz.com/v2/users/ad00b4f1-7b79-461d-92bd-57b4373ef1cb",
-//                 "operation": "include"
-//             }
-//         ]
-//     }
-// ]
 const Freelancer = () => {
     const [freelancers, setFreelancers] = React.useState([])
     const [loading, setLoading] = React.useState(true)
@@ -30,17 +14,19 @@ const Freelancer = () => {
         const getFreelancers = async () => {
             try {
                 const response = await fetch(
-                    `https://api.proz.com/v2/user-list?page=${page}`,
+                    `https://api.proz.com/v2/freelancer-matches?page=${page}&is_member=true&limit=10&featured_member=true&language_pair=eng_swa`,
                     {
                         headers: {
-                            'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+                            "access-control-allow-origin": "*",
+                            "Authorization": `Bearer f40bee2df5d8eeabd82449578150203dafc7e304`
                         },
+                        mode: 'cors',
                         method: 'GET'
                     },
                 )
 
                 const data = await response.json()
-                setFreelancers(data.items)
+                setFreelancers(data)
                 setTotalPages(data.total_pages)
                 setTotalItems(data.total_items)
             } catch (error) {
@@ -51,24 +37,41 @@ const Freelancer = () => {
         }
         getFreelancers()
     }, [page])
+    // console.log(freelancers['data'])
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error!</p>
 
     return (
         <div>
-            <h1>Freelancers</h1>
-            <p>Page {page} of {total_pages}</p>
-            <p>Total items: {total_items}</p>
-            <ul>
-                {freelancers.map(freelancer => (
-                    <li key={freelancer.id}>
-                        <a href={freelancer.link}>{freelancer.name}</a>
-                    </li>
-                ))}
-            </ul>
-            <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous</button>
-            <button onClick={() => setPage(page + 1)} disabled={page === total_pages}>Next</button>
+            {
+                freelancers && freelancers['data'].length > 0 ? (
+                    <div>
+                        <h1>Freelancers</h1>
+                        <p>Page {page} of {total_pages}</p>
+                        <p>Total items: {total_items}</p>
+                        <div className='row'>
+                            {freelancers && freelancers['data'].map((freelancer, index) => (
+                                <div className='col-sm-3' key={index}>
+                                    <div className='shadow m-1 p-2'>
+                                        <a href={`/freelancer/${freelancer.freelancer.uuid}`}>
+                                            {console.log(freelancer)}
+                                            <img src={freelancer.freelancer.image_url} alt='ProZ.com' className='img-fluid w-[50px] h-[50px] rounded-full' />
+                                            <span>{freelancer.freelancer.site_name}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous</button>
+                        <button onClick={() => setPage(page + 1)} disabled={page === total_pages}>Next</button>
+                    </div>
+                ) : (
+                    <div>
+                        No Freelancers Found
+                    </div>
+                )
+            }
         </div>
     )
 }

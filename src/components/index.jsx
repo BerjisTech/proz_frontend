@@ -20,7 +20,7 @@ export { default as RightSideBar } from "./navigation/RightSideBar"
 export { default as SecondaryNavigation } from "./navigation/SecondaryNavigation"
 export { default as UserFacingTopNavigation } from "./navigation/UserFacingTopNavigation"
 export { default as SignupSigninLinks } from "./navigation/SignupSigninLinks"
-
+export { default as LeftSideBars } from "./navigation/LeftSideBars"
 
 export { default as Partner } from "./Partner"
 export { default as Flags } from "./Flags"

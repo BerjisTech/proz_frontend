@@ -1,7 +1,8 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import Blueboards from '../blueboard/Blueboards'
 
-export const KudozFilterForm = () => {
+export function KudozFilterForm () {
     return (
         <div>
             <h1>KudozFilterForm</h1>
@@ -9,7 +10,7 @@ export const KudozFilterForm = () => {
     )
 }
 
-export const BusinessFilterForm = () => {
+export function BusinessFilterForm () {
     return (
         <div>
             <h1>BusinessFilterForm</h1>
@@ -17,7 +18,7 @@ export const BusinessFilterForm = () => {
     )
 }
 
-export const BlueboardFilterForm = () => {
+export function BlueboardFilterForm () {
     return (
         <div>
             <h1>BlueboardFilterForm</h1>
@@ -26,9 +27,11 @@ export const BlueboardFilterForm = () => {
     )
 }
 
-export const EmptySideBar = () => {
+export function EmptySideBar () {
     return (
-        <div></div>
+        <div>
+            EmptySideBar
+        </div>
     )
 }
 
@@ -39,12 +42,11 @@ const LeftSideBars = () => {
         'business': <BusinessFilterForm />,
         'blueboard': <BlueboardFilterForm />
     }
+    const url_params = useParams()
 
-    console.log(left_sidebars)
+    console.log(url_params)
 
     let active_sidebar = localStorage.getItem('active_sidebar') ? localStorage.getItem('active_sidebar') : 'default'
-
-    console.log(active_sidebar)
 
     return (
         <div>
