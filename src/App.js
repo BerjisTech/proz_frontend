@@ -15,7 +15,7 @@ import { Dashboard, LandingPage } from './pages'
 const UserFacingPages = () => {
     return (
         <div className='row'>
-            <div className='col-sm-2'>
+            <div className='col-sm-2 min-h-screen col-xs-none border-end-1'>
                 <LeftSideBars />
             </div>
             <div className='col-sm-8'>

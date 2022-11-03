@@ -1,7 +1,8 @@
 import React from 'react'
 import Blueboards from '../blueboard/Blueboards'
+import { FreelancerFilterForm } from '../hire/Freelancer'
 
-export function KudozFilterForm () {
+export function KudozFilterForm() {
     return (
         <div>
             <h1>KudozFilterForm</h1>
@@ -9,7 +10,7 @@ export function KudozFilterForm () {
     )
 }
 
-export function BusinessFilterForm () {
+export function BusinessFilterForm() {
     return (
         <div>
             <h1>BusinessFilterForm</h1>
@@ -17,7 +18,7 @@ export function BusinessFilterForm () {
     )
 }
 
-export function BlueboardFilterForm () {
+export function BlueboardFilterForm() {
     return (
         <div>
             <h1>BlueboardFilterForm</h1>
@@ -26,7 +27,7 @@ export function BlueboardFilterForm () {
     )
 }
 
-export function EmptySideBar () {
+export function EmptySideBar() {
     return (
         <div>
             EmptySideBar
@@ -34,12 +35,14 @@ export function EmptySideBar () {
     )
 }
 
-const LeftSideBars = ({active_sidebar = 'default'}) => {
+const LeftSideBars = () => {
+    let active_sidebar = localStorage.getItem('active_sidebar') ? localStorage.getItem('active_sidebar') : 'default'
     const left_sidebars = {
         'default': <EmptySideBar />,
         'kudoz': <KudozFilterForm />,
         'business': <BusinessFilterForm />,
-        'blueboard': <BlueboardFilterForm />
+        'blueboard': <BlueboardFilterForm />,
+        'freelancer': <FreelancerFilterForm />
     }
 
     return (
