@@ -4,7 +4,7 @@ const Agency = () => {
   const [agencies, setAgencies] = React.useState([]);
   const [loading, setLoading] = React.useState(true)
   const [error, setError] = React.useState(null)
-  const [page, setPage] = React.useState(1)
+  const [page ] = React.useState(1)
   const [total_pages, setTotalPages] = React.useState(1)
   const [total_items, setTotalItems] = React.useState(0)
 
@@ -15,7 +15,7 @@ const Agency = () => {
           `https://api.proz.com/v2/businesses?page=${page}&ids[]`,
           {
             headers: {
-              'Authorization': `Bearer f40bee2df5d8eeabd82449578150203dafc7e304`
+              'Authorization': `Bearer d388663c26a22121693473370867b3d3ccf6cfcb`
             },
             method: 'GET'
           },

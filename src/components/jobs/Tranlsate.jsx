@@ -2,7 +2,6 @@ import React from 'react'
 import 'react-icons/fi'
 import 'react-icons/gi'
 import 'react-icons/bi'
-import { FiPenTool } from 'react-icons/fi';
 import { GiCancel } from 'react-icons/gi';
 
 const Tranlsate = () => {

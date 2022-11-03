@@ -25,5 +25,8 @@ export { default as Feeds } from './feeds/Feeds'
 export { default as Jobs } from './jobs/Jobs'
 export { default as Hire } from './jobs/Hire'
 
+// Events
+export { default as Events } from './events/Events'
+
 
 
