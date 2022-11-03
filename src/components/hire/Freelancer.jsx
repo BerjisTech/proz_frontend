@@ -113,7 +113,6 @@ const Freelancer = () => {
                             "access-control-allow-origin": "*",
                             "Authorization": `Bearer f40bee2df5d8eeabd82449578150203dafc7e304`
                         },
-                        mode: 'cors',
                         method: 'GET'
                     },
                 )
@@ -137,19 +136,6 @@ const Freelancer = () => {
 
     return (
         <div>
-            <div>
-                <Breadcrumb
-                    items={[
-                        { name: 'Home', link: '/' },
-                        { name: 'Freelancers', link: '/freelancers' },
-                        { name: 'Freelancer Matches', link: '/freelancers/matches' },
-                    ]} />
-                <div className='flex flex-row justify-between'>
-                    <div>
-                        <h1 className='text-3xl font-bold'>Freelancers</h1>
-                    </div>
-                </div>
-            </div>
             {
                 freelancers && freelancers['data'].length > 0 ? (
                     localStorage.setItem('active_sidebar', 'freelancer'),

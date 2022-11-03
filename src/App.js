@@ -23,7 +23,7 @@ const UserFacingPages = () => {
                     <LandingPage />
                 </Main>
             </div>
-            <div className='col-sm-2'></div>
+            <div className='col-sm-2 min-h-screen col-xs-none border-start-1'></div>
         </div>
     )
 }

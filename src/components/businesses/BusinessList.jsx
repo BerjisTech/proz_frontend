@@ -1,25 +1,62 @@
 import axios from 'axios'
 import React from 'react'
-import Feed from '../Feed';
 
-// Business data block
-// {
-//     business_id: 100
-//     business_link: "https://www.proz.com/business/100"
-//     business_membership_expiration_date: "2023-07-05T23:59:59+00:00"
-//     business_membership_package: "standard"
-//     business_name: "Language & Culture Worldwide"
-//     employee_is_admin: null
-//     employee_title: null
-//     is_employee: false
-//     jobs_posted_12_months: 5
-//     lwa_avg_five_year: 5
-//     lwa_num_entries_five_year: 3
-//     self_link: "https://api.proz.com/v2/businesses/100"
-// }
+export const BusinessCard = ({businesS_id}) => {
+  return (
+    <div className="card w-full">
+      <div className="card-body">
+        <div className='d-flex gap-3 wrap'>
+          <img src={`https://picsum.photos/500/300?random=${businesS_id}`} alt="business logo" className='h-[100px] w-[100px] rounded-2' />
+          <div>
+            <h5 className="card-title">Random Business Name</h5>
+            <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href={`/hire/agency/${businesS_id}`} className="card-link">Hire</a>
+            <a href={`/business/${businesS_id}`} className="card-link">View Business Profile</a>
+          </div>
+          <div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const BusinessList = () => {
   const [businesses, setBusinesses] = React.useState([]);
+  const draftBusinesses = [
+    {
+      id: 1
+    },
+    {
+      id: 2
+    },
+    {
+      id: 3
+    },
+    {
+      id: 4
+    },
+    {
+      id: 5
+    },
+    {
+      id: 6
+    },
+    {
+      id: 7
+    },
+    {
+      id: 8
+    },
+    {
+      id: 9
+    },
+    {
+      id: 10
+    },
+  ]
 
   React.useEffect(() => {
     axios.get('https://api.proz.com/v2/businesses?ids[]=1234', {
@@ -37,19 +74,12 @@ const BusinessList = () => {
   console.log(businesses)
 
   return (
-    <div>
-      <h1>Business List</h1>
-      {
-        businesses['businesses'] && businesses['businesses'].length > 0 ? (
-          businesses['businesses'].map(business => {
-            return (
-              <Feed key={business.business_id} feed_icon='/images/logos/proz.png' feed_title={business.business_name} feed_description={business.business_link} feed_extra_text={business.business_membership_package} feed_link={business.business_link} />
-            )
-          })
-        ) : (
-          <p>No businesses found</p>
-        )
-      }
+    <div className='d-flex flex-col gap-3 mb-5'>
+      <div className='d-flex flex-wrap gap-3'>
+        {draftBusinesses.map(business => (
+          <BusinessCard key={business.id} businesS_id={business.id} />
+        ))}
+      </div>
     </div>
   )
 }
