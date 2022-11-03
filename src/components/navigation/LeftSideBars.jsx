@@ -1,5 +1,4 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import Blueboards from '../blueboard/Blueboards'
 
 export function KudozFilterForm () {
@@ -35,18 +34,13 @@ export function EmptySideBar () {
     )
 }
 
-const LeftSideBars = () => {
+const LeftSideBars = ({active_sidebar = 'default'}) => {
     const left_sidebars = {
         'default': <EmptySideBar />,
         'kudoz': <KudozFilterForm />,
         'business': <BusinessFilterForm />,
         'blueboard': <BlueboardFilterForm />
     }
-    const url_params = useParams()
-
-    console.log(url_params)
-
-    let active_sidebar = localStorage.getItem('active_sidebar') ? localStorage.getItem('active_sidebar') : 'default'
 
     return (
         <div>

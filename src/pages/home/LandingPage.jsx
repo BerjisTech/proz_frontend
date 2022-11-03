@@ -3,7 +3,10 @@ import { FiKey } from 'react-icons/fi'
 import { Spacer, Partner, MembershipModel, Integrations, SourceTargetSearch } from '../../components'
 import { Button } from 'react-bootstrap'
 import { BiBookAlt, BiBriefcase, BiLaptop } from 'react-icons/bi'
-import { GiBullseye, GiChatBubble, GiGraduateCap, GiPapers, GiPresent } from 'react-icons/gi'
+import { GiBullseye, GiChatBubble, GiFilmProjector, GiGraduateCap, GiPapers, GiPresent } from 'react-icons/gi'
+import ServicesCards from '../../components/extra_ui_tools/ServicesCards'
+import { randomColor } from '../../components/Helpers'
+import { TypeAnimation } from 'react-type-animation'
 
 const LandingPage = () => {
   return (
@@ -22,7 +25,33 @@ const LandingPage = () => {
               </span>
             </span>
             <Spacer spacing='[2, 0, 0, 0]' />
-            <span className="text-[#739CB4]">Over 1,288,599 professional translators and translation companies</span>
+            <span className="text-[#739CB4]">
+              {/* Over 1,288,599 professional translators and translation companies */}
+              <TypeAnimation
+                sequence={[
+                  'Over 1,288,599 professional translators and translation companies',
+                  3000,
+                  'Find professional translators and interpreters',
+                  3000,
+                  'Translators handle written texts, interpreters handle spoken language',
+                  3000,
+                  'You can also use ProZ.com to find subtitlers',
+                  2000,
+                  'You can also use ProZ.com to find localizers',
+                  2000,
+                  'You can also use ProZ.com to find language instructors',
+                  2000,
+                  'and many more...',
+                  2000,
+                  '',
+                  2000
+                ]}
+                speed={75} // Custom Speed from 1-99 - Default Speed: 40
+                deletionSpeed={100} // Custom Deletion Speed from 1-99 - Default Deletion Speed: 40
+                repeat={Infinity} // Repeat the sequence - Default: false
+
+              />
+            </span>
           </div>
           <SourceTargetSearch />
           <Spacer spacing='[5, 0, 0, 0]' />
@@ -39,6 +68,22 @@ const LandingPage = () => {
             <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/microsoft.png" alt="slide 1" />
           </div>
         </div >
+      </div>
+      <div className='bg-[#F6F7FC] px-5'>
+        <div className="d-flex flex-column align-items-center justify-content-center py-5">
+          <span className='fs-1 fw-bold'>One Platform</span>
+          <span className='fs-1 fw-bold'>Many <span className='text-[#186362]'>Solutions</span></span>
+        </div>
+        <div className='row'>
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Translation'} icon={[<BiBookAlt size={70} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/translation'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Interpretation'} icon={[<GiChatBubble size={70} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/interpretation'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Localization'} icon={[<BiLaptop size={70} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/localization'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Transcription'} icon={[<GiPapers size={70} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/transcription'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Voiceover'} icon={[<GiPresent size={70} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/voiceover'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Training'} icon={[<GiGraduateCap size={70} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/training'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'DTP'} icon={[<GiBullseye size={70} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/dtp'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Subtitling'} icon={[<GiFilmProjector size={70} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/subtitling'} />
+        </div>
       </div>
       <div className="py-[150px] bg-[#F4F6FA]">
         <div className="row">

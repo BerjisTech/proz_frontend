@@ -50,12 +50,11 @@ const Freelancer = () => {
                         <h1>Freelancers</h1>
                         <p>Page {page} of {total_pages}</p>
                         <p>Total items: {total_items}</p>
-                        <div className='row'>
+                        <div className='row mx-0 px-0'>
                             {freelancers && freelancers['data'].map((freelancer, index) => (
                                 <div className='col-sm-3' key={index}>
                                     <div className='shadow m-1 p-2'>
                                         <a href={`/freelancer/${freelancer.freelancer.uuid}`}>
-                                            {console.log(freelancer)}
                                             <img src={freelancer.freelancer.image_url} alt='ProZ.com' className='img-fluid w-[50px] h-[50px] rounded-full' />
                                             <span>{freelancer.freelancer.site_name}</span>
                                         </a>
