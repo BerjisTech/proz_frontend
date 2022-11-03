@@ -45,7 +45,7 @@ const Tranlsate = () => {
         {/* List jobs with name, description, tags, time, pay, job link, language */}
         {draftJobs.map((job) => (
           <div className="job d-flex gap-2 bg-[#F6F9F8] my-3 p-3 hover:shadow-lg" key={job.id}>
-            <div className='flex-fill h-full'>
+            <div className='flex-fill h-full border-end-1'>
               <div className='d-flex flex-column'>
                 <span className='fw-bold'>Job Title Here</span>
                 <div className='text-[13px] my-2'>
@@ -57,16 +57,15 @@ const Tranlsate = () => {
                 </p>
               </div>
             </div>
-            <div className='h-[100]'>
+            <div className='h-[100] min-w-[130px]'>
               <div className="gap-2 h-full d-flex flex-col justify-content-between align-items-end">
                 <div className='w-full d-flex align-items-center justify-content-between'>
                   <span className='text-[10px] text-gray-600'>Posted 12 days ago</span>
-                  <FiPenTool />
-                  <GiCancel />
+                  <GiCancel className='text-[20px] text-gray-600' />
                 </div>
-                <div className='w-full d-flex align-items-center justify-conmtent-between'>
-                  <span className='text-gray-600'>19 views</span>
-                  <a href={`/job/translate/${job.id}`} className='px-2 py-1 rounded-2 bg-[#336666] text-[#ffffff]'>View</a>
+                <div className='w-full d-flex align-items-center justify-content-between'>
+                  <span className='text-[12px] text-gray-600'>19 views</span>
+                  <a href={`/job/translate/${job.id}`} className='text-[12px] fw-bold px-2 py-1 rounded-2 bg-[#336666] text-white'>View</a>
                 </div>
               </div>
             </div>
