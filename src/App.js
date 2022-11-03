@@ -6,26 +6,24 @@ import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 
 // Import components
-import { Footer, Header, Main, Navbar, UserFacingTopNavigation, LandingPageNav } from './components'
+import { Footer, Header, Main, Navbar, UserFacingTopNavigation, LandingPageNav, LeftSideBars } from './components'
 import { UserFacingFooter } from './components/general_ui_components/Footer'
 import LocalizationSelect from './components/navigation/LocalizationSelect'
 // Import pages
 import { Dashboard, LandingPage } from './pages'
 
 const UserFacingPages = () => {
-    let sideBar = localStorage.getItem('sidebarLeft') ? localStorage.getItem('sidebarLeft') : null
-
     return (
         <div className='row'>
-            <div className='col-sm-2'>
-                {sideBar}
+            <div className='col-sm-2 min-h-screen col-xs-none border-end-1'>
+                <LeftSideBars />
             </div>
             <div className='col-sm-8'>
                 <Main>
                     <LandingPage />
                 </Main>
             </div>
-            <div className='col-sm-2'></div>
+            <div className='col-sm-2 min-h-screen col-xs-none border-start-1'></div>
         </div>
     )
 }
