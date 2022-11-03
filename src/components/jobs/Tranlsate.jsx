@@ -57,7 +57,7 @@ const Tranlsate = () => {
                 </p>
               </div>
             </div>
-            <div className='h-full'>
+            <div className='h-[100]'>
               <div className="gap-2 h-full d-flex flex-col justify-content-between align-items-end">
                 <div className='w-full d-flex align-items-center justify-content-between'>
                   <span className='text-[10px] text-gray-600'>Posted 12 days ago</span>
