@@ -51,7 +51,6 @@ const Events = () => {
                     {events.map((event) => {
                         const { id, name, description, url, start, end, logo, organization, venue, format, online_event } = event
                         return (
-                            console.log(event),
                             <div className="w-full d-flex gap-3 flex-wrap algin-items-center justify-content-between hover:shadow-xl px-2 py-4" key={id}>
                                 <div className='min-w-70px'>
                                     <img src={logo.url} className="img-fluid rounded-start w-[100px]" alt={name.text} />
