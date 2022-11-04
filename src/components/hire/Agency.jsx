@@ -15,7 +15,7 @@ const Agency = () => {
           `https://api.proz.com/v2/businesses?page=${page}&ids[]`,
           {
             headers: {
-              'Authorization': `Bearer d388663c26a22121693473370867b3d3ccf6cfcb`
+              'Authorization': `Bearer ${process.env.REACT_PROZ_OAUTH_TOKEN}`
             },
             method: 'GET'
           },

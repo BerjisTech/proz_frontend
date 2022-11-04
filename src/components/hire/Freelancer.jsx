@@ -101,7 +101,7 @@ const Freelancer = () => {
         fetch(`https://api.proz.com/v2/freelancer-matches/?langauge_pair=eng_esl&limit=10&featured_member=true&is_member=true`, {
             method: 'GET',
             headers: {
-                'Authorization': `Bearer d388663c26a22121693473370867b3d3ccf6cfcb`
+                'Authorization': `Bearer ${process.env.REACT_PROZ_OAUTH_TOKEN}`
             }
         }).then(
             response => response.json()
