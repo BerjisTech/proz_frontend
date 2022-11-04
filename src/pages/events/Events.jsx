@@ -71,7 +71,7 @@ const Events = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <a href={url} className="btn btn-primary">View Event</a>
+                                    <a href={url} className="btn btn-primary bg-primary">View Event</a>
                                 </div>
                             </div>
                         )
