@@ -10,7 +10,7 @@ const JobSearchResults = () => {
         return fetch('https://api.proz.com/v2/job-postings', {
             method: 'GET',
             headers: {
-                'Authorization': `Bearer f40bee2df5d8eeabd82449578150203dafc7e304`
+                'Authorization': `Bearer ${process.env.REACT_PROZ_OAUTH_TOKEN}`
             },
         }).then(
             (response) => response.json()

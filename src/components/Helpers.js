@@ -11,7 +11,7 @@ export function setLocale(locale) {
 export function getApiData(path) {
     return axios.get(path, {
         headers: {
-            'Authorization': `Bearer f40bee2df5d8eeabd82449578150203dafc7e304`
+            'Authorization': `Bearer ${process.env.REACT_PROZ_OAUTH_TOKEN}`
         }
     }).then(response => {
         return response.data

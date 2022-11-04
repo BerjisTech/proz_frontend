@@ -1,8 +1,5 @@
-import axios from 'axios'
-import React from 'react'
-import { useEffect } from 'react'
-import { Breadcrumb } from 'react-bootstrap'
-import { useParams } from 'react-router-dom'
+import React, { useEffect } from 'react'
+// import { useParams } from 'react-router-dom'
 import ClearStrikeThrough from '../extra_ui_tools/ClearStrikeThrough'
 
 export const FreelancerFilterForm = () => {
@@ -94,45 +91,33 @@ const Freelancer = () => {
     const [page, setPage] = React.useState(1)
     const [total_pages, setTotalPages] = React.useState(1)
     const [total_items, setTotalItems] = React.useState(0)
-    const url_params = useParams()
-    const langauge_pair = url_params.langauge_pair ? url_params.langauge_pair : 'eng_esl'
-    const limit = url_params.limit ? url_params.limit : 10
-    const offset = url_params.offset ? url_params.offset : 0
-    const sort = url_params.sort ? url_params.sort : 'relevance'
-    const order = url_params.order ? url_params.order : 'desc'
-    const featured_member = url_params.featured_member ? url_params.featured_member : 'false'
-    const is_member = url_params.is_member ? url_params.is_member : 'true'
+    // const url_params = useParams()
+    // let langauge_pair = url_params.langauge_pair ? url_params.langauge_pair : 'eng_esl'
+    // let limit = url_params.limit ? url_params.limit : 10
+    // let featured_member = url_params.featured_member ? url_params.featured_member : 'false'
+    // let is_member = url_params.is_member ? url_params.is_member : 'true'
 
     useEffect(() => {
-        const getFreelancers = async () => {
-            try {
-                const response = await fetch(
-                    `https://api.proz.com/v2/freelancer-matches?page=${page}&is_member=${is_member}&limit=${limit}&featured_member=${featured_member}&language_pair=${langauge_pair}`,
-                    {
-                        headers: {
-                            "access-control-allow-origin": "*",
-                            "Authorization": `Bearer f40bee2df5d8eeabd82449578150203dafc7e304`
-                        },
-                        method: 'GET'
-                    },
-                )
-
-                const data = await response.json()
-                setFreelancers(data)
-                setTotalPages(data.total_pages)
-                setTotalItems(data.total_items)
-            } catch (error) {
-                setError(error)
-            } finally {
-                setLoading(false)
+        fetch(`https://api.proz.com/v2/freelancer-matches/?langauge_pair=eng_esl&limit=10&featured_member=true&is_member=true`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${process.env.REACT_PROZ_OAUTH_TOKEN}`
             }
-        }
-        getFreelancers()
-    }, [page])
-    console.log(freelancers)
+        }).then(
+            response => response.json()
+        ).then(data => {
+            setFreelancers(data.results)
+            setTotalPages(data.total_pages)
+            setTotalItems(data.total_items)
+            setLoading(false)
+        }).catch(error => {
+            setError(error)
+            setLoading(false)
+        })
+    }, [])
 
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error!</p>
+    if (loading) return <div>Loading...</div>
+    if (error) return <div>Error: {error.message}</div>
 
     return (
         <div>
