@@ -7,7 +7,7 @@ const Blueboards = () => {
     React.useEffect(() => {
         axios.get('https://api.proz.com/v2/blueboards', {
             headers: {
-                'Authorization': `Bearer f40bee2df5d8eeabd82449578150203dafc7e304`
+                'Authorization': `Bearer ${process.env.REACT_PROZ_OAUTH_TOKEN}`
             }
         }).then(res => {
             setBlueboards(res.data);
