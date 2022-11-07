@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import Blueboards from '../blueboard/Blueboards'
 import { FreelancerFilterForm } from '../hire/Freelancer'
 
@@ -36,13 +37,15 @@ export function EmptySideBar() {
 }
 
 const LeftSideBars = () => {
-    let active_sidebar = localStorage.getItem('active_sidebar') ? localStorage.getItem('active_sidebar') : 'default'
+    const location = useLocation()
+    let active_sidebar = location.pathname.split('/').reverse()[0]
+    console.log(location.pathname.split('/').reverse()[0])
     const left_sidebars = {
         'default': <EmptySideBar />,
         'kudoz': <KudozFilterForm />,
         'business': <BusinessFilterForm />,
         'blueboard': <BlueboardFilterForm />,
-        'freelancer': <FreelancerFilterForm />
+        'freelancers': <FreelancerFilterForm />
     }
 
     return (

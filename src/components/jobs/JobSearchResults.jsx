@@ -6,11 +6,13 @@ import JobSearch from './JobSearch'
 
 const JobSearchResults = () => {
     const [jobs, setJobs] = React.useState([])
+
+    console.log(process.env.REACT_APP_PROZ_OAUTH_TOKEN)
     const fetchJobs = async () => {
-        return fetch('https://api.proz.com/v2/job-postings', {
+        return fetch('https://cors-anywhere.herokuapp.com/https://api.proz.com/v2/job-postings', {
             method: 'GET',
             headers: {
-                'Authorization': `Bearer ${process.env.REACT_PROZ_OAUTH_TOKEN}`
+                'Authorization': `Bearer ${process.env.REACT_APP_PROZ_OAUTH_TOKEN}`
             },
         }).then(
             (response) => response.json()
@@ -53,7 +55,7 @@ const JobSearchResults = () => {
                     <div className="text-sm pt-3">No jobs found</div>
                 ) : (jobs.map((job, index) => {
                     return (
-                        <div id={index} className="d-flex align-items-center justify-content-start hover:shadow-xl p-3 rounded-5">
+                        <div key={index} className="d-flex align-items-center justify-content-start hover:shadow-xl p-3 rounded-5">
                             {/* <img src="https://m.media-amazon.com/images/M/MV5BMWFmYmRiYzMtMTQ4YS00NjA5LTliYTgtMmM3OTc4OGY3MTFkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg" className="rounded-circle" width="50" height="50" alt="avatar" /> */}
                             <div className='d-flex flex-column flex-fill ms-3'>
                                 <span className="fw-bold">{job.summary}</span>
