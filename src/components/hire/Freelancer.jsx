@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-// import { useParams } from 'react-router-dom'
+import { useParams, useSearchParams } from 'react-router-dom'
 import ClearStrikeThrough from '../extra_ui_tools/ClearStrikeThrough'
 
 export const FreelancerFilterForm = () => {
@@ -91,30 +91,34 @@ const Freelancer = () => {
     const [page, setPage] = React.useState(1)
     const [total_pages, setTotalPages] = React.useState(1)
     const [total_items, setTotalItems] = React.useState(0)
-    // const url_params = useParams()
-    // let langauge_pair = url_params.langauge_pair ? url_params.langauge_pair : 'eng_esl'
-    // let limit = url_params.limit ? url_params.limit : 10
-    // let featured_member = url_params.featured_member ? url_params.featured_member : 'false'
-    // let is_member = url_params.is_member ? url_params.is_member : 'true'
+    const url_params = useSearchParams()
+    let langauge_pair = url_params.langauge_pair ? url_params.langauge_pair : 'eng_esl'
+    let limit = url_params.limit ? url_params.limit : 10
+    let featured_member = url_params.featured_member ? url_params.featured_member : 'true'
+    let is_member = url_params.is_member ? url_params.is_member : 'true'
 
+    console.log('url_params', url_params)
     useEffect(() => {
-        fetch(`https://api.proz.com/v2/freelancer-matches/?langauge_pair=eng_esl&limit=10&featured_member=true&is_member=true`, {
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.proz.com/v2/freelancer-matches?language_pair=${langauge_pair}&limit=${limit}&featured_member=${featured_member.current}&is_member=${is_member}`, {
             method: 'GET',
             headers: {
-                'Authorization': `Bearer ${process.env.REACT_PROZ_OAUTH_TOKEN}`
+                'Authorization': `Bearer ${process.env.REACT_APP_PROZ_OAUTH_TOKEN}`
             }
-        }).then(
-            response => response.json()
-        ).then(data => {
-            setFreelancers(data.results)
-            setTotalPages(data.total_pages)
-            setTotalItems(data.total_items)
-            setLoading(false)
-        }).catch(error => {
-            setError(error)
-            setLoading(false)
-        })
-    }, [])
+        }).then (response => response.json())
+            .then(data => {
+                setFreelancers(data['data'])
+                setTotalPages(data.total_pages)
+                setTotalItems(data.total_items)
+                setLoading(false)
+            }).catch(error => {
+                setError(error)
+                setLoading(false)
+            })
+    }, [langauge_pair,
+        limit,
+        featured_member,
+        is_member])
+
 
     if (loading) return <div>Loading...</div>
     if (error) return <div>Error: {error.message}</div>
@@ -122,7 +126,7 @@ const Freelancer = () => {
     return (
         <div>
             {
-                freelancers && freelancers['data'].length > 0 ? (
+                freelancers && freelancers.length > 0 ? (
                     localStorage.setItem('active_sidebar', 'freelancer'),
                     <div>
                         <h1>Freelancers</h1>
@@ -130,7 +134,7 @@ const Freelancer = () => {
                         <p>Total items: {total_items}</p>
                         <table className='table border-separate border-spacing-y-5'>
                             <tbody>
-                                {freelancers && freelancers['data'].map((freelancer, index) => (
+                                {freelancers && freelancers.map((freelancer, index) => (
                                     // console.log(freelancer),
                                     <tr key={index} className="hover:shadow">
                                         <td style={{ width: '70px' }}><img src={freelancer.freelancer.image_url} alt='ProZ.com' className='img-fluid w-[50px] h-[50px] rounded-3' /></td>

@@ -61,7 +61,7 @@ const BusinessList = () => {
   React.useEffect(() => {
     axios.get('https://api.proz.com/v2/businesses?ids[]=1234', {
       headers: {
-        'Authorization': `Bearer ${process.env.REACT_PROZ_OAUTH_TOKEN}`
+        'Authorization': `Bearer ${process.env.REACT_APP_PROZ_OAUTH_TOKEN}`
       }
     })
       .then(res => {

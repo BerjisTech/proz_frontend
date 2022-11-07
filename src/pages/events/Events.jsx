@@ -4,29 +4,27 @@ const Events = () => {
     const [events, setEvents] = React.useState([]);
     const [loading, setLoading] = React.useState(true)
     const [error, setError] = React.useState(null)
-    const [page] = React.useState(1)
-
-    const url = process.env.REACT_APP_EVENTBRITE_BASE_URL
-
-    const getEvents = async () => {
-        try {
-            const response = await fetch(`${url}/organizations/${process.env.REACT_APP_EVENTBRITE_ORGANIZER_ID}/events/?status=live&page=${page}`, {
-                method: 'GET',
-                headers: {
-                    'Authorization': `Bearer ${process.env.REACT_APP_EVENTBRITE_PRIVATE_TOKEN}`
-                }
-            })
-            const data = await response.json()
-            setEvents(data['events'])
-            setLoading(false)
-        } catch (error) {
-            setError(error)
-            setLoading(false)
-        }
-    }
 
 
     React.useEffect(() => {
+        const url = process.env.REACT_APP_EVENTBRITE_BASE_URL
+        const getEvents = async () => {
+            try {
+                const response = await fetch(`${url}/organizations/${process.env.REACT_APP_EVENTBRITE_ORGANIZER_ID}/events/?status=live`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${process.env.REACT_APP_EVENTBRITE_PRIVATE_TOKEN}`
+                    }
+                })
+                const data = await response.json()
+                setEvents(data['events'])
+                setLoading(false)
+            } catch (error) {
+                setError(error)
+                setLoading(false)
+            }
+        }
+
         getEvents()
     }, [])
 
@@ -49,7 +47,7 @@ const Events = () => {
             {loading ? <div className="text-center">Loading...</div> : (
                 <div className='d-flex align-items-start justify-content-center gap-3 flex-column '>
                     {events.map((event) => {
-                        const { id, name, description, url, start, end, logo, organization, venue, format, online_event } = event
+                        const { id, name, description, url, start, end, logo, venue, online_event } = event
                         return (
                             <div className="w-full d-flex gap-3 flex-wrap algin-items-center justify-content-between hover:shadow-xl px-2 py-4" key={id}>
                                 <div className='min-w-70px'>
