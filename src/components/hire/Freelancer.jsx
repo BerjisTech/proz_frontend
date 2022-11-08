@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams, useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 import ClearStrikeThrough from '../extra_ui_tools/ClearStrikeThrough'
 
 export const FreelancerFilterForm = () => {

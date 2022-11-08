@@ -28,5 +28,6 @@ export { default as Hire } from './jobs/Hire'
 // Events
 export { default as Events } from './events/Events'
 
-
+// Profile
+export { default as UserProfile } from './profiles/UserProfile'
 

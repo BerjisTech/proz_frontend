@@ -1,12 +1,10 @@
-import { FiSend, FiPhone, FiFileText } from "react-icons/fi"
-
 export default function ProfileHeader({
     name,
     member,
     tagline,
     nativeLanguage,
     location,
-    imageLink, 
+    imageLink,
     memberStartDate,
     certifiedPro,
     profileTags
@@ -16,15 +14,15 @@ export default function ProfileHeader({
             <div className="d-flex flex-column">
                 <div className="profile-header-presentation position-relative d-flex">
                     <div>
-                        <img src={imageLink} className="profile-header-picture" />
+                        <img src={imageLink} className="profile-header-picture" alt={imageLink} />
                     </div>
                     <div className="profile-header-badges">
                         <div className="d-flex">
                             <h1>{name}</h1>
                             {
                                 member &&
-                                
-                                <img src="/images/icons/Membership-Std.svg" className="membership-ribbon"/>
+
+                                <img src="/images/icons/Membership-Std.svg" className="membership-ribbon" alt="Membership-Std" />
                             }
                         </div>
                         <div>
@@ -33,24 +31,24 @@ export default function ProfileHeader({
                         <div className="profile-header-tags d-flex gap-1">
                             {
                                 certifiedPro &&
-                                
+
                                 <div className="cpn-pill">
                                     <div className="d-flex cpn-pill-items">
                                         <p>Certified PRO</p>
-                                        <img src="/images/icons/CPN-@600ppi.png" className="membership-ribbon" />
+                                        <img src="/images/icons/CPN-@600ppi.png" className="membership-ribbon" alt="Membership-Std" />
                                     </div>
                                 </div>
                             }
                             {
-                                profileTags.map(e => 
-                                    
+                                profileTags.map(e =>
+
                                 <div className="cpn-pill">
                                     <div className="d-flex cpn-pill-items">
                                         <p>#</p>
                                         <p>{e}</p>
                                     </div>
                                 </div>
-                                    
+
                                     )
                             }
                         </div>
@@ -58,8 +56,8 @@ export default function ProfileHeader({
                                 <p>{nativeLanguage.name}</p>
                                 {
                                     nativeLanguage.verified &&
-                                    
-                                    <img src="/images/icons/native_verified.gif" className="native-icon"/>
+
+                                    <img src="/images/icons/native_verified.gif" className="native-icon" alt="native_verified" />
                                 }
                         </div>
                         <div className="member-since">
@@ -67,7 +65,7 @@ export default function ProfileHeader({
                         </div>
                         <div className="profile-badges-bottom d-flex gap-5">
                             <div className="d-flex gap-1 profile-header-location">
-                                <img src="/images/icons/location-sign-svgrepo-com.svg" className="location-icon"/>
+                                <img src="/images/icons/location-sign-svgrepo-com.svg" className="location-icon" alt="location-sign-svgrepo-com" />
                                 <p>{location.city}, {location.region}, {location.country}</p>
                             </div>
                         </div>
