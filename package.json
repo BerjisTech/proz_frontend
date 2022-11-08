@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "proxy": "https://api.proz.com/v2",
   "dependencies": {
     "@coreui/coreui": "^4.2.2",
     "@coreui/react": "^4.4.0",
