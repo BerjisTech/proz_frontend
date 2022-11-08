@@ -1,6 +1,5 @@
 import "./FeedbackCard.css";
 import { FiStar } from "react-icons/fi";
-import ActionButtons from "./ActionButtons";
 
 export default function FeedbackCard() {
     return (
