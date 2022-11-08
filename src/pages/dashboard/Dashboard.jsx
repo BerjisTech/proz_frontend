@@ -12,8 +12,8 @@ const Dashboard = () => {
         <div className='col-sm-8'>
           {/* Jobs */}
           <div className='rounded-3 shadow bg-white border-1'>
-            <div className='row h-full border-bottom-1'>
-              <div className='col-sm-8 h-full'>
+            <div className='d-flex align-items-center justify-content-between h-full border-bottom-1'>
+              <div className='p-2 h-full'>
                 <div className='d-flex align-items-center justify-content-start mb-3'>
                   <img src='/images/translate.png' alt='open-book' className='border-1 w-[70px] h-[70px] p-1 rounded-full shadow img-fluid' />
                   <div className='ms-3 mt-2'>
@@ -25,7 +25,7 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className='col-sm-4'>
+              <div className='p-2'>
                 <div className='d-flex align-items-center justify-content-center h-full '>
                   <a href='/dashboard/job/1' className='btn btn-sm bg-[#186362] btn btn-sm py-2 px-3 rounded-3 text-white hover:bg-[#2E6969]'>Finish Translating</a>
                 </div>
