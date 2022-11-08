@@ -26,7 +26,12 @@ body {
 .bg-primary {
   background-color: #186362 !important;
 }
-
+.showMoreBox {
+  transition: all 2s ease;
+}
+.showMoreTrigger:hover > .showMoreBox {
+  display: flex !important;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

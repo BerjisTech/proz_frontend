@@ -1,9 +1,12 @@
 import React from 'react'
-import { FiKey, FiMail } from 'react-icons/fi'
-import { Spacer, Partner, MembershipModel, Integrations, AddressCards, SourceTargetSearch } from '../../components'
+import { FiKey } from 'react-icons/fi'
+import { Spacer, Partner, MembershipModel, Integrations, SourceTargetSearch } from '../../components'
 import { Button } from 'react-bootstrap'
 import { BiBookAlt, BiBriefcase, BiLaptop } from 'react-icons/bi'
-import { GiBullseye, GiChatBubble, GiGraduateCap, GiPapers, GiPresent } from 'react-icons/gi'
+import { GiBullseye, GiChatBubble, GiFilmProjector, GiGraduateCap, GiPapers, GiPresent } from 'react-icons/gi'
+import ServicesCards from '../../components/extra_ui_tools/ServicesCards'
+import { randomColor } from '../../components/Helpers'
+import { TypeAnimation } from 'react-type-animation'
 
 const LandingPage = () => {
   return (
@@ -22,7 +25,33 @@ const LandingPage = () => {
               </span>
             </span>
             <Spacer spacing='[2, 0, 0, 0]' />
-            <span className="text-[#739CB4]">Over 1,288,599 professional translators and translation companies</span>
+            <span className="text-[#739CB4]">
+              {/* Over 1,288,599 professional translators and translation companies */}
+              <TypeAnimation
+                sequence={[
+                  'Over 1,288,599 professional translators and translation companies',
+                  3000,
+                  'Find professional translators and interpreters',
+                  3000,
+                  'Translators handle written texts, interpreters handle spoken language',
+                  3000,
+                  'You can also use ProZ.com to find subtitlers',
+                  2000,
+                  'You can also use ProZ.com to find localizers',
+                  2000,
+                  'You can also use ProZ.com to find language instructors',
+                  2000,
+                  'and many more...',
+                  2000,
+                  '',
+                  2000
+                ]}
+                speed={75} // Custom Speed from 1-99 - Default Speed: 40
+                deletionSpeed={100} // Custom Deletion Speed from 1-99 - Default Deletion Speed: 40
+                repeat={Infinity} // Repeat the sequence - Default: false
+
+              />
+            </span>
           </div>
           <SourceTargetSearch />
           <Spacer spacing='[5, 0, 0, 0]' />
@@ -39,6 +68,22 @@ const LandingPage = () => {
             <Partner main_style="col-2" card_style="d-flex align-items-center justify-content-center h-full" logo_size="30px" partner_logo="/images/logos/microsoft.png" alt="slide 1" />
           </div>
         </div >
+      </div>
+      <div className='bg-[#F6F7FC] px-5'>
+        <div className="d-flex flex-column align-items-center justify-content-center py-5">
+          <span className='fs-1 fw-bold'>One Platform</span>
+          <span className='fs-1 fw-bold'>Many <span className='text-[#186362]'>Solutions</span></span>
+        </div>
+        <div className='row'>
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Translation'} icon={[<BiBookAlt size={'3.5rem'} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/translation'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Interpretation'} icon={[<GiChatBubble size={'3.5rem'} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/interpretation'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Localization'} icon={[<BiLaptop size={'3.5rem'} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/localization'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Transcription'} icon={[<GiPapers size={'3.5rem'} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/transcription'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Voiceover'} icon={[<GiPresent size={'3.5rem'} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/voiceover'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Training'} icon={[<GiGraduateCap size={'3.5rem'} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/training'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'DTP'} icon={[<GiBullseye size={'3.5rem'} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/dtp'} />
+          <ServicesCards card_column={'col-md-3'} card_extra_style={'mb-3'} title={'Subtitling'} icon={[<GiFilmProjector size={'3.5rem'} color={randomColor()} />]} description={'Translate documents, websites, and mobile apps. Use our advanced editing features to perfect your translation.'} link={'services/subtitling'} />
+        </div>
       </div>
       <div className="py-[150px] bg-[#F4F6FA]">
         <div className="row">
@@ -290,45 +335,6 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="col-md-2"></div>
-      </div>
-      <div className="row bg-[#ECF5FA]">
-        <Spacer spacing='[5, 0, 0, 0]' />
-        <div className="col-md-2"></div>
-        <div className="col-md-8">
-          <div className="row">
-            <div className="col-md-7">
-              <div className="row h-full">
-                <AddressCards main_style="col-md-4 h-full" card_style="bg-[#ECF5FA] shadow-lg rounded-2 h-full" office_location="ProZ.com Headquaters" office_phone="+1-315-463-7323" office_address="235 Harrison Street Suite 202 Syracuse, NY 13202. USA" />
-                <AddressCards main_style="col-md-4 h-full" card_style="bg-[#ECF5FA] shadow-lg rounded-2 h-full" office_location="ProZ.com Argentina" office_phone="+54-221-425-1266" office_address="Calle 14 nro. 622 1/2 entre 44 y 45 La Plata (B1900AND), Buenos Aires Argentina" />
-                <AddressCards main_style="col-md-4 h-full" card_style="bg-[#ECF5FA] shadow-lg rounded-2 h-full" office_location="ProZ.com Ukraine" office_phone="+380 57 7281624" office_address="6 Karazina St. Kharkiv, 61002. Ukraine" />
-              </div>
-            </div>
-            <div className="col-md-5">
-              <div className="d-flex flex-column">
-                <span className="text-md fw-bolder">Newsletter</span>
-                <span className="text-sm my-2">Be ther first to know about discounts, offers and events. Unsubscribe whenever you like.</span>
-                <div className="d-flex align-items-center justify-content-start bg-white rounded-full p-2">
-                  <FiMail className="ms-3" />
-                  <input type="text" className="flex-fill mx-3 focus:outline-none" placeholder="Enter your email" />
-                  <Button className="text-xs bg-[#3A727F] border-[#3A727F] border-[3px] fw-bold rounded-full d-flex align-items-center justify-content-center hover:bg-white hover:text-[#3A727F] hover:border-[#3A727F]">
-                    SUBSCRIBE
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-2"></div>
-        <Spacer spacing='[5, 0, 0, 0]' />
-      </div>
-      <div className="bg-[#254856] w-full py-3 d-flex align-items-center justify-content-center">
-        <span className="text-white px-2">&copy; 1999 - {new Date().getFullYear()}, All Rights Reserved. Designed By OpusCreation</span>
-        <span className="text-[#A1DDCB] px-2">
-          <a href="/privacy-policy">Privacy Policy</a>
-        </span>
-        <span className="text-[#A1DDCB] px-2">
-          <a href="/terms-of-use">Terms Of Use</a>
-        </span>
       </div>
     </div >
   )

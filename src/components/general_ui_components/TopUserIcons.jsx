@@ -1,6 +1,6 @@
 import React from 'react'
 import 'react-icons/fi';
-import SignupSigninLinks from './SignupSigninLinks';
+import SignupSigninLinks from '../navigation/SignupSigninLinks';
 
 const TopUserIcons = () => {
     return (

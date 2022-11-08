@@ -10,6 +10,8 @@ const HeaderSearch = ({ placeholder }) => {
                     <FiSearch className="fs-3 me-3 text-gray-400" />
                     <input type="text" placeholder={placeholder ? placeholder : "Search..."} name="searchItem" className="bg-gray-100"/>
                 </div>
+                <FiSearch className="fs-3 ms-3" />
+                <input type="text" placeholder={placeholder ? placeholder : "Search..."} name="searchItem" className='flex-fill border-0 py-2 px-3 outline-none focus:outline-none' />
             </form>
         </div>
     )

@@ -7,7 +7,7 @@ export { default as SignupForm } from "./auth/Signup"
 export { default as Header } from "./general_ui_components/Header"
 export { default as Main } from "./general_ui_components/Main"
 export { default as Footer } from "./general_ui_components/Footer"
-export { default as HeaderSearch } from "./general_ui_components/HeaderSearch"
+export { default as TopUserIcons } from "./general_ui_components/TopUserIcons"
 
 export { default as ClearStrikeThrough } from "./extra_ui_tools/ClearStrikeThrough"
 export { default as Spacer } from "./extra_ui_tools/Spacer"
@@ -20,8 +20,7 @@ export { default as RightSideBar } from "./navigation/RightSideBar"
 export { default as SecondaryNavigation } from "./navigation/SecondaryNavigation"
 export { default as UserFacingTopNavigation } from "./navigation/UserFacingTopNavigation"
 export { default as SignupSigninLinks } from "./navigation/SignupSigninLinks"
-export { default as TopUserIcons } from "./navigation/TopUserIcons"
-
+export { default as LeftSideBars } from "./navigation/LeftSideBars"
 
 export { default as Partner } from "./Partner"
 export { default as Flags } from "./Flags"
@@ -33,6 +32,7 @@ export { default as Events } from "./Events"
 
 // Search forms
 export { default as SourceTargetSearch } from "./search/SourceTargetSearch"
+export { default as HeaderSearch } from "./search/HeaderSearch"
 
 
 // Businesses
