@@ -1,0 +1,26 @@
+/****FEEDBACK CARD****/
+.profile-feedback-card h3 {
+    font-size: 50px;
+    font-weight: 900;
+    color: #186362;
+    line-height: 0.8em;
+}
+
+.profile-feedback-card h2 {
+    color: black;
+}
+
+.feedback-items {
+    width: 200px;
+    transition: 0.5s linear;
+    border-radius: 5px;
+    background: rgb(248, 249, 249);
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 15px;
+}
+
+
+.feedback-items:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,63 @@
+.profile-training {
+    width: 100%;
+}
+
+.profile-training h2 {
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.profile-training-image img {
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.profile-training-courses {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-training-course {
+    display: flex;
+    gap: 20px;
+    background-color: #F3F4F6;
+    padding: 10px 30px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-training-description ul {
+    display: flex;
+}
+
+.profile-training-description ul li {
+    display: flex;
+}
+
+.profile-training-description span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-training-verified {
+    display: flex;
+    align-items: center;
+}
+
+.profile-training-verified svg {
+    filter: invert(31%) sepia(66%) saturate(3265%) hue-rotate(225deg) brightness(97%) contrast(84%);
+}
+
+@media only screen and (max-width: 768px) {
+    .profile-training-course {
+      flex-direction: column;
+      align-items: center;
+      
+    }
+}

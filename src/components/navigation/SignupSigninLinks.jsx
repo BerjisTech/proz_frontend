@@ -4,6 +4,7 @@ import { FiKey } from 'react-icons/fi'
 import Notifications from '../Notifications'
 import { LocalizationDropdown } from './LocalizationSelect'
 import { UserAccountNavigationDropdown } from './UserAccountNavigation'
+import MessageIcon from './MessageIcon'
 
 const SignupSigninLinks = () => {
 
@@ -21,8 +22,9 @@ const SignupSigninLinks = () => {
                             Get Started
                         </a>
                     </span>
-                    : <span className="d-flex align-items-center justify-content-between">
+                    : <span className="d-flex align-items-center justify-content-between gap-2">
                         <LocalizationDropdown />
+                        <MessageIcon />
                         <Notifications />
                         <UserAccountNavigationDropdown />
                     </span>

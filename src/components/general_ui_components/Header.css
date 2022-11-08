@@ -1,0 +1,27 @@
+.profile-dropdown-nav {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 300px;
+}
+
+.membership-text-nav {
+    font-size: small;
+}
+
+.btn-freelance-membership {
+    background-color: #2E6969!important;
+    color: white !important;
+}
+
+.btn-business-membership {
+    background-color: #5E2955!important;
+    color: white !important;
+}
+
+.profile-bundle-nav {
+    right: 5%;
+}
+
+
+#notificationsDropdown {
+    
+}

@@ -1,0 +1,37 @@
+.action-main {
+    background-color: #EF9C00;
+    padding: 20px 0px;
+}
+
+.action-secondary {
+    background-color: #186362;
+    padding: 10px 0px;
+}
+
+.profile-header-action-items {
+    /*margin-top: 20px;*/
+    left: 20px;
+    bottom: 10px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.contact-button {
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+}
+
+.contact-button:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-button {
+        width: 200px;
+    }
+
+  }

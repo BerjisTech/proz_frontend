@@ -1,0 +1,130 @@
+.user-profile-frame {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.user-profile-presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.profile-header-picture {
+    border-radius: 5px;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.profile-header-badges {
+    color: black;
+    padding-left: 25px;
+}
+
+.profile-header-badges h1 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+
+}
+
+.profile-header-tags {
+    flex-wrap: wrap;
+}
+
+.membership-ribbon {
+    width: 15px;
+    margin-left: 5px;
+}
+
+.cpn-pill {
+    font-size: 10px;
+    position: relative;
+    background-color: #186362;
+    border-radius: 20px;
+    color: white;
+}
+
+.cpn-pill-items {
+    padding: 5px 10px;
+}
+
+.profile-badges-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.location-icon {
+    width: 15px;
+    filter: invert(29%) sepia(99%) saturate(345%) hue-rotate(130deg) brightness(87%) contrast(90%);
+}
+
+.native-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.member-since {
+    font-size: small;
+}
+
+.secondary-information {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*  mobile and tablet */
+@media only screen and (max-width: 768px) {
+    .profile-header-presentation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .profile-header-tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .user-profile-presentation {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .profile-badges-bottom {
+        position: relative;
+    }
+
+  }
+
+  @media only screen and (max-width: 320px) {
+    .profile-badges-bottom {
+        position: relative;
+    }
+
+    /*
+    .profile-header-presentation {
+        height: 550px;
+    }
+    */
+
+    .profile-header-location {
+        flex-direction: row-reverse;
+    }
+
+    .user-profile-presentation {
+        gap: 10px;
+    }
+
+  }

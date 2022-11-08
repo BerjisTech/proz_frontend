@@ -14,12 +14,9 @@ import {
     Billing,
     Businesses,
     Business,
-    BlueboardList,
-    Feeds,
-    Jobs,
-    Hire,
-    Events
+    BlueboardList
 } from "../../pages";
+import UserProfile from '../../pages/profiles/UserProfile';
 
 const Main = () => {
     return (
@@ -40,11 +37,6 @@ const Main = () => {
             <Route path="/businesses/*" element={<Businesses />} />
             <Route path="/business/:business_id" element={<Business />} />
             <Route path="/blueboards" element={<BlueboardList />} />
-            <Route path="/feed" element={<Feeds />} />
-            <Route path="/jobs/:job_type" element={<Jobs />} />
-            <Route path="/hire/:translator_type" element={<Hire />} />
-            <Route path="/events" element={<Events />} />
-
             {/* Dashboard links */}
             <Route path="/dashboard/*" element={<Dashboard />} />
             <Route path="/dashboard/applications/*" element={<Applications />} />
