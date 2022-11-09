@@ -18,8 +18,8 @@ const UserFacingPages = () => {
             <div className='col-sm-2 min-h-screen col-xs-none border-end-1'>
                 <LeftSideBars />
             </div>
-            <div className='col-sm-8'>
-                <Main>
+            <div className='col-sm-8 m-0 p-0'>
+                <Main className='m-0 p-0'>
                     <LandingPage />
                 </Main>
             </div>

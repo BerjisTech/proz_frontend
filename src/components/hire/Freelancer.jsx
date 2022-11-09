@@ -99,7 +99,7 @@ const Freelancer = () => {
 
     console.log('url_params', url_params)
     useEffect(() => {
-        fetch(`https://cors-anywhere.herokuapp.com/https://api.proz.com/v2/freelancer-matches?language_pair=${langauge_pair}&limit=${limit}&featured_member=${featured_member.current}&is_member=${is_member}`, {
+        fetch(`${process.env.REACT_APP_PROZ_API_V2_URL}freelancer-matches?language_pair=${langauge_pair}&limit=${limit}&featured_member=${featured_member.current}&is_member=${is_member}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${process.env.REACT_APP_PROZ_OAUTH_TOKEN}`
