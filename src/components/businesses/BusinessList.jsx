@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 
-export const BusinessCard = ({businesS_id}) => {
+export const BusinessCard = ({ businesS_id }) => {
   return (
     <div className="card w-full">
       <div className="card-body">
@@ -74,7 +74,7 @@ const BusinessList = () => {
   console.log(businesses)
 
   return (
-    <div className='d-flex flex-col gap-3 mb-5'>
+    <div className='d-flex flex-col gap-3 mx-3 mt-3 mb-5'>
       <div className='d-flex flex-wrap gap-3'>
         {draftBusinesses.map(business => (
           <BusinessCard key={business.id} businesS_id={business.id} />

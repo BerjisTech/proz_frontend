@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
 import axios from 'axios'
+import { Rating } from '@mui/material'
 
 // Business data block
 // {
@@ -19,32 +20,73 @@ import axios from 'axios'
 // }
 
 const SingleBusiness = () => {
-    const [business, setBusiness] = React.useState({});
+    // const [business, setBusiness] = React.useState({});
 
-    let { business_id } = useParams()
+    // let { business_id } = useParams()
 
-    React.useEffect(() => {
-        axios.get(`https://api.proz.com/v2/businesses/${business_id}`, {
-            headers: {
-                'Authorization': `Bearer e5d0cf93ab4ba99261aa9a02adeb30c3abfad5cf`
-            }
-        }).then(res => {
-            setBusiness(res.data);
-        }).catch(err => {
-            console.log(err);
-        })
-    }, [business_id])
+    // React.useEffect(() => {
+    //     axios.get(`https://api.proz.com/v2/businesses/${business_id}`, {
+    //         headers: {
+    //             'Authorization': `Bearer ${process.env.REACT_APP_PROZ_OAUTH_TOKEN}`
+    //         }
+    //     }).then(res => {
+    //         setBusiness(res.data);
+    //     }).catch(err => {
+    //         console.log(err);
+    //     })
+    // }, [business_id])
 
     return (
-        <div>
-            {business.business_name ? (
-                <div>
-                    <h3>{business.business_name}</h3>
-                    <p>{business.business_link}</p>
+        <div className='m-3'>
+            <div className="d-flex align-items-center justify-content-start gap-3">
+                <img src="https://thumbs.dreamstime.com/b/something-like-bx-logo-letter-separated-black-zigzag-line-bx-logo-letter-separated-black-zigzag-line-114234401.jpg" alt="ProZ.com" className="shadow img-fluid bg-white rounded-3 h-[100px] w-[100px]" />
+                <span className='fs-3'>BusinessX</span>
+            </div>
+            <div className="d-flex align-items-center justify-content-start my-3 min-h-[100px]">
+                <div className="d-flex align-items-start justify-content-start flex-col shadow rounded-2 p-3 gap-2 h-[100%] bg-white">
+                    <span className='fw-bold'>About BusinessX</span>
+                    <span>
+                        BusinessX was founded in November 2002. The business was born out as a translation service provider and, in order to meet our clients’ demands, gradually expanded to localization, transcription services, voice over, subtitling, copy writing,  and DTP.
+
+                        Many clients only use the BusinessX translation module, but increasingly clients seek to benefit from 883 integrating our services into the overall package.
+
+                        We operate from London, UK and Chisinau, Moldova with representations in Berlin, Paris, Milan and Madrid. Right from the start we have welcomed large and small clients, from corporations to one-man consultancies.
+                    </span>
                 </div>
-            ) : (
-                <p>No business found</p>
-            )}
+                <div className="d-flex align-items-start justify-content-start flex-col m-2 gap-4 h-[100%] flex-fill flex-wrap">
+                    <div className="d-flex align-items-start justify-content-start flex-col gap-2 shadow rounded-2 p-3 bg-white">
+                        <a href="https://www.thiswebsite.com" className='fw-bold text-blue-800'>https://www.thiswebsite.com</a>
+                        <span className='fw-bold'>Medical</span>
+                        <span className='fw-bold'>Scottsdale, US</span>
+                    </div>
+                    <div className="d-flex align-items-start justify-content-start gap-2 flex-wrap flex-fill w-full">
+                        <div className="d-flex align-items-center justify-content-start flex-col flex-fill gap-2 shadow rounded-2 p-3 bg-white">
+                            <span className='text-sm fw-bold'>Done Jobs</span>
+                            <span>10</span>
+                        </div>
+                        <div className="d-flex align-items-center justify-content-start flex-col flex-fill gap-2 shadow rounded-2 p-3 bg-white">
+                            <span className='text-sm fw-bold'>Hired Talent</span>
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="d-flex align-items-start justify-content-start flex-wrap gap-3 shadow rounded-3 p-3 bg-white">
+                <div className='d-flex align-items-start justify-content-start flex-fill flex-col'>
+                    <span className='d-flex align-items-center justify-content-center'>
+                        <span>4.5</span>
+                        <Rating value={4.5} precision={0.5} />
+                        <span>(1)</span>
+                    </span>
+                    <span>CLEAR EXPECTATIONS AND SCOPE</span>
+                </div>
+                <div>
+                    <a className='text-[#ffffff] bg-[#186362] btn' href="https://www.proz.com/business/100">View All Reviews</a>
+                </div>
+            </div>
+            <div>
+                <h1>Jobs Will Go Here</h1>
+            </div>
         </div>
     )
 
