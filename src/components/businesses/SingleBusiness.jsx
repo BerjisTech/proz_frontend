@@ -42,8 +42,8 @@ const SingleBusiness = () => {
                 <img src="https://thumbs.dreamstime.com/b/something-like-bx-logo-letter-separated-black-zigzag-line-bx-logo-letter-separated-black-zigzag-line-114234401.jpg" alt="ProZ.com" className="shadow img-fluid bg-white rounded-3 h-[100px] w-[100px]" />
                 <span className='fs-3'>BusinessX</span>
             </div>
-            <div className="d-flex align-items-center justify-content-start my-3 min-h-[100px]">
-                <div className="d-flex align-items-start justify-content-start flex-col shadow rounded-2 p-3 gap-2 h-[100%] bg-white">
+            <div className="d-flex align-items-start justify-content-start md:flex-row xs:flex-col my-3 gap-3 min-h-[100px]">
+                <div className="d-flex align-items-start justify-content-start flex-col flex-fill shadow rounded-2 p-3 gap-2 h-[100%] bg-white">
                     <span className='fw-bold'>About BusinessX</span>
                     <span>
                         BusinessX was founded in November 2002. The business was born out as a translation service provider and, in order to meet our clients’ demands, gradually expanded to localization, transcription services, voice over, subtitling, copy writing,  and DTP.
@@ -53,8 +53,8 @@ const SingleBusiness = () => {
                         We operate from London, UK and Chisinau, Moldova with representations in Berlin, Paris, Milan and Madrid. Right from the start we have welcomed large and small clients, from corporations to one-man consultancies.
                     </span>
                 </div>
-                <div className="d-flex align-items-start justify-content-start flex-col m-2 gap-4 h-[100%] flex-fill flex-wrap">
-                    <div className="d-flex align-items-start justify-content-start flex-col gap-2 shadow rounded-2 p-3 bg-white">
+                <div className="d-flex align-items-start justify-content-start flex-col gap-2 h-[100%] flex-fill flex-wrap w-full">
+                    <div className="d-flex align-items-start justify-content-start flex-col gap-2 shadow rounded-2 h-full p-3 w-full bg-white">
                         <a href="https://www.thiswebsite.com" className='fw-bold text-blue-800'>https://www.thiswebsite.com</a>
                         <span className='fw-bold'>Medical</span>
                         <span className='fw-bold'>Scottsdale, US</span>

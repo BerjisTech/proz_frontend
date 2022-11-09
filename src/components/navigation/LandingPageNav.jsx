@@ -5,7 +5,7 @@ import { GiCutDiamond, GiHelp } from 'react-icons/gi'
 import { SignupSigninLinks } from '..'
 const LandingPageNav = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-[#F4F6FA] navbar-light sticky">
+        <nav className="navbar navbar-expand-lg bg-[#F4F6FA] navbar-light sticky  z-[100]">
             <div className="container-fluid d-flex flex-row align-items-center justify-between">
                 <a className="navbar-brand" href="/">
                     <img src="https://pbs.twimg.com/profile_images/1151905246073053189/cZLu6vip_400x400.jpg" width="30" alt="logo" className='bg-white shadow rounded-full mx-2 fs-5' />
@@ -50,8 +50,8 @@ const LandingPageNav = () => {
                                 <span className="ms-2">ProZ Educate&trade;</span>
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a className="dropdown-item" href="/prozpay">Courses</a></li>
-                                <li><a className="dropdown-item" href="/directory">Training</a></li>
+                                <li><a className="dropdown-item" href="/courses">Courses</a></li>
+                                <li><a className="dropdown-item" href="/training">Training</a></li>
                                 <li><hr className="dropdown-divider" /></li>
                                 <li><a className="dropdown-item" href="/collaborate">Collaborative Translation</a></li>
                             </ul>
