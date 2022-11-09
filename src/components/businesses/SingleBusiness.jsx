@@ -27,7 +27,7 @@ const SingleBusiness = () => {
     // React.useEffect(() => {
     //     axios.get(`https://api.proz.com/v2/businesses/${business_id}`, {
     //         headers: {
-    //             'Authorization': `Bearer e5d0cf93ab4ba99261aa9a02adeb30c3abfad5cf`
+    //             'Authorization': `Bearer ${process.env.REACT_APP_PROZ_OAUTH_TOKEN}`
     //         }
     //     }).then(res => {
     //         setBusiness(res.data);
