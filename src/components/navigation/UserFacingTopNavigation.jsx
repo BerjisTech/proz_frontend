@@ -6,7 +6,7 @@ import HeaderSearch from '../search/HeaderSearch'
 
 const UserFacingTopNavigation = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-white navbar-light sticky w-screen">
+        <nav className="navbar navbar-expand-lg bg-white navbar-light sticky w-screen z-[100]">
             <div className="container-fluid d-flex align-items-center justify-content-center w-full py-2 shadow">
                 <a href="/">
                     <img src='/images/logos/logo.png' alt="logo" className="w-20 m-3" />
@@ -58,7 +58,7 @@ const UserFacingTopNavigation = () => {
                                         <span className="ms-2">Member Activities</span>
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="/prozpay">Courses</a></li>
+                                        <li><a className="dropdown-item" href="/courses">Courses</a></li>
                                         <li><a className="dropdown-item" href="/directory">Training</a></li>
                                         <li><hr className="dropdown-divider" /></li>
                                         <li><a className="dropdown-item" href="/collaborate">Collaborative Translation</a></li>

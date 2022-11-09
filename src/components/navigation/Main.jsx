@@ -46,6 +46,7 @@ const Main = () => {
             <Route path="/freelancer/:freelancer_id" element={<FreelancerProfile />} />
             <Route path="/business/:business_id" element={<BusinessProfile />} />
             <Route path="/jobs/*" element={<Jobs />} />
+            <Route path="/courses/*" element={<Courses />} />
             {/* Dashboard links */}
             <Route path="/dashboard/*" element={<Dashboard />} />
             <Route path="/dashboard/applications/*" element={<Applications />} />

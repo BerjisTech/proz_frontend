@@ -5,7 +5,7 @@ export { default as SigninForm } from "./auth/Signin"
 export { default as SignupForm } from "./auth/Signup"
 
 export { default as Header } from "./general_ui_components/Header"
-export { default as Main } from "./general_ui_components/Main"
+export { default as Main } from "./navigation/Main"
 export { default as Footer } from "./general_ui_components/Footer"
 export { default as TopUserIcons } from "./general_ui_components/TopUserIcons"
 
