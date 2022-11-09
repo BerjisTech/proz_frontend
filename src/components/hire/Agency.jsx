@@ -1,4 +1,5 @@
 import React from 'react'
+import { BusinessList } from '../../components'
 
 const Agency = () => {
   const [agencies, setAgencies] = React.useState([]);
@@ -59,7 +60,7 @@ const Agency = () => {
             <p>Total items: {total_items}</p>
           </div>
         ) : (
-          <p>No agencies found</p>
+          <BusinessList />
         )
       }
     </div >
