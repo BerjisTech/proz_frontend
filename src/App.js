@@ -65,9 +65,9 @@ const LandingPagesLayout = () => {
         'right-side-bar': <RightSideBarPages />
     }
 
-    const right_side_bar_pages = ['/freelancer/', '/courses', '/about/', '/contact/']
+    const right_side_bar_pages = ['/courses', '/about/', '/contact/']
     const left_side_bar_pages = ['/employer/', '/about/', '/contact/']
-    const two_side_bar_pages = ['/hire/', '/employer/', '/about/', '/contact/']
+    const two_side_bar_pages = ['/profile/', '/freelancer/', '/about/', '/contact/']
 
     let location = window.location.href
     let page = 'landing-page'
