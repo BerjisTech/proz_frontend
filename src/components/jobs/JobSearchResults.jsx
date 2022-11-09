@@ -9,7 +9,7 @@ const JobSearchResults = () => {
 
     console.log(process.env.REACT_APP_PROZ_OAUTH_TOKEN)
     const fetchJobs = async () => {
-        return fetch('https://cors-anywhere.herokuapp.com/https://api.proz.com/v2/job-postings', {
+        return fetch('https://api.proz.com/v2/job-postings', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${process.env.REACT_APP_PROZ_OAUTH_TOKEN}`

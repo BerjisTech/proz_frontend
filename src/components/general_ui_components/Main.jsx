@@ -15,7 +15,11 @@ import {
     Businesses,
     Business,
     BlueboardList,
-    UserProfile
+    UserProfile,
+    Hire,
+    Jobs,
+    FreelancerProfile,
+    BusinessProfile
 } from "../../pages";
 
 const Main = () => {
@@ -38,6 +42,10 @@ const Main = () => {
             <Route path="/business/:business_id" element={<Business />} />
             <Route path="/blueboards" element={<BlueboardList />} />
             <Route path="/profile/:profile_id" element={<UserProfile/>} />
+            <Route path="/hire/:translator_type" element={<Hire />} />
+            <Route path="/freelancer/:freelancer_id" element={<FreelancerProfile />} />
+            <Route path="/business/:business_id" element={<BusinessProfile />} />
+            <Route path="/jobs/*" element={<Jobs />} />
             {/* Dashboard links */}
             <Route path="/dashboard/*" element={<Dashboard />} />
             <Route path="/dashboard/applications/*" element={<Applications />} />

@@ -30,4 +30,6 @@ export { default as Events } from './events/Events'
 
 // Profile
 export { default as UserProfile } from './profiles/UserProfile'
+export { default as BusinessProfile } from './profiles/BusinessProfile'
+export { default as FreelancerProfile } from './profiles/FreelancerProfile'
 

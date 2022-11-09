@@ -18,7 +18,7 @@ const LandingPage = () => {
             <span className='text-[80px] text-[#2E6969]'>
               Find Professional<br />
               Translators
-              <span className="d-flex algin-items-end justify-content-end mt-[-80px] pr-[70px]">
+              <span className="d-flex align-items-end justify-content-end mt-[-80px] pr-[70px]">
                 <img src='/images/avatars/avatar.jpg' alt="translator" className="inline ml-[-20px] border-1 border-white rounded-circle w-[60px] h-[60px]" />
                 <img src='/images/avatars/avatar2.jpg' alt="translator" className="inline ml-[-20px] border-1 border-white rounded-circle w-[60px] h-[60px]" />
                 <img src='/images/avatars/avatar3.png' alt="translator" className="inline ml-[-20px] border-1 border-white rounded-circle w-[60px] h-[60px]" />
