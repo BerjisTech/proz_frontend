@@ -14,7 +14,7 @@ import { Dashboard, LandingPage } from './pages'
 
 const TwoSideBars = () => {
     return (
-        <div className='row bg-gray-100'>
+        <div className='row'>
             <div className='col-sm-2 min-h-screen col-xs-none border-end-1'>
                 <LeftSideBars />
             </div>
@@ -30,7 +30,7 @@ const TwoSideBars = () => {
 
 const LeftSideBarPages = () => {
     return (
-        <div className='row bg-gray-100'>
+        <div className='row'>
             <div className='col-sm-2 min-h-screen col-xs-none border-end-1'>
                 <LeftSideBars />
             </div>
@@ -45,7 +45,7 @@ const LeftSideBarPages = () => {
 
 const RightSideBarPages = () => {
     return (
-        <div className='row bg-gray-100'>
+        <div className='row'>
             <div className='col-sm-10 m-0 p-0'>
                 <Main className='m-0 p-0'>
                     <Dashboard />
