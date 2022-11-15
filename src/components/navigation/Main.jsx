@@ -19,7 +19,8 @@ import {
     Hire,
     Jobs,
     FreelancerProfile,
-    BusinessProfile
+    BusinessProfile,
+    Events
 } from "../../pages";
 
 const Main = () => {
@@ -30,6 +31,7 @@ const Main = () => {
             <Route path="/signup" element={<Signup />} />
             <Route path="/applications/*" element={<Applications />} />
             <Route path="/courses/*" element={<Courses />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/find-work/*" element={<FindWork />} />
             <Route path="/find_work/*" element={<FindWork />} />
             <Route path="/findwork/*" element={<FindWork />} />

@@ -56,27 +56,35 @@ const RightSideBarPages = () => {
     )
 }
 
+const NoSideBarPages = () => {
+    return (
+        <Main className='m-0 p-0'>
+            <Dashboard />
+        </Main>
+    )
+}
+
 
 const LandingPagesLayout = () => {
     const page_selectors = {
-        'landing-page': <LandingPage />,
+        'no-side-bars': <NoSideBarPages />,
         'two-side-bars': <TwoSideBars />,
         'left-side-bar': <LeftSideBarPages />,
         'right-side-bar': <RightSideBarPages />
     }
 
+    const no_side_bars = []
     const right_side_bar_pages = ['/courses', '/about/', '/contact/']
     const left_side_bar_pages = ['/employer/', '/about/', '/contact/']
-    const two_side_bar_pages = ['/profile/', '/freelancer/', '/hire/', '/contact/']
 
     let location = window.location.href
-    let page = 'landing-page'
+    let page = 'two-side-bars'
     if (right_side_bar_pages.some(path_selector => location.indexOf(path_selector) !== -1)) {
         page = 'right-side-bar'
     } else if (left_side_bar_pages.some(path_selector => location.indexOf(path_selector) !== -1)) {
         page = 'left-side-bar'
-    } else if (two_side_bar_pages.some(path_selector => location.indexOf(path_selector) !== -1)) {
-        page = 'two-side-bars'
+    } else if (no_side_bars.some(path_selector => location.indexOf(path_selector) !== -1)) {
+        page = 'no-side-bars'
     }
 
     return (
