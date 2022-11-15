@@ -5,8 +5,8 @@ import ClearStrikeThrough from '../extra_ui_tools/ClearStrikeThrough'
 export const FreelancerFilterForm = () => {
     return (
         <div className=''>
-            <form className='form' method="GET" action="/hire/freelancers">
-                <div>
+            <form className='sticky top-100 form' method="GET" action="/hire/freelancers">
+                <div className='shadow rounded-2 my-2 p-2'>
                     <ClearStrikeThrough striked_text="Category" />
                     <div className='d-flex flex-wrap gap-2 mx-2 text-sm'>
                         <a href="?category=translation">Translators | <span className='text-muted'>35k</span></a>
@@ -19,7 +19,7 @@ export const FreelancerFilterForm = () => {
                         <a href="?category=training">Training | <span className='text-muted'>19k</span></a>
                     </div>
                 </div>
-                <div>
+                <div className='shadow rounded-2 my-2 p-2'>
                     <ClearStrikeThrough striked_text="Language" />
                     <div className='d-flex border-1'>
                         <div className='form-group'>
@@ -34,7 +34,7 @@ export const FreelancerFilterForm = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className='shadow rounded-2 my-2 p-2'>
                     <ClearStrikeThrough striked_text="Expertise" />
                     <div className='form-floating'>
                         <input type='text' name='skills' placeholder="Skills" className='form-control' />
@@ -53,7 +53,7 @@ export const FreelancerFilterForm = () => {
                         <label htmlFor='name'>Languages</label>
                     </div>
                 </div>
-                <div>
+                <div className='shadow rounded-2 my-2 p-2'>
                     <ClearStrikeThrough striked_text="Credential and Software" />
                     <div className='form-floating'>
                         <input type='text' name='certifications' placeholder="Certifications" className='form-control' />
@@ -72,7 +72,7 @@ export const FreelancerFilterForm = () => {
                         <label htmlFor='name'>Reviews</label>
                     </div>
                 </div>
-                <div>
+                <div className='shadow rounded-2 my-2 p-2'>
                     <ClearStrikeThrough striked_text="Other" />
                     <div className='form-floating'>
                         <input type='text' name='rate' placeholder="Rate" className='form-control' />
