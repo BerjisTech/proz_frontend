@@ -73,9 +73,9 @@ const LandingPagesLayout = () => {
         'right-side-bar': <RightSideBarPages />
     }
 
-    const no_side_bars = []
     const right_side_bar_pages = ['/courses', '/about/', '/contact/']
     const left_side_bar_pages = ['/employer/', '/about/', '/contact/']
+    const two_side_bar_pages = ['/profile/', '/freelancer/', '/hire/', '/businesses', '/jobs', '/job/', '/profile/']
 
     let location = window.location.href
     let page = 'two-side-bars'
@@ -83,14 +83,14 @@ const LandingPagesLayout = () => {
         page = 'right-side-bar'
     } else if (left_side_bar_pages.some(path_selector => location.indexOf(path_selector) !== -1)) {
         page = 'left-side-bar'
-    } else if (no_side_bars.some(path_selector => location.indexOf(path_selector) !== -1)) {
-        page = 'no-side-bars'
+    } else if (two_side_bar_pages.some(path_selector => location.indexOf(path_selector) !== -1)) {
+        page = 'two-side-bars'
     }
 
     return (
         <div>
             {window.location.pathname === '/' ? <LandingPageNav /> : <UserFacingTopNavigation />}
-            {page_selectors[page]}
+            {window.location.pathname === '/' ? <NoSideBarPages /> : page_selectors[page]}
             <UserFacingFooter />
         </div>
     )
