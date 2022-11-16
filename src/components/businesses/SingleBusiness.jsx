@@ -1,7 +1,6 @@
 import React from 'react'
-import { useParams } from "react-router-dom";
-import axios from 'axios'
 import { Rating } from '@mui/material'
+import { JobsList } from '../jobs/JobDescription'
 
 // Business data block
 // {
@@ -20,21 +19,30 @@ import { Rating } from '@mui/material'
 // }
 
 const SingleBusiness = () => {
-    // const [business, setBusiness] = React.useState({});
+    const [jobs, setJobs] = React.useState([])
+    const [loading, setLoading] = React.useState(true)
+    const [error, setError] = React.useState(false)
 
-    // let { business_id } = useParams()
+    React.useEffect(() => {
+        const fetchJobs = async () => {
+            try {
+                const response = await fetch('https://api.proz.com/v2/job-postings', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${process.env.REACT_APP_PROZ_OAUTH_TOKEN}`
+                    }
+                })
+                const data = await response.json()
+                setJobs(data['data'])
+                setLoading(false)
+            } catch (error) {
+                setError(true)
+                setLoading(false)
+            }
 
-    // React.useEffect(() => {
-    //     axios.get(`https://api.proz.com/v2/businesses/${business_id}`, {
-    //         headers: {
-    //             'Authorization': `Bearer ${process.env.REACT_APP_PROZ_OAUTH_TOKEN}`
-    //         }
-    //     }).then(res => {
-    //         setBusiness(res.data);
-    //     }).catch(err => {
-    //         console.log(err);
-    //     })
-    // }, [business_id])
+        }
+        fetchJobs()
+    }, [])
 
     return (
         <div className='m-3'>
@@ -84,8 +92,13 @@ const SingleBusiness = () => {
                     <a className='text-[#ffffff] bg-[#186362] btn' href="https://www.proz.com/business/100">View All Reviews</a>
                 </div>
             </div>
-            <div>
-                <h1>Jobs Will Go Here</h1>
+            <div className='my-3'>
+                <span className='fw-bold fs-4'>Active Jobs By BusinessX</span>
+                {loading && <span>Loading...</span>}
+                {error && <span>Error</span>}
+                {jobs.map((job) => (
+                    <JobsList key={job.id} job={job} />
+                ))}
             </div>
         </div>
     )
