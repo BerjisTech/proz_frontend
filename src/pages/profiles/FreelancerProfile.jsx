@@ -1,9 +1,14 @@
-import { Rating } from '@mui/material'
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
+// MUI
+import {
+    FormControl, InputLabel, Select, Rating,
+    Box, Tab, Button, ButtonGroup,
+    InputAdornment, OutlinedInput
+} from '@mui/material';
+
+import { TabContext, TabList, TabPanel } from '@mui/lab'
+
+// BOOTSTRAP
+import Modal from 'react-bootstrap/Modal';
 
 import React from 'react'
 import { BsTranslate } from 'react-icons/bs'
@@ -11,8 +16,30 @@ import { FiGlobe, FiInstagram, FiMail, FiMapPin, FiTwitter } from 'react-icons/f
 import { useParams } from 'react-router-dom'
 import Rates from '../../components/profile/Rates'
 import { ShortJobDescription } from '../../components/jobs/JobDescription';
+import { useState } from 'react';
+import { LimitedWordTextarea } from '../../components/general_ui_components/Reusables';
+import { GiPaperClip } from 'react-icons/gi';
 
 const FreelancerProfile = () => {
+    const [showQuoteModal, setShowQuoteModal] = useState(false);
+    const [category, setCategory] = useState('')
+    const [sub_category, setSubCategory] = useState('')
+    const categoryRef = React.useRef()
+    const subCategoryRef = React.useRef()
+    const quoteFormRef = React.useRef()
+
+    const submitQuote = (e) => {
+        e.preventDefault()
+        console.log('submitting quote')
+        console.log(FormData(quoteFormRef.current))
+    }
+
+    const handleCategoryChange = (event) => { setCategory(event.target.value) }
+    const handleSubCategoryChange = (event) => { setSubCategory(event.target.value) }
+
+    const handleCloseQuoteModal = () => setShowQuoteModal(false);
+    const handleShowQuoteModal = () => setShowQuoteModal(true);
+
     // const [freelancer, setFreelancer] = React.useState({})
     // const [loading, setLoading] = React.useState(true)
     // const [error, setError] = React.useState(false)
@@ -48,7 +75,7 @@ const FreelancerProfile = () => {
 
     const [value, setValue] = React.useState('1');
 
-    const handleChange = (event, newValue) => {
+    const handleJobTabChange = (event, newValue) => {
         setValue(newValue);
     };
 
@@ -78,7 +105,116 @@ const FreelancerProfile = () => {
                             </div>
                             <div className='d-flex align-items-end justify-content-center gap-1'>
                                 <a href={`/hire/${freelancer_id}`} className='btn bg-[#186362] btn-sm text-[#ffffff]'>Contact Me</a>
-                                <a href={`/hire/${freelancer_id}`} className='btn bg-[#ffffff] btn-sm text-[#186362] border-1 border-[#186362]'>Get A Quote</a>
+                                <span onClick={handleShowQuoteModal} className='btn bg-[#ffffff] btn-sm text-[#186362] border-1 border-[#186362]'>Request Quote</span>
+                                <Modal show={showQuoteModal} onHide={handleCloseQuoteModal}>
+                                    <form ref={quoteFormRef} onSubmit={submitQuote}>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Request Quote</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>
+                                            <div className='d-flex align-items-start justify-content-start gap-2 border-bottom-1 py-3'>
+                                                <img src='https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50' alt='open-book' className='border-2 border-[#ffffff] border-1 w-[50px] h-[50px] rounded-full img-fluid' />
+                                                <div className='d-flex align-items-start justify-content-between flex-col'>
+                                                    <span className='fw-bold'>John  Doe</span>
+                                                    <span>Hi, please provide your request details below and I'll get back to you.</span>
+                                                </div>
+                                            </div>
+                                            <div className='d-flex align-items-start justify-content-start flex-col gap-2 my-3 py-3 border-bottom-1'>
+                                                <LimitedWordTextarea limit={2500} />
+                                                <label>
+                                                    <span className='d-flex gap-2 align-items-center fw-bold cursor-pointer btn border-1 border-[#c0c0c0] text-gray-800 bg-gray-200'>Select Service <GiPaperClip /> </span>
+                                                    <input type={'file'} className='d-none' />
+                                                </label>
+                                            </div>
+                                            <div className='d-flex align-items-start justify-content-start flex-col gap-2 my-3 py-3 border-bottom-1'>
+                                                <span className='fw-bold'>Choose Category</span>
+                                                <div className='d-flex align-items-start justify-content-start flex-wrap gap-2 w-full'>
+                                                    <div className="flex-fill">
+                                                        <FormControl fullWidth>
+                                                            <InputLabel id="categorySelectLabel">Category</InputLabel>
+                                                            <Select native
+                                                                labelId="categorySelectLabel"
+                                                                id="categorySelect"
+                                                                value={category}
+                                                                label="Category"
+                                                                onChange={handleCategoryChange}
+                                                                className="border-none outline-none"
+                                                                required
+                                                                ref={categoryRef}
+                                                            >
+                                                                <option aria-label="None" value=""></option>
+                                                                <option aria-label="None" value="tranlsate">Translation</option>
+                                                                <option value="transcribe">Transcription</option>
+                                                                <option value="interpret">Interpretation</option>
+                                                                <option value="voiceover">Voiceover</option>
+                                                                <option value="proofread">Proofreading</option>
+                                                                <option value="subtitling">Subtitling</option>
+                                                                <option value="captioning">Captioning</option>
+                                                            </Select>
+                                                        </FormControl>
+                                                    </div>
+                                                    <div className="flex-fill">
+                                                        <FormControl fullWidth>
+                                                            <InputLabel id="subCategorySelectLabel">Sub Category</InputLabel>
+                                                            <Select native
+                                                                labelId="subCategorySelectLabel"
+                                                                id="subCategorySelect"
+                                                                value={sub_category}
+                                                                label="Sub Category"
+                                                                onChange={handleSubCategoryChange}
+                                                                className="border-none outline-none"
+                                                                required
+                                                                disabled={category ? false : true}
+                                                                ref={subCategoryRef}
+                                                            >
+                                                                <option aria-label="None" value=""></option>
+                                                                <option aria-label="None" value="medicine">Medicine</option>
+                                                                <option value="law">Law</option>
+                                                                <option value="finance">Finance</option>
+                                                                <option value="engineering">Engineering</option>
+                                                                <option value="business">Business</option>
+                                                                <option value="marketing">Marketing</option>
+                                                                <option value="education">Education</option>
+                                                            </Select>
+                                                        </FormControl>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='d-flex align-items-start justify-content-start flex-col gap-2 my-3 py-3 border-bottom-1'>
+                                                <span className='fw-bold'>How soon do you need this service delivered?</span>
+                                                <ButtonGroup variant="outlined" aria-label="outlined primary button group">
+                                                    <Button>24 hours</Button>
+                                                    <Button>7 days</Button>
+                                                    <Button>14 days</Button>
+                                                    <Button>1 month</Button>
+                                                    <Button>Other</Button>
+                                                </ButtonGroup>
+                                            </div>
+                                            <div className='d-flex align-items-start justify-content-start flex-col gap-2 my-3 py-3 border-bottom-1'>
+                                                <span className='fw-bold'>What's your budget for the service?</span>
+                                                <FormControl fullWidth>
+                                                    <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
+                                                    <OutlinedInput
+                                                        id="outlined-adornment-amount"
+                                                        startAdornment={<InputAdornment position="start">$</InputAdornment>}
+                                                        label="Amount"
+                                                        type='number'
+                                                        inputProps={{ min: 0 }}
+                                                        required
+                                                    />
+                                                </FormControl>
+                                            </div>
+                                        </Modal.Body>
+                                        <Modal.Footer>
+                                            {/* <Button variant="secondary" onClick={handleCloseQuoteModal}>
+                                                Close
+                                            </Button> */}
+                                            <Button type="submit" className='btn bg-primary text-white'>
+                                                Save Changes
+                                            </Button>
+                                        </Modal.Footer>
+                                    </form>
+                                </Modal>
                             </div>
                         </div>
                     </div>
@@ -108,7 +244,7 @@ const FreelancerProfile = () => {
                     <span className='fw-bold fs-4'>Work History</span>
                     <TabContext value={value} className='w-full bg-red-100'>
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                            <TabList onChange={handleChange} aria-label="lab API tabs example">
+                            <TabList onChange={handleJobTabChange} aria-label="lab API tabs example">
                                 <Tab label="Previous Jobs" value="1" />
                                 <Tab label="Ongoing Jobs" value="2" />
                             </TabList>

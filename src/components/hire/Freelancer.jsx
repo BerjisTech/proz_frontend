@@ -1,93 +1,125 @@
+// MUI
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+// REACT
 import React, { useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
+// CUSTOM SHIT
 import ClearStrikeThrough from '../extra_ui_tools/ClearStrikeThrough'
+import { prozLanguages } from '../Helpers';
 
 export const FreelancerFilterForm = () => {
+    const [source_language, setSourceLanguage] = React.useState('')
+    const [target_language, setTargetLanguage] = React.useState('')
+
+    const handleSourceLanguageChange = (event) => {
+        setSourceLanguage(event.target.value)
+    }
+
+    const handleTargetLanguageChange = (event) => {
+        setTargetLanguage(event.target.value)
+    }
+
+    console.log(prozLanguages)
     return (
         <div className=''>
-            <form className='sticky top-100 form' method="GET" action="/hire/freelancers">
-                <div className='shadow rounded-2 my-2 p-2'>
-                    <ClearStrikeThrough striked_text="Category" />
-                    <div className='d-flex flex-wrap gap-2 mx-2 text-sm'>
-                        <a href="?category=translation">Translators | <span className='text-muted'>35k</span></a>
-                        <a href="?category=interpretation">Interpretors | <span className='text-muted'>21k</span></a>
-                        <a href="?category=voice_acting">Voice Over | <span className='text-muted'>13.5k</span></a>
-                        <a href="?category=localization">Localization | <span className='text-muted'>3k</span></a>
-                        <a href="?category=transcription">Transcription | <span className='text-muted'>17k</span></a>
-                        <a href="?category=subtitling">Subtitling | <span className='text-muted'>2.7k</span></a>
-                        <a href="?category=dtp">DTP | <span className='text-muted'>1k</span></a>
-                        <a href="?category=training">Training | <span className='text-muted'>19k</span></a>
-                    </div>
+            <div className='shadow rounded-2 my-2 p-2'>
+                <ClearStrikeThrough striked_text="Category" />
+                <div className='d-flex flex-wrap gap-2 mx-2 text-sm'>
+                    <a href="?category=translation">Translators | <span className='text-muted'>35k</span></a>
+                    <a href="?category=interpretation">Interpretors | <span className='text-muted'>21k</span></a>
+                    <a href="?category=voice_acting">Voice Over | <span className='text-muted'>13.5k</span></a>
+                    <a href="?category=localization">Localization | <span className='text-muted'>3k</span></a>
+                    <a href="?category=transcription">Transcription | <span className='text-muted'>17k</span></a>
+                    <a href="?category=subtitling">Subtitling | <span className='text-muted'>2.7k</span></a>
+                    <a href="?category=dtp">DTP | <span className='text-muted'>1k</span></a>
+                    <a href="?category=training">Training | <span className='text-muted'>19k</span></a>
                 </div>
-                <div className='shadow rounded-2 my-2 p-2'>
-                    <ClearStrikeThrough striked_text="Language" />
-                    <div className='d-flex border-1'>
-                        <div className='form-group'>
-                            <select type='select' name='source_language' placeholder="Name" className='form-control border-none outline-none focus:outline-none focus:border-none'>
-                                <option disabled>Pick a source langauge</option>
-                            </select>
-                        </div>
-                        <div className='form-group'>
-                            <select type='select' name='target_language' placeholder="Location" className='form-control border-none outline-none focus:outline-none focus:border-none'>
-                                <option disabled>Pick a target langauge</option>
-                            </select>
-                        </div>
-                    </div>
+            </div>
+            <div className='shadow rounded-2 my-2 p-2'>
+                <ClearStrikeThrough striked_text="Language" />
+                <div className='d-flex border-1 min-w-[50%]'>
+                    <FormControl className="flex-fill">
+                        <InputLabel id="sourceLanguageSelectLabel">From</InputLabel>
+                        <Select native
+                            labelId="sourceLanguageSelectLabel"
+                            id="sourceLanguageSelect"
+                            value={source_language}
+                            label="From"
+                            onChange={handleSourceLanguageChange}
+                            className="border-none outline-none"
+                        >
+                        </Select>
+                    </FormControl>
+                    <FormControl className="flex-fill min-w-[50%]">
+                        <InputLabel id="targetLanguageSelectLabel">To</InputLabel>
+                        <Select native
+                            labelId="targetLanguageSelectLabel"
+                            id="targetLanguageSelect"
+                            value={target_language}
+                            label="To"
+                            onChange={handleTargetLanguageChange}
+                            className="border-none outline-none"
+                        >
+
+                        </Select>
+                    </FormControl>
                 </div>
-                <div className='shadow rounded-2 my-2 p-2'>
-                    <ClearStrikeThrough striked_text="Expertise" />
-                    <div className='form-floating'>
-                        <input type='text' name='skills' placeholder="Skills" className='form-control' />
-                        <label htmlFor='name'>Skills</label>
-                    </div>
-                    <div className='form-floating'>
-                        <input type='text' name='experience' placeholder="Experience" className='form-control' />
-                        <label htmlFor='name'>Experience</label>
-                    </div>
-                    <div className='form-floating'>
-                        <input type='text' name='education' placeholder="Education" className='form-control' />
-                        <label htmlFor='name'>Education</label>
-                    </div>
-                    <div className='form-floating'>
-                        <input type='text' name='languages' placeholder="Languages" className='form-control' />
-                        <label htmlFor='name'>Languages</label>
-                    </div>
+            </div>
+            <div className='shadow rounded-2 my-2 p-2'>
+                <ClearStrikeThrough striked_text="Expertise" />
+                <div className='form-floating'>
+                    <input type='text' name='skills' placeholder="Skills" className='form-control' />
+                    <label htmlFor='name'>Skills</label>
                 </div>
-                <div className='shadow rounded-2 my-2 p-2'>
-                    <ClearStrikeThrough striked_text="Credential and Software" />
-                    <div className='form-floating'>
-                        <input type='text' name='certifications' placeholder="Certifications" className='form-control' />
-                        <label htmlFor='name'>Certifications</label>
-                    </div>
-                    <div className='form-floating'>
-                        <input type='text' name='testimonials' placeholder="Testimonials" className='form-control' />
-                        <label htmlFor='name'>Testimonials</label>
-                    </div>
-                    <div className='form-floating'>
-                        <input type='text' name='portfolio' placeholder="Portfolio" className='form-control' />
-                        <label htmlFor='name'>Portfolio</label>
-                    </div>
-                    <div className='form-floating'>
-                        <input type='text' name='reviews' placeholder="Reviews" className='form-control' />
-                        <label htmlFor='name'>Reviews</label>
-                    </div>
+                <div className='form-floating'>
+                    <input type='text' name='experience' placeholder="Experience" className='form-control' />
+                    <label htmlFor='name'>Experience</label>
                 </div>
-                <div className='shadow rounded-2 my-2 p-2'>
-                    <ClearStrikeThrough striked_text="Other" />
-                    <div className='form-floating'>
-                        <input type='text' name='rate' placeholder="Rate" className='form-control' />
-                        <label htmlFor='name'>Rate</label>
-                    </div>
-                    <div className='form-floating'>
-                        <input type='text' name='hourly_rate' placeholder="Rate" className='form-control' />
-                        <label htmlFor='name'>Hourly Rate</label>
-                    </div>
-                    <div className='form-floating'>
-                        <input type='text' name='availability' placeholder="Availability" className='form-control' />
-                        <label htmlFor='name'>Availability</label>
-                    </div>
+                <div className='form-floating'>
+                    <input type='text' name='education' placeholder="Education" className='form-control' />
+                    <label htmlFor='name'>Education</label>
                 </div>
-            </form>
+                <div className='form-floating'>
+                    <input type='text' name='languages' placeholder="Languages" className='form-control' />
+                    <label htmlFor='name'>Languages</label>
+                </div>
+            </div>
+            <div className='shadow rounded-2 my-2 p-2'>
+                <ClearStrikeThrough striked_text="Credential and Software" />
+                <div className='form-floating'>
+                    <input type='text' name='certifications' placeholder="Certifications" className='form-control' />
+                    <label htmlFor='name'>Certifications</label>
+                </div>
+                <div className='form-floating'>
+                    <input type='text' name='testimonials' placeholder="Testimonials" className='form-control' />
+                    <label htmlFor='name'>Testimonials</label>
+                </div>
+                <div className='form-floating'>
+                    <input type='text' name='portfolio' placeholder="Portfolio" className='form-control' />
+                    <label htmlFor='name'>Portfolio</label>
+                </div>
+                <div className='form-floating'>
+                    <input type='text' name='reviews' placeholder="Reviews" className='form-control' />
+                    <label htmlFor='name'>Reviews</label>
+                </div>
+            </div>
+            <div className='shadow rounded-2 my-2 p-2'>
+                <ClearStrikeThrough striked_text="Other" />
+                <div className='form-floating'>
+                    <input type='text' name='rate' placeholder="Rate" className='form-control' />
+                    <label htmlFor='name'>Rate</label>
+                </div>
+                <div className='form-floating'>
+                    <input type='text' name='hourly_rate' placeholder="Rate" className='form-control' />
+                    <label htmlFor='name'>Hourly Rate</label>
+                </div>
+                <div className='form-floating'>
+                    <input type='text' name='availability' placeholder="Availability" className='form-control' />
+                    <label htmlFor='name'>Availability</label>
+                </div>
+            </div>
         </div>
     )
 }
@@ -100,12 +132,12 @@ const Freelancer = () => {
     const [total_pages, setTotalPages] = React.useState(1)
     const [total_items, setTotalItems] = React.useState(0)
     const url_params = useSearchParams()
+
     let langauge_pair = url_params.langauge_pair ? url_params.langauge_pair : 'eng_esl'
     let limit = url_params.limit ? url_params.limit : 10
     let featured_member = url_params.featured_member ? url_params.featured_member : 'true'
     let is_member = url_params.is_member ? url_params.is_member : 'true'
 
-    console.log('url_params', url_params)
     useEffect(() => {
         fetch(`${process.env.REACT_APP_PROZ_API_V2_URL}freelancer-matches?language_pair=${langauge_pair}&limit=${limit}&featured_member=${featured_member.current}&is_member=${is_member}`, {
             method: 'GET',

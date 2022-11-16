@@ -25,6 +25,7 @@ body {
 }
 .bg-primary {
   background-color: #186362 !important;
+  border-color: #186362 !important;
 }
 .showMoreBox {
   transition: all 2s ease;
