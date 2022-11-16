@@ -122,7 +122,7 @@ const FreelancerProfile = () => {
                                             <div className='d-flex align-items-start justify-content-start flex-col gap-2 my-3 py-3 border-bottom-1'>
                                                 <LimitedWordTextarea limit={2500} />
                                                 <label>
-                                                    <span className='d-flex gap-2 align-items-center fw-bold cursor-pointer btn border-1 border-[#c0c0c0] text-gray-800 bg-gray-200'>Select Service <GiPaperClip /> </span>
+                                                    <span className='d-flex gap-2 align-items-center fw-bold cursor-pointer btn border-1 border-[#c0c0c0] text-gray-800 bg-gray-200'>Select File <GiPaperClip /> </span>
                                                     <input type={'file'} className='d-none' />
                                                 </label>
                                             </div>
