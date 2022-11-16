@@ -1,8 +1,8 @@
 import React from 'react'
 import { BiGlasses, BiRocket } from 'react-icons/bi'
 import { FiBookOpen } from 'react-icons/fi'
-import { SignupSigninLinks } from '..'
 import HeaderSearch from '../search/HeaderSearch'
+import SignupSigninLinks from './SignupSigninLinks'
 
 const UserFacingTopNavigation = () => {
     return (
@@ -14,10 +14,10 @@ const UserFacingTopNavigation = () => {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div className='row'>
-                        <div className="col-sm-4 m-0 p-0"><HeaderSearch placeholder="What are you looking for?" /></div>
-                        <div className="col-sm-7 m-0 p-0">
+                <div className="navbar-collapse" id="navbarSupportedContent">
+                    <div className='d-flex flex-wrap w-full'>
+                        <div className="m-0 p-0"><HeaderSearch placeholder="What are you looking for?" /></div>
+                        <div className="flex-fill m-0 p-0">
                             <ul className="navbar-nav mb-2 mb-lg-0 flex-fill justify-content-center me-3">
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -92,7 +92,7 @@ const UserFacingTopNavigation = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-sm-1 text-end m-0 p-0"><SignupSigninLinks /></div>
+                        <div className="text-end m-0 p-0"><SignupSigninLinks /></div>
                     </div>
                 </div>
             </div>

@@ -39,7 +39,6 @@ export function EmptySideBar() {
 const LeftSideBars = () => {
     const location = useLocation()
     let active_sidebar = location.pathname.split('/').reverse()[0]
-    console.log(location.pathname.split('/').reverse()[0])
     const left_sidebars = {
         'default': <EmptySideBar />,
         'kudoz': <KudozFilterForm />,
