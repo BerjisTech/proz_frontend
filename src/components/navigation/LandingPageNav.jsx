@@ -2,7 +2,7 @@ import React from 'react'
 import { BiGlasses, BiRocket } from 'react-icons/bi'
 import { FiBookOpen } from 'react-icons/fi'
 import { GiCutDiamond, GiHelp } from 'react-icons/gi'
-import { SignupSigninLinks } from '..'
+import SignupSigninLinks from './SignupSigninLinks'
 const LandingPageNav = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-[#F4F6FA] navbar-light sticky  z-[100]">
@@ -13,7 +13,7 @@ const LandingPageNav = () => {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse flex-grow flex justify-content-center align-items-center" id="navbarSupportedContent">
+                <div className="navbar-collapse flex-grow flex justify-content-center align-items-center" id="navbarSupportedContent">
                     <ul className="navbar-nav mb-2 mb-lg-0">
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle d-flex align-items-center justify-content-center" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
