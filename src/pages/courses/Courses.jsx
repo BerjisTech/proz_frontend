@@ -1,18 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRef } from 'react'
 
 export const CoursePreview = (course) => {
   return (
-    `<div class='w-full p-3'>
-      <img src=${course.image} alt=${course.title} class='w-[100%] h-auto rounded-3'/>
-      <h3>${course.title}</h3>
-      <p>${course.description}</p>
-      <p>${course.price}</p>
-    </div>`
+    <div class='w-full p-3'>
+      <img src={course.image} alt={course.title} class='w-[100%] h-auto rounded-3'/>
+      <h3>{course.title}</h3>
+      <p>{course.description}</p>
+      <p>{course.price}</p>
+    </div>
   )
 }
 
 const Courses = () => {
+  const [activeCourse, setActiveCourse] = useState(null)
   const courses = [
     { id: 1, title: "Course name", description: "First course in the list.", price: '$100', duration: "1 month", image: "https://picsum.photos/500/300?random=1" },
     { id: 2, title: "Course name", description: "Some type of description goes here", price: '$100', duration: "1 month", image: "https://picsum.photos/500/300?random=2" },
@@ -39,8 +40,7 @@ const Courses = () => {
   const coursePreviewPanel = useRef()
 
   const loadCoursePreview = (course) => {
-    let coursePreview = CoursePreview(course)
-    coursePreviewPanel.current.innerHTML = coursePreview
+    setActiveCourse(CoursePreview(course))
   }
 
 
@@ -67,7 +67,7 @@ const Courses = () => {
           </div>
           <div className='col-sm-8'>
             <div className='sticky top-[100px] h-[80vh] shadow rounded-3 shadow bg-white coursePreviewPanel w-full' ref={coursePreviewPanel}>
-              Course preview goes here
+              {activeCourse}
             </div>
           </div>
         </div>
