@@ -1,0 +1,8 @@
+{
+    "host": "machoman.syr.proz.com",
+    "port": 1919,
+    "user": "ben",
+    "ignore":[".git",".vscode"],
+    "remotePath": "/home/ben",
+    "uploadOnSave": true
+}
