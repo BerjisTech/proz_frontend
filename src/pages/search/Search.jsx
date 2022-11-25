@@ -183,38 +183,16 @@ const Search = () => {
   ]
 
   return (
-    <DataTable
-      pagination
-      columns={columns}
-      data={data}
-      selectableRows
-      expandableRows
-      expandableRowsComponent={ExpandedComponent}
-    />
-    // <table className='table table-responsive table-hover'>
-    //   <thead>
-    //     <tr>
-    //       <th>Languages</th>
-    //       <th>Fields</th>
-    //       <th className='text-center'>Term & Translation</th>
-    //       <th className='text-center'>Poster | Answerer</th>
-    //       <th className='text-end'>Source</th>
-    //     </tr>
-    //   </thead>
-    //   <tbody>
-    //     {results.map((result) => (
-    //       <tr key={result.id} className="cursor-pointer">
-    //         <td>{result.languages}</td>
-    //         <td>{result.fields}</td>
-    //         <td className='text-center'>{result.term} - {result.translation}</td>
-    //         <td className='text-center'>
-    //           <a href={result.poster_ul} target="_BLANK">{result.poster}</a> | <a href={result.translator_ul} target="_BLANK">{result.translator}</a></td>
-    //         <td className='text-end'><a href={result.source_url} target="_BLANK">{result.source}</a></td>
-    //       </tr>
-    //     ))}
-    //   </tbody>
-    //   <tfoot></tfoot>
-    // </table>
+    <>
+      <DataTable
+        pagination
+        columns={columns}
+        data={data}
+        selectableRows
+        expandableRows
+        expandableRowsComponent={ExpandedComponent}
+      />
+    </>
   )
 }
 
