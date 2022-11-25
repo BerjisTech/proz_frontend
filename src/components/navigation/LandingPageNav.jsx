@@ -39,6 +39,7 @@ const LandingPageNav = () => {
                                 <li><a className="dropdown-item" href="/directory">ProZ Directory</a></li>
                                 <li><a className="dropdown-item" href="/wiwo">#Wiwo</a></li>
                                 <li><a className="dropdown-item" href="/blueboards">Blueboards</a></li>
+                                <li><a className="dropdown-item" href="/search">Term Search</a></li>
                                 <li><hr className="dropdown-divider" /></li>
                                 <li><a className="dropdown-item" href="/collaborate">Collaborative Translation</a></li>
                             </ul>
