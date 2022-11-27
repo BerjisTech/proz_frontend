@@ -23,7 +23,7 @@ body {
 .text-primary {
   color: #186362 !important;
 }
-.bg-primary {
+.bg-primary, .progress-bar {
   background-color: #186362 !important;
   border-color: #186362 !important;
 }

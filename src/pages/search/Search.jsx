@@ -22,32 +22,6 @@ const ExpandedComponent = ({ data }) => {
 };
 
 const Search = () => {
-  // const [search, setSearch] = React.useState('')
-  // const [results, setResults] = React.useState([])
-  // const [loading, setLoading] = React.useState(false)
-  // const [error, setError] = React.useState(false)
-
-  // const handleSearch = (e) => {
-  //   e.preventDefault()
-  //   setLoading(true)
-  //   setError(false)
-  //   fetch(`https://api.github.com/search/users?q=${search}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setResults(data.items)
-  //       setLoading(false)
-  //     })
-  //     .catch((err) => {
-  //       setError(true)
-  //       setLoading(false)
-  //     })
-  // }
-
-  // React.useState(() => {
-  //   handleSearch()
-  // }, [])
-
-  // setSearch(search)
 
   const columns = [
     {
