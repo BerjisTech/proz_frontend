@@ -21,7 +21,8 @@ import {
     FreelancerProfile,
     BusinessProfile,
     Events,
-    JobManagement
+    JobManagement,
+    Job
 } from "../../pages";
 
 const Main = () => {
@@ -55,6 +56,7 @@ const Main = () => {
             <Route path="/dashboard/applications/*" element={<Applications />} />
             <Route path="/dashboard/courses/*" element={<Courses />} />
             <Route path="/dashboard/findwork/*" element={<JobManagement />} />
+            <Route path="/dashboard/job/:job_id" element={<Job />} />
             <Route path="/dashboard/kudoz/*" element={<Kudoz />} />
             <Route path="/dashboard/messages/*" element={<Messages />} />
             <Route path="/dashboard/search/*" element={<Search />} />
