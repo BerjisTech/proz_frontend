@@ -14,7 +14,7 @@ const UserFacingTopNavigation = () => {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="navbar-collapse /*collapse*/" id="navbarSupportedContent">
+                <div className="navbar-collapse collapse" id="navbarSupportedContent">
                     <div className='d-flex flex-wrap w-full'>
                         <div className="m-0 p-0"><HeaderSearch placeholder="What are you looking for?" /></div>
                         <div className="flex-fill m-0 p-0">
@@ -84,8 +84,8 @@ const UserFacingTopNavigation = () => {
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a className="dropdown-item" href="/prozpay">ProZPay&trade;</a></li>
-                                        <li><a className="dropdown-item" href="https://tm-town.com" target="_BLANK">TM Town</a></li>
-                                        <li><a className="dropdown-item" href="https://protemos.com" target="_BLANK">Protemos</a></li>
+                                        <li><a className="dropdown-item" href="https://tm-town.com" target="_BLANK" rel="noreferrer">TM Town</a></li>
+                                        <li><a className="dropdown-item" href="https://protemos.com" target="_BLANK" rel="noreferrer">Protemos</a></li>
                                     </ul>
                                 </li>
                             </ul>

@@ -33,6 +33,9 @@ body {
 .showMoreTrigger:hover > .showMoreBox {
   display: flex !important;
 }
+.navbar .collapse {
+  visibility: visible !important;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

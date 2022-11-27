@@ -1,7 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import DataTable from 'react-data-table-component';
 
-const ExpandedComponent = ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
+const ExpandedComponent = ({ data }) => {
+  return (
+    <>
+      <div className='d-flex gap-3 flex-wrap p-2 bg-green-100'>
+        <div className='d-flex flex-col gap-1'>
+          <span><span className='fw-bold'>{data.from_language} Term</span>: {data.term}</span>
+          <span><span className='fw-bold'>{data.to_language} Translation</span>: {data.translation}</span>
+        </div>
+        <div className='d-flex flex-col gap-1 flex-grow border-start-1 px-2'>
+          <span>Poster: <a href={data.poster_ul}>{data.poster}</a></span>
+          <span>Answerer: <a href={data.translator_ul}>{data.translator}</a></span>
+          <span>Source: <a href={data.source_url}>{data.source}</a></span>
+          <span>Fields: {data.fields}</span>
+          <span><a href={`/kudoz/term/${data.term}`}>View full discussion</a></span>
+        </div>
+      </div>
+    </>
+  )
+};
 
 const Search = () => {
   // const [search, setSearch] = React.useState('')
@@ -25,7 +43,7 @@ const Search = () => {
   //     })
   // }
 
-  // useState(() => {
+  // React.useState(() => {
   //   handleSearch()
   // }, [])
 
@@ -34,7 +52,7 @@ const Search = () => {
   const columns = [
     {
       name: 'Languages',
-      selector: row => row.languages,
+      selector: row => `${row.from_language} - ${row.to_language}`,
       sortable: true
     },
     {
@@ -60,7 +78,8 @@ const Search = () => {
   ]
 
   const data = [{
-    languages: "English to French",
+    from_language: "English",
+    to_language: "French",
     fields: "Business, Finance, Law, Marketing, Science, Technology, Travel, and more",
     term: "Business",
     translation: "Affaires",
@@ -72,7 +91,8 @@ const Search = () => {
     source: "Wikipedia"
   },
   {
-    languages: "English to French",
+    from_language: "English",
+    to_language: "French",
     fields: "Business, Finance, Law, Marketing, Science, Technology, Travel, and more",
     term: "Business",
     translation: "Affaires",
@@ -84,7 +104,8 @@ const Search = () => {
     source: "Wikipedia"
   },
   {
-    languages: "English to French",
+    from_language: "English",
+    to_language: "French",
     fields: "Business, Finance, Law, Marketing, Science, Technology, Travel, and more",
     term: "Business",
     translation: "Affaires",
@@ -96,7 +117,8 @@ const Search = () => {
     source: "Wikipedia"
   },
   {
-    languages: "English to French",
+    from_language: "English",
+    to_language: "French",
     fields: "Business, Finance, Law, Marketing, Science, Technology, Travel, and more",
     term: "Business",
     translation: "Affaires",
@@ -108,7 +130,8 @@ const Search = () => {
     source: "Wikipedia"
   },
   {
-    languages: "English to French",
+    from_language: "English",
+    to_language: "French",
     fields: "Business, Finance, Law, Marketing, Science, Technology, Travel, and more",
     term: "Business",
     translation: "Affaires",
@@ -120,7 +143,8 @@ const Search = () => {
     source: "Wikipedia"
   },
   {
-    languages: "English to French",
+    from_language: "English",
+    to_language: "French",
     fields: "Business, Finance, Law, Marketing, Science, Technology, Travel, and more",
     term: "Business",
     translation: "Affaires",
@@ -132,7 +156,8 @@ const Search = () => {
     source: "Wikipedia"
   },
   {
-    languages: "English to French",
+    from_language: "English",
+    to_language: "French",
     fields: "Business, Finance, Law, Marketing, Science, Technology, Travel, and more",
     term: "Business",
     translation: "Affaires",
@@ -144,7 +169,8 @@ const Search = () => {
     source: "Wikipedia"
   },
   {
-    languages: "English to French",
+    from_language: "English",
+    to_language: "French",
     fields: "Business, Finance, Law, Marketing, Science, Technology, Travel, and more",
     term: "Business",
     translation: "Affaires",
@@ -156,7 +182,8 @@ const Search = () => {
     source: "Wikipedia"
   },
   {
-    languages: "English to French",
+    from_language: "English",
+    to_language: "French",
     fields: "Business, Finance, Law, Marketing, Science, Technology, Travel, and more",
     term: "Business",
     translation: "Affaires",
@@ -168,7 +195,8 @@ const Search = () => {
     source: "Wikipedia"
   },
   {
-    languages: "English to French",
+    from_language: "English",
+    to_language: "French",
     fields: "Business, Finance, Law, Marketing, Science, Technology, Travel, and more",
     term: "Business",
     translation: "Affaires",
