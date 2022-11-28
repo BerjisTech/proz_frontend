@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { BiBook, BiChat, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiTask, BiTimer } from 'react-icons/bi'
 import { GoSmiley } from 'react-icons/go'
 
@@ -49,45 +49,22 @@ const JobFeatureLinks = ({ feature, setJobFeatures, featureIcon }) => {
     </div>
   )
 }
-const InternalTermSearch = ({ search_param }) => {
-  const termSearch = useState('')
-  
-  const [searchResults, setSearchResults] = useState([])
-  const [searchResultsLoading, setSearchResultsLoading] = useState(false)
-  const searchRef = useRef(null)
-
-  useRef(() => {
-    searchRef.current.focus()
-    setSearchResultsLoading(true)
-    axios.get(`/api/search/${search_param}/${termSearch}`)
-      .then(res => {
-        setSearchResults(res.data)
-        setSearchResultsLoading(false)
-      })
-      .catch(err => {
-        console.log(err)
-        setSearchResultsLoading(false)
-      })
-  }, [])
+const InternalTermSearch = ({ searchResults, searchResultsLoading }) => {
 
   return (
-    <div className="relative text-gray-600">
-      {searchResultsLoading && <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-50 z-10">
+    <div className="w-full d-flex">
+      {searchResultsLoading && <div className="w-full">
         <div className="d-flex align-items-center justify-content-center h-full">
           <div className="spinner-border text-primary" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       </div>}
-      {searchResults.length > 0 && <div className="absolute top-0 left-0 w-full bg-white z-10">
+      {searchResults.length > 0 && <div className="">
         <div className="d-flex flex-col gap-2">
           {searchResults.map((result, index) => {
             return (
-              <div className="d-flex align-items-center justify-content-start gap-2 px-2 py-2 cursor-pointer hover:bg-gray-100"
-                onClick={() => {
-                  searchRef.current.value = result.name
-                  setSearchResults([])
-                }}>
+              <div className="d-flex align-items-center justify-content-start gap-2 px-2 py-2 cursor-pointer hover:bg-gray-100">
                 <BiPaperclip className="text-[20px]" />
                 <span>{result.name}</span>
               </div>
@@ -103,7 +80,10 @@ const InternalTermSearch = ({ search_param }) => {
 
 const Job = () => {
   const [activeJobFeature, setActiveJobFeature] = useState('messages')
-  const [termSearch, setTermSearch] = useState('')
+  const [termSearchPanel, setTermSearchPanel] = useState(false)
+  const termSearchRef = useRef(null)
+  const [searchResults, setSearchResults] = useState([])
+  const [searchResultsLoading, setSearchResultsLoading] = useState(false)
 
   const setJobFeatures = (feature) => {
     switch (feature) {
@@ -140,13 +120,22 @@ const Job = () => {
     }
   }
 
-  const handleSearch = () => {
-    setTermSearch(InternalTermSearch({ search_param: termSearch, termSearch }))
+  const handleSearch = (term_search) => {
+    setSearchResultsLoading(true)
+    axios.get(`/api/search/${term_search}`)
+      .then(res => {
+        setSearchResults(res.data)
+        setSearchResultsLoading(false)
+      })
+      .catch(err => {
+        console.log(err)
+        setSearchResultsLoading(true)
+      })
+    setTermSearchPanel(InternalTermSearch({ searchResults, searchResultsLoading }))
   }
 
-  useRef(() => {
-    setJobFeatures('files')
-    handleSearch()
+  useEffect(() => {
+    setJobFeatures('messages')
   }, [])
 
   return (
@@ -172,9 +161,9 @@ const Job = () => {
         <div className='d-flex flex-col gap-2 h-full'>
           <input type="text" placeholder="Enter Term To Search"
             className="block w-full py-2 pl-4 bg-gray-100 outline-none focus:text-gray-700"
-            name="term_search" required onChange={(e) => { handleSearch(e.target.value) }} />
+            name="term_search" required onChange={(e) => { handleSearch(e.target.value) }} ref={termSearchRef} />
           <div className='flex-fill w-full overflow-y-auto'>
-            {termSearch}
+            {termSearchPanel}
           </div>
         </div>
       </div>
