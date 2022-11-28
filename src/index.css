@@ -23,7 +23,7 @@ body {
 .text-primary {
   color: #186362 !important;
 }
-.bg-primary {
+.bg-primary, .progress-bar {
   background-color: #186362 !important;
   border-color: #186362 !important;
 }
@@ -32,6 +32,9 @@ body {
 }
 .showMoreTrigger:hover > .showMoreBox {
   display: flex !important;
+}
+.navbar .collapse {
+  visibility: visible !important;
 }
 @tailwind base;
 @tailwind components;
