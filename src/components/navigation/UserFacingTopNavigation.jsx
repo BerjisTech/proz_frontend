@@ -84,8 +84,8 @@ const UserFacingTopNavigation = () => {
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a className="dropdown-item" href="/prozpay">ProZPay&trade;</a></li>
-                                        <li><a className="dropdown-item" href="https://tm-town.com" target="_BLANK">TM Town</a></li>
-                                        <li><a className="dropdown-item" href="https://protemos.com" target="_BLANK">Protemos</a></li>
+                                        <li><a className="dropdown-item" href="https://tm-town.com" target="_BLANK" rel="noreferrer">TM Town</a></li>
+                                        <li><a className="dropdown-item" href="https://protemos.com" target="_BLANK" rel="noreferrer">Protemos</a></li>
                                     </ul>
                                 </li>
                             </ul>
