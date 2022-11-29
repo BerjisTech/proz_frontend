@@ -21,11 +21,11 @@ const LandingPageNav = () => {
                                 <span className="ms-2">Start Translating</span>
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a className="dropdown-item" href="/#/hire/freelancers">Hire Freelancers</a></li>
-                                <li><a className="dropdown-item" href="/#/hire/agencies">Hire Agencies</a></li>
+                                <li><a className="dropdown-item" href="//hire/freelancers">Hire Freelancers</a></li>
+                                <li><a className="dropdown-item" href="//hire/agencies">Hire Agencies</a></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="/#/jobs/translate">Translating Jobs</a></li>
-                                <li><a className="dropdown-item" href="/#/jobs/interprete">Interpretation Jobs</a></li>
+                                <li><a className="dropdown-item" href="//jobs/translate">Translating Jobs</a></li>
+                                <li><a className="dropdown-item" href="//jobs/interprete">Interpretation Jobs</a></li>
                             </ul>
                         </li>
 
@@ -35,13 +35,13 @@ const LandingPageNav = () => {
                                 <span className="ms-2">ProZ Services</span>
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a className="dropdown-item" href="/#/prozpay">ProZPay&trade;</a></li>
-                                <li><a className="dropdown-item" href="/#/directory">ProZ Directory</a></li>
-                                <li><a className="dropdown-item" href="/#/wiwo">#Wiwo</a></li>
-                                <li><a className="dropdown-item" href="/#/blueboards">Blueboards</a></li>
-                                <li><a className="dropdown-item" href="/#/search">Term Search</a></li>
+                                <li><a className="dropdown-item" href="//prozpay">ProZPay&trade;</a></li>
+                                <li><a className="dropdown-item" href="//directory">ProZ Directory</a></li>
+                                <li><a className="dropdown-item" href="//wiwo">#Wiwo</a></li>
+                                <li><a className="dropdown-item" href="//blueboards">Blueboards</a></li>
+                                <li><a className="dropdown-item" href="//search">Term Search</a></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="/#/collaborate">Collaborative Translation</a></li>
+                                <li><a className="dropdown-item" href="//collaborate">Collaborative Translation</a></li>
                             </ul>
                         </li>
 
@@ -51,15 +51,15 @@ const LandingPageNav = () => {
                                 <span className="ms-2">ProZ Educate&trade;</span>
                             </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a className="dropdown-item" href="/#/courses">Courses</a></li>
-                                <li><a className="dropdown-item" href="/#/training">Training</a></li>
+                                <li><a className="dropdown-item" href="//courses">Courses</a></li>
+                                <li><a className="dropdown-item" href="//training">Training</a></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="/#/collaborate">Collaborative Translation</a></li>
+                                <li><a className="dropdown-item" href="//collaborate">Collaborative Translation</a></li>
                             </ul>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/#/about-us">
+                            <a className="nav-link active" aria-current="page" href="//about-us">
                                 <div className="d-flex align-items-center justify-content-center">
                                     <GiCutDiamond />
                                     <span className="ms-2">About</span>
@@ -67,7 +67,7 @@ const LandingPageNav = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link d-flex align-items-center justify-content-center" href="/#/support">
+                            <a className="nav-link d-flex align-items-center justify-content-center" href="//support">
                                 <GiHelp />
                                 <span className="ms-2">Help</span>
                             </a>
