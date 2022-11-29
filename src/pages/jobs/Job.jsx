@@ -1,9 +1,9 @@
 import axios from 'axios'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Image } from 'react-bootstrap'
 import DataTable from 'react-data-table-component'
 import { AiOutlineEllipsis } from 'react-icons/ai'
-import { BiBook, BiChat, BiCheckDouble, BiChevronDown, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiTask, BiTimer } from 'react-icons/bi'
+import { BiBook, BiChat, BiCheckDouble, BiChevronDown, BiFile, BiGroup, BiMicrophone, BiMoney, BiPaperclip, BiSend } from 'react-icons/bi'
 import { BsFillStarFill } from 'react-icons/bs'
 import { GiCancel, GiFullFolder } from 'react-icons/gi'
 import { GoSmiley } from 'react-icons/go'
@@ -149,12 +149,12 @@ const ChatBubble = ({ message, isMe, file_type }) => {
 
 const JobMessages = () => {
   const messagesEndRef = React.createRef()
-  let scrollToBottom = () => {
+  let scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+  }, [messagesEndRef])
   useEffect(() => {
     scrollToBottom()
-  }, [])
+  }, [scrollToBottom])
   return (
     <div className='d-flex flex-col h-full'>
       <div className="flex-fill overflow-y-auto"
