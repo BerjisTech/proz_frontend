@@ -437,11 +437,7 @@ const Job = () => {
           <JobFeatureLinks feature='details' setJobFeatures={setJobFeatures} featureIcon={<BiFile className='text-[20px]' />} />
           <JobFeatureLinks feature='messages' setJobFeatures={setJobFeatures} featureIcon={<BiChat className='text-[20px]' />} />
           <JobFeatureLinks feature='files' setJobFeatures={setJobFeatures} featureIcon={<BiBook className='text-[20px]' />} />
-          <JobFeatureLinks feature='notes' setJobFeatures={setJobFeatures} featureIcon={<BiNote className='text-[20px]' />} />
-          <JobFeatureLinks feature='tasks' setJobFeatures={setJobFeatures} featureIcon={<BiTask className='text-[20px]' />} />
-          <JobFeatureLinks feature='time' setJobFeatures={setJobFeatures} featureIcon={<BiTimer className='text-[20px]' />} />
           <JobFeatureLinks feature='payments' setJobFeatures={setJobFeatures} featureIcon={<BiMoney className='text-[20px]' />} />
-          <JobFeatureLinks feature='support' setJobFeatures={setJobFeatures} featureIcon={<BiHelpCircle className='text-[20px]' />} />
           <JobFeatureLinks feature='members' setJobFeatures={setJobFeatures} featureIcon={<BiGroup className='text-[20px]' />} />
 
         </div>
