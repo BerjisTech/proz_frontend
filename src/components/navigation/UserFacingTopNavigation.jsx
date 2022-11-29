@@ -14,7 +14,7 @@ const UserFacingTopNavigation = () => {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="navbar-collapse /*collapse*/" id="navbarSupportedContent">
+                <div className="navbar-collapse collapse" id="navbarSupportedContent">
                     <div className='d-flex flex-wrap w-full'>
                         <div className="m-0 p-0"><HeaderSearch placeholder="What are you looking for?" /></div>
                         <div className="flex-fill m-0 p-0">
@@ -31,7 +31,7 @@ const UserFacingTopNavigation = () => {
                                         <li><a className="dropdown-item" href="/kudoz">Answer Question</a></li>
                                         <li><hr className="dropdown-divider" /></li>
                                         <li className='p-2 fw-bold'>Other</li>
-                                        <li><a className="dropdown-item" href="/kudoz/resources">Terminology Resources</a></li>
+                                        <li><a className="dropdown-item" href="/resources">Terminology Resources</a></li>
                                         <li><hr className="dropdown-divider" /></li>
                                         <li className='p-2 fw-bold'>Learn More About</li>
                                         <li><a className="dropdown-item" href="/about-us">ProZ Terminology</a></li>
@@ -44,11 +44,9 @@ const UserFacingTopNavigation = () => {
                                         <span className="ms-2">Jobs &amp; Directory</span>
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="/prozpay">ProZPay&trade;</a></li>
-                                        <li><a className="dropdown-item" href="/directory">ProZ Directory</a></li>
-                                        <li><a className="dropdown-item" href="/wiwo">#Wiwo</a></li>
-                                        <li><hr className="dropdown-divider" /></li>
-                                        <li><a className="dropdown-item" href="/collaborate">Collaborative Translation</a></li>
+                                        <li><a className="dropdown-item" href="/hire/freelancer">Translator Directory</a></li>
+                                        <li><a className="dropdown-item" href="/hire/agency">Translator Agencies</a></li>
+                                        <li><a className="dropdown-item" href="/jobs">Jobs</a></li>
                                     </ul>
                                 </li>
 
@@ -58,8 +56,8 @@ const UserFacingTopNavigation = () => {
                                         <span className="ms-2">Member Activities</span>
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="/courses">Courses</a></li>
-                                        <li><a className="dropdown-item" href="/directory">Training</a></li>
+                                        <li><a className="dropdown-item" href="/wiwo">#Wiwo</a></li>
+                                        <li><a className="dropdown-item" href="/training">Training</a></li>
                                         <li><hr className="dropdown-divider" /></li>
                                         <li><a className="dropdown-item" href="/collaborate">Collaborative Translation</a></li>
                                     </ul>
@@ -71,9 +69,10 @@ const UserFacingTopNavigation = () => {
                                         <span className="ms-2">ProZ Educate&trade;</span>
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="/prozpay">Courses</a></li>
-                                        <li><a className="dropdown-item" href="/directory">Training</a></li>
+                                        <li><a className="dropdown-item" href="/courses">Courses</a></li>
+                                        <li><a className="dropdown-item" href="/training">Training</a></li>
                                         <li><hr className="dropdown-divider" /></li>
+                                        <li><a className="dropdown-item" href="/dashboard/jobs">Job Management</a></li>
                                         <li><a className="dropdown-item" href="/collaborate">Collaborative Translation</a></li>
                                     </ul>
                                 </li>
@@ -84,10 +83,9 @@ const UserFacingTopNavigation = () => {
                                         <span className="ms-2">Tools</span>
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="/prozpay">Courses</a></li>
-                                        <li><a className="dropdown-item" href="/directory">Training</a></li>
-                                        <li><hr className="dropdown-divider" /></li>
-                                        <li><a className="dropdown-item" href="/collaborate">Collaborative Translation</a></li>
+                                        <li><a className="dropdown-item" href="/prozpay">ProZPay&trade;</a></li>
+                                        <li><a className="dropdown-item" href="https://tm-town.com" target="_BLANK" rel="noreferrer">TM Town</a></li>
+                                        <li><a className="dropdown-item" href="https://protemos.com" target="_BLANK" rel="noreferrer">Protemos</a></li>
                                     </ul>
                                 </li>
                             </ul>

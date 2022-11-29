@@ -64,7 +64,7 @@ export const JobsList = ({ job }) => {
                             <span>Location here</span>
                         </div>
                         <p>
-                            {job.description ? `${job.description.substring(0,300)} ...` : 'Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                            {job.description ? `${job.description.substring(0, 300)} ...` : 'Lorem Ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
                         </p>
                     </div>
                 </div>
@@ -86,11 +86,19 @@ export const JobsList = ({ job }) => {
 }
 
 
-const JobDescription = () => {
+const JobDescription = ({ data }) => {
 
     return (
-        <div>
-            Away
+        <div className='d-flex flex-wrap gap-2'>
+            <span className='fw-bold'>{data.title}</span>
+            <span>{data.language}</span>
+            <span>{data.client}</span>
+            <span>{data.progress}</span>
+            <span>{data.rating}</span>
+            <span>{data.paid}</span>
+            <span>{data.complete}</span>
+            <span>{data.cancelled}</span>
+            <span>{data.price}</span>
         </div>
     )
 }
