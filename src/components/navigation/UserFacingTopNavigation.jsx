@@ -72,7 +72,7 @@ const UserFacingTopNavigation = () => {
                                         <li><a className="dropdown-item" href="//courses">Courses</a></li>
                                         <li><a className="dropdown-item" href="//training">Training</a></li>
                                         <li><hr className="dropdown-divider" /></li>
-                                        <li><a className="dropdown-item" href="//dashboard/jobs">Job Management</a></li>
+                                        <li><a className="dropdown-item" href="/dashboard/jobs">Job Management</a></li>
                                         <li><a className="dropdown-item" href="//collaborate">Collaborative Translation</a></li>
                                     </ul>
                                 </li>

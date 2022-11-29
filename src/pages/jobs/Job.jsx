@@ -41,7 +41,7 @@ const File = ({ file }) => {
         <hr />
         <div className='d-flex justify-content-between align-items-center'>
           <span><b>File Size</b><br /> {file.size}</span>
-          <a href="//dashboard/client/12345" className="rounded w-[40px] h-[40px] text-white d-flex items-center justify-center shadow fw-bold bg-" style={{ backgroundColor: randomColor() }}>{file.shared_by.substring(0, 1)}</a>
+          <a href="/dashboard/client/12345" className="rounded w-[40px] h-[40px] text-white d-flex items-center justify-center shadow fw-bold bg-" style={{ backgroundColor: randomColor() }}>{file.shared_by.substring(0, 1)}</a>
         </div>
       </div>
     </div>

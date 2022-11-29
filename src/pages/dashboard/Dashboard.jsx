@@ -69,8 +69,8 @@ const Dashboard = () => {
                   <span className='fw-bold'>ProzPay&trade;</span>
                   <span className='text-gray-500'>Manage all your funds in one place. Organize your invoices, handle disputes and send notiofications to your clients</span>
                   <span className='d-flex align-items-center justify-content-center gap-2'>
-                    <a href="//dashboard/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Visit ProzPay</a>
-                    <a href="//dashboard/help/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-1'>Help <GiHelp /></a>
+                    <a href="/dashboard/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Visit ProzPay</a>
+                    <a href="/dashboard/help/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-1'>Help <GiHelp /></a>
                     <AiOutlineEllipsis className='fs-3 text-blue-800' />
                   </span>
                 </div>
@@ -81,8 +81,8 @@ const Dashboard = () => {
                   <span className='fw-bold'>Job Management</span>
                   <span className='text-gray-500'>Manage your jobs. Keep all files in one place and streamline your communication with clients. You can also collaborate...</span>
                   <span className='d-flex align-items-center justify-content-center gap-2'>
-                    <a href="//dashboard/jobs" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Manage My Jobs</a>
-                    <a href="//dashboard/help/jobs" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-1'>Help <GiHelp /></a>
+                    <a href="/dashboard/jobs" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Manage My Jobs</a>
+                    <a href="/dashboard/help/jobs" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-1'>Help <GiHelp /></a>
                     <AiOutlineEllipsis className='fs-3 text-blue-800' />
                   </span>
                 </div>
@@ -93,8 +93,8 @@ const Dashboard = () => {
                   <span className='fw-bold'>Apps & Integration</span>
                   <span className='text-gray-500'>Integrete other apps to enjoy ProZ tp the fullest. Get access to TMTown, Protemos, CafeTran and many more</span>
                   <span className='d-flex align-items-center justify-content-center gap-2'>
-                    <a href="//dashboard/apps" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Visit AppStore</a>
-                    <a href="//dashboard/help/apps" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-1'>Help <GiHelp /></a>
+                    <a href="/dashboard/apps" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Visit AppStore</a>
+                    <a href="/dashboard/help/apps" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-1'>Help <GiHelp /></a>
                     <AiOutlineEllipsis className='fs-3 text-blue-800' />
                   </span>
                 </div>
@@ -105,8 +105,8 @@ const Dashboard = () => {
                   <span className='fw-bold'>Community</span>
                   <span className='text-gray-500'>Interact with the community to get the latest trends and news from other translators and intepreters.</span>
                   <span className='d-flex align-items-center justify-content-center gap-2'>
-                    <a href="//dashboard/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Visit ProzPay</a>
-                    <a href="//dashboard/prozpay/help" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-1'>Help <GiHelp /></a>
+                    <a href="/dashboard/prozpay" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3'>Visit ProzPay</a>
+                    <a href="/dashboard/prozpay/help" className='text-[12px] px-2 py-1 border-1 bg-blue-200 text-blue-800 fw-bold rounded-3 d-flex align-items-center justify-content-center gap-1'>Help <GiHelp /></a>
                     <AiOutlineEllipsis className='fs-3 text-blue-800' />
                   </span>
                 </div>

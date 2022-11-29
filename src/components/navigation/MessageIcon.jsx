@@ -7,6 +7,6 @@ export default function MessageIcon() {
         <Link to="/dashboard/messages">
             <FiMessageCircle/>
         </Link>
-        
+
     )
 }

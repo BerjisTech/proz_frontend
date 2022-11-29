@@ -11,7 +11,7 @@ export function UserAccountProfileImage() {
 export function UserAccountNavigationDropdown() {
     return (
         <div className="dropdown">
-            <a className="dropdown-toggle text-green-800 bg-inherit border-1 rounded-full m-2 px-2 py-1 d-flex align-items-center justify-content-center" id="userAccountDropdown" href="//dashboard/*" data-bs-toggle="dropdown" aria-expanded="false">
+            <a className="dropdown-toggle text-green-800 bg-inherit border-1 rounded-full m-2 px-2 py-1 d-flex align-items-center justify-content-center" id="userAccountDropdown" href="/dashboard/*" data-bs-toggle="dropdown" aria-expanded="false">
                 {window.location.href.includes('/dashboard') ? <UserAccountProfileImage /> : <BiUser />}
             </a>
             <ul className="profile-dropdown-nav dropdown-menu dropdown-menu-end my-1" aria-labelledby="userAccountDropdown">
@@ -31,11 +31,11 @@ export function UserAccountNavigationDropdown() {
                 </li>
                 <li><hr className="dropdown-divider" /></li>
                 <li className='p-2 fw-bold'>Account</li>
-                <li><a className="dropdown-item" href="//dashboard/settings">Settings</a></li>
-                <li><a className="dropdown-item" href="//dashboard/settings">Support</a></li>
-                <li><a className="dropdown-item" href="//dashboard/settings">Notifications</a></li>
+                <li><a className="dropdown-item" href="/dashboard/settings">Settings</a></li>
+                <li><a className="dropdown-item" href="/dashboard/settings">Support</a></li>
+                <li><a className="dropdown-item" href="/dashboard/settings">Notifications</a></li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="//dashboard/settings">Log out</a></li>
+                <li><a className="dropdown-item" href="/dashboard/settings">Log out</a></li>
             </ul>
         </div>
     )
