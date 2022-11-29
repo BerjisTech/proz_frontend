@@ -3,13 +3,15 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Image } from 'react-bootstrap'
 import DataTable from 'react-data-table-component'
 import { AiOutlineEllipsis } from 'react-icons/ai'
-import { BiAddToQueue, BiBook, BiChat, BiChevronDown, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiTask, BiTimer } from 'react-icons/bi'
+import { BiBook, BiChat, BiChevronDown, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiTask, BiTimer } from 'react-icons/bi'
 import { BsFillStarFill } from 'react-icons/bs'
 import { GiFullFolder } from 'react-icons/gi'
 import { GoSmiley } from 'react-icons/go'
 import { RiAddBoxLine, RiTranslate2 } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { randomColor } from '../../components/Helpers'
+import Board, { addCard, addColumn } from '@asseinfo/react-kanban'
+import '@asseinfo/react-kanban/dist/styles.css'
 
 const files = [
   { id: 1, starred: true, name: "Court Case 0097234/234", size: "2kb", type: "pdf", shared_by: "John Doe", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
@@ -25,6 +27,32 @@ const files = [
   { id: 11, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Aurora", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
   { id: 12, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "xlsx", shared_by: "Kristyen", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
 ]
+const dummyBoard = {
+  columns: [
+    {
+      id: 1,
+      title: 'Backlog',
+      cards: [
+        {
+          id: 1,
+          title: 'Add card',
+          description: 'Add capability to add a card in a column'
+        },
+      ]
+    },
+    {
+      id: 2,
+      title: 'Doing',
+      cards: [
+        {
+          id: 2,
+          title: 'Drag-n-drop support',
+          description: 'Move a card between the columns'
+        },
+      ]
+    }
+  ]
+}
 
 const File = ({ file }) => {
   return (
@@ -76,7 +104,17 @@ const JobFiles = () => {
   )
 }
 const JobNotes = () => { return (<>Notes</>) }
-const JobTasks = () => { return (<>Tasks</>) }
+const JobTasks = () => {
+  const [board, setBoard] = useState(dummyBoard)
+  const [newColumn, setNewColumn] = useState('')
+  const newBoard = addColumn(board, newColumn)
+  useEffect(() => {
+    setBoard(newBoard)
+  }, [newColumn])
+  return (
+    <Board initialBoard={dummyBoard} allowAddColumn={true} onNewColumnConfirm={setNewColumn} allowRemoveColumn={true} allowAddCard={true} allowRemoveCard={true} />
+  )
+}
 const JobTime = () => { return (<>Time</>) }
 const JobDetails = () => {
   return (
