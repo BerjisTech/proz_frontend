@@ -4,33 +4,50 @@ import { Image } from 'react-bootstrap'
 import DataTable from 'react-data-table-component'
 import { AiOutlineEllipsis } from 'react-icons/ai'
 import { BiBook, BiChat, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiStar, BiTask, BiTimer } from 'react-icons/bi'
+import { BsFillStarFill } from 'react-icons/bs'
 import { GoSmiley } from 'react-icons/go'
 import { RiTranslate2 } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { randomColor } from '../../components/Helpers'
 
-const File = () => {
+const files = [
+  { id: 1, starred: true, name: "Court Case 0097234/234", size: "2kb", type: "pdf", shared_by: "John Doe", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 2, starred: false, name: "Court Case 0097234/567", size: "2kb", type: "xlsx", shared_by: "Jane Doe", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 3, starred: true, name: "Plaintif Confidential", size: "2kb", type: "docx", shared_by: "Mary Jane", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 4, starred: true, name: "Court Case 0097234/123", size: "2kb", type: "ppt", shared_by: "Adrianna", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 5, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Big Man", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 6, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "docx", shared_by: "Hol'tigh Asknee", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 7, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "docx", shared_by: "Asknee", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 8, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "pdf", shared_by: "Blighmee", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 9, starred: true, name: "Court Case 0097234/123", size: "2kb", type: "pdf", shared_by: "Greg", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 10, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Eugine", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 11, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Aurora", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+  { id: 12, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "xlsx", shared_by: "Kristyen", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+]
+
+const File = ({ file }) => {
   return (
-    <div></div>
+    <div className='col-sm-3 py-3'>
+      <div className='d-flex flex-col shadow rounded gap-2 p-3'>
+        <div className='d-flex justify-content-between align-items-center'>
+          <span><BsFillStarFill fill={`${file.starred ? '#F5A13C' : '#cacaca'}`} /></span>
+          <span><AiOutlineEllipsis className='rotate-90' /></span>
+        </div>
+        <div className='d-flex flex-col items-center gap-3 justify-center cursor-pointer'>
+          <Image src={`/images/icons/${file.type}.png`} className='w-[150px] shadow rounded p-3' />
+          <span className='fw-bold'>{file.name}</span>
+        </div>
+        <hr />
+        <div className='d-flex justify-content-between align-items-center'>
+          <span><b>File Size</b><br /> {file.size}</span>
+          <a href="/dashboard/client/12345" className="rounded w-[40px] h-[40px] text-white d-flex items-center justify-center shadow fw-bold bg-" style={{ backgroundColor: randomColor() }}>{file.shared_by.substring(0, 1)}</a>
+        </div>
+      </div>
+    </div>
   )
 }
 
 const JobFiles = () => {
-  const files = [
-    { id: 1, name: "Court Case 0097234/234", size: "2kb", type: "pdf", shared_by: "John Doe", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 2, name: "Court Case 0097234/567", size: "2kb", type: "xlsx", shared_by: "Jane Doe", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 3, name: "Plaintif Confidential", size: "2kb", type: "docx", shared_by: "Mary Jane", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 4, name: "Court Case 0097234/123", size: "2kb", type: "ppt", shared_by: "Adrianna", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 5, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Big Man", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 6, name: "Court Case 0097234/123", size: "2kb", type: "docx", shared_by: "Hol'tigh Asknee", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 7, name: "Court Case 0097234/123", size: "2kb", type: "docx", shared_by: "Asknee", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 8, name: "Court Case 0097234/123", size: "2kb", type: "pdf", shared_by: "Blighmee", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 9, name: "Court Case 0097234/123", size: "2kb", type: "pdf", shared_by: "Greg", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 10, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Eugine", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 11, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Aurora", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 12, name: "Court Case 0097234/123", size: "2kb", type: "xlsx", shared_by: "Kristyen", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-
-  ]
   return (
     <div className='d-flex flex-col h-full w-full'>
       <div className='min-h-[70px] w-full'>
@@ -40,23 +57,7 @@ const JobFiles = () => {
         <div className='row'>
           {
             files.map((file, index) => (
-              <div className='col-sm-3 py-3'>
-                <div className='d-flex flex-col shadow rounded gap-2 p-3'>
-                  <div className='d-flex justify-content-between align-items-center'>
-                    <span><BiStar /></span>
-                    <span><AiOutlineEllipsis className='rotate-90' /></span>
-                  </div>
-                  <div className='d-flex flex-col items-center gap-3 justify-center cursor-pointer'>
-                    <Image src={`/images/icons/${file.type}.png`} className='w-[150px] shadow rounded p-3' />
-                    <span className='fw-bold'>{file.name}</span>
-                  </div>
-                  <hr />
-                  <div className='d-flex justify-content-between align-items-center'>
-                    <span><b>File Size</b><br /> {file.size}</span>
-                    <a href="/dashboard/client/12345" className="rounded w-[40px] h-[40px] text-white d-flex items-center justify-center shadow fw-bold bg-" style={{ backgroundColor: randomColor() }}>{file.shared_by.substring(0, 1)}</a>
-                  </div>
-                </div>
-              </div>
+              <File file={file} key={index} />
             ))
           }
         </div>
@@ -67,7 +68,60 @@ const JobFiles = () => {
 const JobNotes = () => { return (<>Notes</>) }
 const JobTasks = () => { return (<>Tasks</>) }
 const JobTime = () => { return (<>Time</>) }
-const JobDetails = () => { return (<>Details</>) }
+const JobDetails = () => {
+  return (
+    <div className='w-full d-flex flex-col gap-3 p-3 overflow-y-auto h-full'>
+      <span className='fs-2'>Translate Legal Documents from English to Spanish</span>
+      <hr />
+      <span className='fs-4'>Job Description</span>
+      <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+        optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+        obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+        nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+        tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+        quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
+        sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+        recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
+        minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit
+        quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur
+        fugiat, temporibus enim commodi iusto libero magni deleniti quod quam
+        consequuntur! Commodi minima excepturi repudiandae velit hic maxime
+        doloremque. Quaerat provident commodi consectetur veniam similique ad
+        earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo
+        fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore
+        suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
+        modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam
+        totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam
+        quasi aliquam eligendi, placeat qui corporis!
+      </span>
+      <span className='fs-4'>Requirements</span>
+      <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+        optio, eaque rerum! Provident similique accusantium nemo autem.
+        <ul className='ms-5 list-disc'>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+      </span>
+      <span className='fs-4'>Useful files</span>
+      <div className='row'>
+        {
+          files.map((file, index) => (
+            <File file={file} key={index} />
+          ))
+        }
+      </div>
+    </div>
+  )
+}
 const ChatBubble = ({ message, isMe, file_type }) => {
   return (
     <div className={`d-flex flex-col ${isMe ? 'align-items-end' : 'align-items-start'} w-full`}>
