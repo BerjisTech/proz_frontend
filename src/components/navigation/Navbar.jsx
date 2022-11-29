@@ -21,6 +21,7 @@ const Navbar = () => {
                     <NavBarSerction listItems={[
                         { name: "Home", route: "/dashboard", icon: <FiHome className="app__sidebar-icon" /> },
                         { name: "Jobs", route: "/dashboard/findwork", icon: <FiPieChart className="app__sidebar-icon" /> },
+                        { name: "Job Management", route: "/dashboard/job/123", icon: <FiPieChart className="app__sidebar-icon" /> },
                         { name: "Courses", route: "/dashboard/courses", icon: <FiShoppingCart className="app__sidebar-icon" /> },
                         { name: "Terms", route: "/dashboard/kudoz", icon: <FiBookOpen className="app__sidebar-icon" /> },
                         { name: "Blue Board", route: "/dashboard/blueboard", icon: <FiThumbsUp className="app__sidebar-icon" /> },
