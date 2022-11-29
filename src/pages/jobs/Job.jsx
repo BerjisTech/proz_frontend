@@ -3,15 +3,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Image } from 'react-bootstrap'
 import DataTable from 'react-data-table-component'
 import { AiOutlineEllipsis } from 'react-icons/ai'
-import { BiBook, BiChat, BiChevronDown, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiTask, BiTimer } from 'react-icons/bi'
+import { BiBook, BiChat, BiCheckDouble, BiChevronDown, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiTask, BiTimer } from 'react-icons/bi'
 import { BsFillStarFill } from 'react-icons/bs'
-import { GiFullFolder } from 'react-icons/gi'
+import { GiCancel, GiFullFolder } from 'react-icons/gi'
 import { GoSmiley } from 'react-icons/go'
 import { RiAddBoxLine, RiTranslate2 } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { randomColor } from '../../components/Helpers'
-import Board, { addCard, addColumn } from '@asseinfo/react-kanban'
-import '@asseinfo/react-kanban/dist/styles.css'
 
 const files = [
   { id: 1, starred: true, name: "Court Case 0097234/234", size: "2kb", type: "pdf", shared_by: "John Doe", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
@@ -27,32 +25,6 @@ const files = [
   { id: 11, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Aurora", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
   { id: 12, starred: false, name: "Court Case 0097234/123", size: "2kb", type: "xlsx", shared_by: "Kristyen", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
 ]
-const dummyBoard = {
-  columns: [
-    {
-      id: 1,
-      title: 'Backlog',
-      cards: [
-        {
-          id: 1,
-          title: 'Add card',
-          description: 'Add capability to add a card in a column'
-        },
-      ]
-    },
-    {
-      id: 2,
-      title: 'Doing',
-      cards: [
-        {
-          id: 2,
-          title: 'Drag-n-drop support',
-          description: 'Move a card between the columns'
-        },
-      ]
-    }
-  ]
-}
 
 const File = ({ file }) => {
   return (
@@ -105,14 +77,8 @@ const JobFiles = () => {
 }
 const JobNotes = () => { return (<>Notes</>) }
 const JobTasks = () => {
-  const [board, setBoard] = useState(dummyBoard)
-  const [newColumn, setNewColumn] = useState('')
-  const newBoard = addColumn(board, newColumn)
-  useEffect(() => {
-    setBoard(newBoard)
-  }, [newColumn])
   return (
-    <Board initialBoard={dummyBoard} allowAddColumn={true} onNewColumnConfirm={setNewColumn} allowRemoveColumn={true} allowAddCard={true} allowRemoveCard={true} />
+    <></>
   )
 }
 const JobTime = () => { return (<>Time</>) }
@@ -246,7 +212,76 @@ const JobMessages = () => {
     </div>
   )
 }
-const JobPayments = () => { return (<>Payments</>) }
+const JobPayments = () => {
+  const columns = [
+    { name: 'Date', selector: row => new Date(row.date).toLocaleDateString(), type: 'date', defaultSort: 'desc', searchable: true },
+    { name: 'Amount', selector: row => ["$", row.amount], type: 'currency', searchable: true },
+    { name: 'Status', selector: row => [row.status === 'paid' ? <BiCheckDouble color='green' size={20} /> : <GiCancel color='red' size={12} />], searchable: true },
+    { name: 'Method', selector: row => row.method, searchable: true }
+  ]
+  const payments = [
+    { id: 1, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'paid', method: 'paypal' },
+    { id: 2, name: 'John Doe', amount: 100, date: '2021-01-17', status: 'paid', method: 'wise.com' },
+    { id: 3, name: 'John Doe', amount: 100, date: '2021-02-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 4, name: 'John Doe', amount: 100, date: '2021-02-09', status: 'unpaid', method: 'ProzPay' },
+    { id: 5, name: 'John Doe', amount: 100, date: '2021-02-10', status: 'unpaid', method: 'ProzPay' },
+    { id: 6, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 7, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 8, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 9, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 10, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 11, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 12, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 13, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 14, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 15, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 16, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 17, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' },
+    { id: 18, name: 'John Doe', amount: 100, date: '2021-01-01', status: 'unpaid', method: 'ProzPay' }
+  ]
+
+  return (
+    <div className='w-full h-full overflow-y-auto'>
+      <div className="row">
+        <div className='col-sm-4'>
+          <div className="shadow rounded p-3 my-4 bg-white">
+            <span>Project budget</span>
+            <span className="block text-2xl font-bold">$1000</span>
+          </div>
+        </div>
+        <div className='col-sm-4'>
+          <div className="shadow rounded p-3 my-4 bg-white">
+            <span>Amount Paid</span>
+            <span className="block text-2xl font-bold">$200</span>
+          </div>
+        </div>
+        <div className='col-sm-4'>
+          <div className="shadow rounded p-3 my-4 bg-white">
+            <span>Amount Due</span>
+            <span className="block text-2xl font-bold">$800</span>
+          </div>
+        </div>
+      </div >
+      <DataTable
+        title="Payments"
+        columns={columns}
+        data={payments}
+        pagination
+        highlightOnHover
+        pointerOnHover
+        paginationPerPage={5}
+        paginationRowsPerPageOptions={[5, 10, 15, 20]}
+        paginationComponentOptions={{
+          rowsPerPageText: 'Rows per page:',
+          rangeSeparatorText: 'of',
+          noRowsPerPage: false,
+          selectAllRowsItem: true,
+          selectAllRowsItemText: 'All'
+        }}
+      />
+    </div >
+  )
+}
 const JobSupport = () => { return (<>Support</>) }
 const JobMembers = () => {
   const members = [
@@ -308,11 +343,11 @@ const InternalTermSearch = ({ searchResults, searchResultsLoading }) => {
           </div>
         </div>
       </div>}
-      {searchResults.length > 0 && <div className="">
-        <div className="d-flex flex-col gap-2">
+      {searchResults.length > 0 && <div className="w-full">
+        <div className="d-flex flex-col gap-2 w-full">
           {searchResults.map((result, index) => {
             return (
-              <div className="d-flex align-items-center justify-content-start gap-2 px-2 py-2 cursor-pointer hover:bg-gray-100" key={index}>
+              <div className="w-full d-flex align-items-center justify-content-start gap-2 px-2 py-2 cursor-pointer hover:bg-gray-100" key={index}>
                 {result.name}
               </div>
             )
@@ -391,7 +426,7 @@ const Job = () => {
       { id: 3, name: [<RiTranslate2 className="text-[20px]" />, " Court: ", <em>Juzgado</em>] },
       { id: 4, name: [<RiTranslate2 className="text-[20px]" />, " Judicial District: ", <em>Juzgado</em>] }
     ]
-    setJobFeatures('files')
+    setJobFeatures('payments')
     setTermSearchPanel(InternalTermSearch({ searchResults: demo_search_results, searchResultsLoading: false }))
   }, [])
 
