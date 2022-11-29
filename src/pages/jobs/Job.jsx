@@ -3,10 +3,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Image } from 'react-bootstrap'
 import DataTable from 'react-data-table-component'
 import { AiOutlineEllipsis } from 'react-icons/ai'
-import { BiBook, BiChat, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiStar, BiTask, BiTimer } from 'react-icons/bi'
+import { BiAddToQueue, BiBook, BiChat, BiChevronDown, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiTask, BiTimer } from 'react-icons/bi'
 import { BsFillStarFill } from 'react-icons/bs'
+import { GiFullFolder } from 'react-icons/gi'
 import { GoSmiley } from 'react-icons/go'
-import { RiTranslate2 } from 'react-icons/ri'
+import { RiAddBoxLine, RiTranslate2 } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { randomColor } from '../../components/Helpers'
 
@@ -50,8 +51,17 @@ const File = ({ file }) => {
 const JobFiles = () => {
   return (
     <div className='d-flex flex-col h-full w-full'>
-      <div className='min-h-[70px] w-full'>
-
+      <div className='min-h-[70px] d-flex items-center justify-between w-full p-3'>
+        <span className='d-flex items-center cursor-pointer gap-2'>
+          <span className='d-flex bg-white shadow rounded p-2'>
+            <GiFullFolder size={30} color="#186362" />
+            <BiChevronDown size={30} />
+          </span>
+          <span className='fw-bold'>Recent Files</span>
+        </span>
+        <span className='d-flex items-center cursor-pointer gap-2'>
+          <RiAddBoxLine size={30} color="#186362" />
+        </span>
       </div>
       <div className='d-flex flex-grow overflow-y-auto'>
         <div className='row'>
