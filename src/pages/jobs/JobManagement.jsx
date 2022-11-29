@@ -17,7 +17,7 @@ const JobManagement = () => {
                     <ActiveJob />
                     <ActiveJob />
                     <div className='col-sm-3 px-3'>
-                        <a href="#/dashboard/jobs/active">View All Active Jobs</a>
+                        <a href="/#/dashboard/jobs/active">View All Active Jobs</a>
                     </div>
                 </div>
             </div>

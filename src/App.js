@@ -1,7 +1,7 @@
 //  RAFCE
 import React from 'react'
 //  Routes
-import { BrowserRouter, HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 import './App.css'
 
@@ -119,11 +119,10 @@ const DashboardLayout = () => {
 
 const App = () => {
     let location = window.location.href
-    return (
-        <HashRouter>
-            <LocalizationSelect />
-            {location.includes('dashboard') ? <DashboardLayout /> : <LandingPagesLayout />}
-        </HashRouter>)
+    return (<BrowserRouter>
+        <LocalizationSelect />
+        {location.includes('dashboard') ? <DashboardLayout /> : <LandingPagesLayout />}
+    </BrowserRouter>)
 }
 
 export default App

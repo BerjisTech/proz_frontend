@@ -12,7 +12,7 @@ const businesses = () => {
         }}
       >
         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-        <Breadcrumb.Item href="#/businesses">
+        <Breadcrumb.Item href="/#/businesses">
           Businesses
         </Breadcrumb.Item>
         <Breadcrumb.Item active>Data</Breadcrumb.Item>

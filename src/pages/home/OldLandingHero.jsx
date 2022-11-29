@@ -14,13 +14,13 @@ const OldLandingHero = () => {
                     </div>
                     <Spacer spacing='[5, 0, 0, 0]' />
                     <div className="d-flex align-items-center justify-content-center">
-                        <a href="#/jobs" >
+                        <a href="/#/jobs" >
                             <span className="fw-bolder d-flex align-items-center justify-content-center w-auto bg-[#386E7A] text-white px-3 py-2 mx-2 rounded">
                                 <BiTargetLock className="me-2" /> Find Work
                             </span>
                         </a>
                         <span className="inline-block mx-3"></span>
-                        <a href="#/transaltors" >
+                        <a href="/#/transaltors" >
                             <span className="fw-bolder d-flex align-items-center justify-content-center w-auto bg-inherit text-[#386E7A] border-[#386E7A] border-2 px-3 py-2 mx-2 rounded">
                                 <BiUserPin className="me-2" /> Hire A Pro
                             </span>

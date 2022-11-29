@@ -13,20 +13,20 @@ export const UserFacingFooter = () => {
                     <div className='row'>
                         <div className="col-md-6">
                             <span className='nav-items'>
-                                <a href="#/jobs-and-directory" className="nav-item nav-link text-primary text-[14px] font-bold">Jobs & Directory</a>
-                                <a href="#/member-activities" className="nav-item nav-link text-primary text-[14px] font-bold">Member Activities</a>
-                                <a href="#/education" className="nav-item nav-link text-primary text-[14px] font-bold">Education</a>
-                                <a href="#/tools" className="nav-item nav-link text-primary text-[14px] font-bold">Tools</a>
-                                <a href="#/basics" className="nav-item nav-link text-primary text-[14px] font-bold">ProZ basics</a>
+                                <a href="/#/jobs-and-directory" className="nav-item nav-link text-primary text-[14px] font-bold">Jobs & Directory</a>
+                                <a href="/#/member-activities" className="nav-item nav-link text-primary text-[14px] font-bold">Member Activities</a>
+                                <a href="/#/education" className="nav-item nav-link text-primary text-[14px] font-bold">Education</a>
+                                <a href="/#/tools" className="nav-item nav-link text-primary text-[14px] font-bold">Tools</a>
+                                <a href="/#/basics" className="nav-item nav-link text-primary text-[14px] font-bold">ProZ basics</a>
                             </span>
                         </div>
                         <div className="col-md-6">
                             <span className='nav-items'>
                                 <a href="about-us" className="nav-item nav-link text-primary text-[14px] font-bold">About Us</a>
-                                <a href="#/advertising" className="nav-item nav-link text-primary text-[14px] font-bold">Advertising</a>
-                                <a href="#/support" className="nav-item nav-link text-primary text-[14px] font-bold">Support</a>
-                                <a href="#/faq" className="nav-item nav-link text-primary text-[14px] font-bold">FAQ</a>
-                                <a href="#/terms-of-use" className="nav-item nav-link text-primary text-[14px] font-bold">Terms Of Use</a>
+                                <a href="/#/advertising" className="nav-item nav-link text-primary text-[14px] font-bold">Advertising</a>
+                                <a href="/#/support" className="nav-item nav-link text-primary text-[14px] font-bold">Support</a>
+                                <a href="/#/faq" className="nav-item nav-link text-primary text-[14px] font-bold">FAQ</a>
+                                <a href="/#/terms-of-use" className="nav-item nav-link text-primary text-[14px] font-bold">Terms Of Use</a>
                             </span>
                         </div>
                     </div>
@@ -66,10 +66,10 @@ export const Copyright = () => {
         <div className="bg-[#254856] text-[10px] w-full py-3 d-flex align-items-center justify-content-center">
             <span className="text-white px-2">&copy; 1999 - {new Date().getFullYear()}, All Rights Reserved. Designed By OpusCreation</span>
             <span className="text-[#A1DDCB] px-2">
-                <a href="#/privacy-policy">Privacy Policy</a>
+                <a href="/#/privacy-policy">Privacy Policy</a>
             </span>
             <span className="text-[#A1DDCB] px-2">
-                <a href="#/terms-of-use">Terms Of Use</a>
+                <a href="/#/terms-of-use">Terms Of Use</a>
             </span>
         </div>
     )
