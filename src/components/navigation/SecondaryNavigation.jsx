@@ -6,7 +6,7 @@ const SecondaryNavigation = ({ primary_navigation }) => {
             return (
                 <div className="secondary-navigation">
                     <div className="secondary-navigation__item">
-                        <a href="//dashboard" className="secondary-navigation__link">
+                        <a href="/dashboard" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-home"></i>
                             </span>
