@@ -103,7 +103,7 @@ const LandingPage = () => {
                     Focusing on the people and the work they do makes ProZ.com a uniquely effective place for outsourcers to meet capable freelancers and translation companies. Many other sites consist of little more than static profiles in a directory.
                   </span>
                   <Spacer spacing='[4, 0, 0, 0]' />
-                  <a href="/signup" className="d-flex">
+                  <a href="#/signup" className="d-flex">
                     <span className="py-1 px-3 bg-[#186362] border-[#186362] border-2 rounded-2 text-[#ffffff] d-flex align-items-center justify-content-center hover:bg-white hover:text-[#186362] hover:border-[#186362]">
                       <FiKey className="text-white me-2" />
                       GET STARTED
@@ -148,7 +148,7 @@ const LandingPage = () => {
                     </span>
                   </a>
                   <Spacer spacing='[5, 0, 0, 0]' />
-                  <a href="/signup" className="d-flex">
+                  <a href="#/signup" className="d-flex">
                     <span className="py-2 px-3 bg-inherit border-[#186362] border-[3px] fw-bold rounded-2 text-[#186362] d-flex align-items-center justify-content-center hover:bg-[#186362] hover:text-white hover:border-[#186362]">
                       <BiBriefcase className="me-2" color="#186362" />
                       POST A JOB

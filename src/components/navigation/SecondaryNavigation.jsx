@@ -6,7 +6,7 @@ const SecondaryNavigation = ({ primary_navigation }) => {
             return (
                 <div className="secondary-navigation">
                     <div className="secondary-navigation__item">
-                        <a href="/dashboard" className="secondary-navigation__link">
+                        <a href="#/dashboard" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-home"></i>
                             </span>
@@ -16,7 +16,7 @@ const SecondaryNavigation = ({ primary_navigation }) => {
                         </a>
                     </div>
                     <div className="secondary-navigation__item">
-                        <a href="/dashboard/findwork" className="secondary-navigation__link">
+                        <a href="#/dashboard/findwork" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-search"></i>
                             </span>
@@ -26,7 +26,7 @@ const SecondaryNavigation = ({ primary_navigation }) => {
                         </a>
                     </div>
                     <div className="secondary-navigation__item">
-                        <a href="/dashboard/applications" className="secondary-navigation__link">
+                        <a href="#/dashboard/applications" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-file-alt"></i>
                             </span>
@@ -36,7 +36,7 @@ const SecondaryNavigation = ({ primary_navigation }) => {
                         </a>
                     </div>
                     <div className="secondary-navigation__item">
-                        <a href="/dashboard/courses" className="secondary-navigation__link">
+                        <a href="#/dashboard/courses" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-book"></i>
                             </span>
@@ -46,7 +46,7 @@ const SecondaryNavigation = ({ primary_navigation }) => {
                         </a>
                     </div>
                     <div className="secondary-navigation__item">
-                        <a href="/dashboard/kudoz" className="secondary-navigation__link">
+                        <a href="#/dashboard/kudoz" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-thumbs-up"></i>
                             </span>
@@ -56,7 +56,7 @@ const SecondaryNavigation = ({ primary_navigation }) => {
                         </a>
                     </div>
                     <div className="secondary-navigation__item">
-                        <a href="/dashboard/teams" className="secondary-navigation__link">
+                        <a href="#/dashboard/teams" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-users"></i>
                             </span>
@@ -66,7 +66,7 @@ const SecondaryNavigation = ({ primary_navigation }) => {
                         </a>
                     </div>
                     <div className="secondary-navigation__item">
-                        <a href="/dashboard/contacts" className="secondary-navigation__link">
+                        <a href="#/dashboard/contacts" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-address-book"></i>
                             </span>
@@ -76,7 +76,7 @@ const SecondaryNavigation = ({ primary_navigation }) => {
                         </a>
                     </div>
                     <div className="secondary-navigation__item">
-                        <a href="/dashboard/notifications" className="secondary-navigation__link">
+                        <a href="#/dashboard/notifications" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-bell"></i>
                             </span>
@@ -86,7 +86,7 @@ const SecondaryNavigation = ({ primary_navigation }) => {
                         </a>
                     </div>
                     <div className="secondary-navigation__item">
-                        <a href="/dashboard/settings" className="secondary-navigation__link">
+                        <a href="#/dashboard/settings" className="secondary-navigation__link">
                             <span className="secondary-navigation__icon">
                                 <i className="fas fa-cog"></i>
                             </span>
