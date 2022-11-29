@@ -2,51 +2,66 @@ import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
 import { Image } from 'react-bootstrap'
 import DataTable from 'react-data-table-component'
-import { BiBook, BiChat, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiTask, BiTimer } from 'react-icons/bi'
+import { AiOutlineEllipsis } from 'react-icons/ai'
+import { BiBook, BiChat, BiFile, BiGroup, BiHelpCircle, BiMicrophone, BiMoney, BiNote, BiPaperclip, BiSend, BiStar, BiTask, BiTimer } from 'react-icons/bi'
 import { GoSmiley } from 'react-icons/go'
+import { RiTranslate2 } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
+import { randomColor } from '../../components/Helpers'
+
+const File = () => {
+  return (
+    <div></div>
+  )
+}
 
 const JobFiles = () => {
-  const columns = [
-    { name: 'Name', selector: row => row.name, sortable: true },
-    { name: 'Size', selector: row => row.size, sortable: true },
-    { name: 'Type', selector: row => row.type, sortable: true },
-    { name: 'Date', selector: row => row.date, sortable: true },
-    { name: 'Action', selector: row => row.download_link, sortable: true }
-  ]
   const files = [
-    { id: 1, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 2, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 3, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 4, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 5, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 6, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 7, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 8, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 9, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 10, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 11, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
-    { id: 12, name: "Court Case 0097234/123", size: "2kb", type: "pdf", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 1, name: "Court Case 0097234/234", size: "2kb", type: "pdf", shared_by: "John Doe", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 2, name: "Court Case 0097234/567", size: "2kb", type: "xlsx", shared_by: "Jane Doe", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 3, name: "Plaintif Confidential", size: "2kb", type: "docx", shared_by: "Mary Jane", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 4, name: "Court Case 0097234/123", size: "2kb", type: "ppt", shared_by: "Adrianna", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 5, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Big Man", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 6, name: "Court Case 0097234/123", size: "2kb", type: "docx", shared_by: "Hol'tigh Asknee", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 7, name: "Court Case 0097234/123", size: "2kb", type: "docx", shared_by: "Asknee", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 8, name: "Court Case 0097234/123", size: "2kb", type: "pdf", shared_by: "Blighmee", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 9, name: "Court Case 0097234/123", size: "2kb", type: "pdf", shared_by: "Greg", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 10, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Eugine", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 11, name: "Court Case 0097234/123", size: "2kb", type: "txt", shared_by: "Aurora", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
+    { id: 12, name: "Court Case 0097234/123", size: "2kb", type: "xlsx", shared_by: "Kristyen", date: "3 days ago", download_link: <Link to="/dashboard/dummy.pdf" download>Download</Link> },
 
   ]
   return (
-    <DataTable
-      title="Files"
-      columns={columns}
-      data={files}
-      pagination
-      highlightOnHover
-      pointerOnHover
-      paginationPerPage={5}
-      paginationRowsPerPageOptions={[5, 10, 15, 20]}
-      paginationComponentOptions={{
-        rowsPerPageText: 'Rows per page:',
-        rangeSeparatorText: 'of',
-        noRowsPerPage: false,
-        selectAllRowsItem: true,
-        selectAllRowsItemText: 'All'
-      }}
-    />
+    <div className='d-flex flex-col h-full w-full'>
+      <div className='min-h-[70px] w-full'>
+
+      </div>
+      <div className='d-flex flex-grow overflow-y-auto'>
+        <div className='row'>
+          {
+            files.map((file, index) => (
+              <div className='col-sm-3 py-3'>
+                <div className='d-flex flex-col shadow rounded gap-2 p-3'>
+                  <div className='d-flex justify-content-between align-items-center'>
+                    <span><BiStar /></span>
+                    <span><AiOutlineEllipsis className='rotate-90' /></span>
+                  </div>
+                  <div className='d-flex flex-col items-center gap-3 justify-center cursor-pointer'>
+                    <Image src={`/images/icons/${file.type}.png`} className='w-[150px] shadow rounded p-3' />
+                    <span className='fw-bold'>{file.name}</span>
+                  </div>
+                  <hr />
+                  <div className='d-flex justify-content-between align-items-center'>
+                    <span><b>File Size</b><br /> {file.size}</span>
+                    <a href="/dashboard/client/12345" className="rounded w-[40px] h-[40px] text-white d-flex items-center justify-center shadow fw-bold bg-" style={{ backgroundColor: randomColor() }}>{file.shared_by.substring(0, 1)}</a>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
   )
 }
 const JobNotes = () => { return (<>Notes</>) }
@@ -65,6 +80,13 @@ const ChatBubble = ({ message, isMe, file_type }) => {
 }
 
 const JobMessages = () => {
+  const messagesEndRef = React.createRef()
+  let scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+  useEffect(() => {
+    scrollToBottom()
+  }, [])
   return (
     <div className='d-flex flex-col h-full'>
       <div className="flex-fill overflow-y-auto"
@@ -73,7 +95,7 @@ const JobMessages = () => {
           backgroundPosition: 'center center',
           backgroundSize: 'cover'
         }}>
-        <div className="space-y-2 d-flex flex-col w-full p-6 overflow-y-auto align-items-end justify-content-end h-full">
+        <div className="d-flex flex-col w-full gap-2 p-6 align-items-end justify-content-end">
           <ChatBubble message="Hello" isMe={true} />
           <ChatBubble message="Hi" isMe={false} />
           <ChatBubble message="Were you able to find the file I requested" isMe={true} />
@@ -82,6 +104,23 @@ const JobMessages = () => {
           <ChatBubble message="Here" isMe={false} file_type="pdf" />
           <ChatBubble message="Thanks for the reminder" isMe={false} />
           <ChatBubble message="Don't sweat it" isMe={true} />
+          <ChatBubble message="Hello" isMe={true} />
+          <ChatBubble message="Hi" isMe={false} />
+          <ChatBubble message="Were you able to find the file I requested" isMe={true} />
+          <ChatBubble message="It'd be nice if I started the work today" isMe={true} />
+          <ChatBubble message="Oh, yes" isMe={false} />
+          <ChatBubble message="Here" isMe={false} file_type="pdf" />
+          <ChatBubble message="Thanks for the reminder" isMe={false} />
+          <ChatBubble message="Don't sweat it" isMe={true} />
+          <ChatBubble message="Hello" isMe={true} />
+          <ChatBubble message="Hi" isMe={false} />
+          <ChatBubble message="Were you able to find the file I requested" isMe={true} />
+          <ChatBubble message="It'd be nice if I started the work today" isMe={true} />
+          <ChatBubble message="Oh, yes" isMe={false} />
+          <ChatBubble message="Here" isMe={false} file_type="pdf" />
+          <ChatBubble message="Thanks for the reminder" isMe={false} />
+          <ChatBubble message="Don't sweat it" isMe={true} />
+          <div ref={messagesEndRef} />
         </div>
       </div>
       <div className="min-h-[70px] px-2 d-flex gap-3 align-items-center justify-content-between">
@@ -171,9 +210,8 @@ const InternalTermSearch = ({ searchResults, searchResultsLoading }) => {
         <div className="d-flex flex-col gap-2">
           {searchResults.map((result, index) => {
             return (
-              <div className="d-flex align-items-center justify-content-start gap-2 px-2 py-2 cursor-pointer hover:bg-gray-100">
-                <BiPaperclip className="text-[20px]" />
-                <span>{result.name}</span>
+              <div className="d-flex align-items-center justify-content-start gap-2 px-2 py-2 cursor-pointer hover:bg-gray-100" key={index}>
+                {result.name}
               </div>
             )
           })}
@@ -195,6 +233,9 @@ const Job = () => {
     switch (feature) {
       case 'files':
         setActiveJobFeature(<JobFiles />)
+        break
+      case 'file':
+        setActiveJobFeature(<File />)
         break
       case 'notes':
         setActiveJobFeature(<JobNotes />)
@@ -241,7 +282,15 @@ const Job = () => {
   }
 
   useEffect(() => {
-    setJobFeatures('messages')
+    const demo_search_results = [
+      { id: 0, name: [<b><u>Previous searches</u></b>] },
+      { id: 1, name: [<RiTranslate2 className="text-[20px]" />, " Plaintif: ", <em>Demandante</em>] },
+      { id: 2, name: [<RiTranslate2 className="text-[20px]" />, " Defendant: ", <em>Demandado</em>] },
+      { id: 3, name: [<RiTranslate2 className="text-[20px]" />, " Court: ", <em>Juzgado</em>] },
+      { id: 4, name: [<RiTranslate2 className="text-[20px]" />, " Judicial District: ", <em>Juzgado</em>] }
+    ]
+    setJobFeatures('files')
+    setTermSearchPanel(InternalTermSearch({ searchResults: demo_search_results, searchResultsLoading: false }))
   }, [])
 
   return (
