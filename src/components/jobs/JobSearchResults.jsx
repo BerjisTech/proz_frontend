@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import 'react-icons/fi'
-import { GoPrimitiveDot } from 'react-icons/go'
+import { GoDot } from 'react-icons/go'
 import { BiDotsVertical } from 'react-icons/bi'
 import JobSearch from './JobSearch'
 
@@ -35,15 +35,15 @@ const JobSearchResults = () => {
             <div className="d-flex align-items-center justify-content-between">
                 <div className="d-flex align-items-center justify-content-start">
                     <span className="text-sm d-flex align-items-center rounded py-1 pe-3 m-1">
-                        <GoPrimitiveDot className="text-blue-800" />
+                        <GoDot className="text-blue-800" />
                         Translator
                     </span>
                     <span className="text-sm d-flex align-items-center rounded py-1 pe-3 m-1">
-                        <GoPrimitiveDot className="text-blue-800" />
+                        <GoDot className="text-blue-800" />
                         ₹50Cr - ₹150Cr
                     </span>
                     <span className="text-sm d-flex align-items-center rounded py-1 pe-3 m-1">
-                        <GoPrimitiveDot className="text-blue-800" />
+                        <GoDot className="text-blue-800" />
                         Mumbai, Bengaluru,Pune
                     </span>
                 </div>
